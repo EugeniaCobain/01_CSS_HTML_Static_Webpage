@@ -1,0 +1,526 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* PROPIEDADES PARA TODO EL SITIO */
+@font-face {
+    font-family: Tombstone-FREE;
+    src: url(../assets/Fonts/Tombstone-FREE.otf);
+}
+
+@font-face {
+    font-family: Oxygen-Regular;
+    src: url(../assets/Fonts/Oxygen-Regular.ttf)
+}
+
+body{
+    font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif;
+    background-color: rgb(192, 214, 188);
+}
+
+/* 1) PROPIEDADES HEADER: LOGO + MENÚ */
+header{
+    background-color: rgb(69, 92, 80);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30%;
+    z-index: 1000;
+}
+/* header{
+    background-color: rgb(69, 92, 80);
+    z-index: 1000;
+    width: 100%;
+    height: 30%;
+    display: inline-block;
+    position: sticky; /* no funciona */
+
+/* 1.1) Propiedades logo y nombre sitio */
+.titulo{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+    margin-left: 25px; /* top derecha bottom izquierda*/
+    padding: 15px 25px; /* arriba abajo e izqu y dcha */
+}
+/* .titulo{
+    display: inline-block;
+    position: relative; 
+    width: 49%;
+    top: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+ */
+
+.titulo__imgLogo{
+    width: 60px; 
+    filter: drop-shadow(4px 4px 4px rgba(9, 18, 18, 0.381))
+}
+/* .imglogo{
+    width: 60px;
+    display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    filter: drop-shadow(4px 4px 4px rgba(9, 18, 18, 0.381))
+}
+ */
+
+.titulo__nombreSitio{
+    font-family: Tombstone-FREE;
+    font-size: 3rem;
+    color: rgb(186, 164, 128);
+    text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2.3rem;
+ 
+}
+/* .nombresitio{
+    font-family: Tombstone-FREE;
+    font-size: 3rem;
+    color: rgb(186, 164, 128);
+    text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+    text-align: center;
+    line-height: 1.6rem;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    margin-left: 3px;
+}
+ */
+
+ .titulo small{
+    font-size: 1.375rem;
+    color: black;
+ }
+
+ /* 1.2) Propiedades Menú  */
+ .nav{
+    width: 51%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin:10px 25px 0px 0px; /* top derecha bottom izquierda*/
+    padding: 15px 25px; /* arriba abajo e izqu y dcha */
+    /* margin: 25px auto;
+    padding: 10px 25px; */
+ }
+ /* nav{
+    display: inline-block;
+    position:relative;
+    width: 50%;
+ }
+ */
+
+ /* .navbar {
+    display: inline-block;
+    position: relative;
+    top:5px;
+    margin: auto;
+    height: 50px;
+}
+ */
+
+ .nav__navList{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.3rem;
+    list-style: none;
+    gap: 25px;
+    position: relative;
+ }
+ /* .navbar .navlist{
+    position: relative;
+    font-size: 1.3rem;
+    list-style: none;
+}
+ */
+
+.nav__navList > li{
+    position: relative;   
+   /*  margin:10px 25px 0px 0px;  *//* top derecha bottom izquierda*/
+    /* padding: 15px 25px; */ /* arriba abajo e izqu y dcha */
+}
+ /* .navlist > li{
+    position: relative;
+    display: inline-block;
+    margin-left: 17px;
+    list-style: none;
+    height: 50px;
+}
+ */
+
+.nav__navList > li >a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(186, 164, 128);
+    padding: 5px 10px 15px 0px;
+   /*  margin:10px 25px 0px 0px;  *//* top derecha bottom izquierda*/
+    /* padding: 15px 25px; */ /* arriba abajo e izqu y dcha */
+}
+ /* .navlist > li > a{
+    display: inline-block;
+    padding: 15px, 20px;
+    color: rgb(186, 164, 128);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;   
+}
+ */
+
+ .nav__navList li a:hover{
+    color: rgb(146, 141, 127);
+    transition: all 0.3s;
+ }
+
+ /* 1.2.1) Submenú/Dropdown menu/ Menú vertical */
+.menuVertical{
+    background-color:rgb(32, 53, 54);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    margin-top: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    z-index: 10;
+}
+ /* .menuVertical{
+    *position: absolute;
+    *list-style: none;
+    *margin-top: 21.5px;
+    *background-color:rgb(32, 53, 54);
+    *text-align: center;
+    *width: 100%;
+   * visibility: hidden;
+    *opacity: 0;
+    *transition: opacity 1.5s;
+    *z-index: 10;
+    }
+ */
+
+ .menuVertical li a{
+    display:block;
+    color: rgb(126, 121, 108);
+    padding: 15px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ /* .menuvertical li a{
+        display: block;
+        padding: 15px;
+        color: rgb(126, 121, 108);
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+ */
+
+ .nav__navList li:hover .menuVertical{
+    visibility: visible;
+    opacity:1;
+ }
+
+ /* 2) PROPIEDADES FOOTER hacer con grid */
+ footer{
+    display: grid;
+    width: 100%;
+    height: 25%;
+    background-color: rgb(32, 53, 54) ;
+    color: rgb(186, 164, 128);
+    padding-top: 15px;
+ }
+ /* footer{
+    width: 100%;
+    background-color: rgb(32, 53, 54) ;
+    color: rgb(186, 164, 128);
+    height: 25%
+}
+ */
+
+ .footer__titulo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px 0px 50px;
+    margin-bottom: 0;
+ }
+
+ .titulo__nombreSitio{
+    margin-top: 15px;
+    margin-left: 6px;
+ }
+ /* .footertitulo{
+    display: block;
+    align-content: center;
+    padding-top: 10px;
+}
+ */
+
+.footer__redes{
+display: flex;
+justify-content: center;
+gap: 50px;
+font-size: 1.3rem;
+text-align: center;
+margin-top: 0px;
+padding-bottom: 35px;
+}
+
+/* .redes, .contactofooter {
+    display: inline-block;
+    position: relative;
+    font-size: 1.3rem;
+    margin-top: 0px;
+    padding: 0 15 15 15px;
+    text-align: center;
+    margin-bottom: 20px;
+} */
+/* .redes{
+margin-left: 600px;
+}
+ */
+
+.footer__disclaimer{
+display: flex;
+justify-content: center;
+padding-bottom: 15px;
+}
+
+.footer__copyright{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* 3) PROPIEDADES PÁGINA "INDEX" */
+/* .mainIndex{
+    background-color: rgb(192, 214, 188);
+} */
+
+.ver{
+    width: 100%;
+    height: 750px;   
+}
+
+.mainIndex__carrousel{
+width: 100%;
+}
+
+.mainIndex__secciones{
+display: flex;
+flex-direction: column;
+padding: 75px;
+}
+
+.mainIndex__secciones h3{
+font-size: 3rem;
+display: flex;
+justify-content: center;
+margin-bottom: 10px;
+}
+
+.mainIndex__secciones p{
+font-size: 1.3rem;
+justify-content: center;
+text-align: justify;
+}
+
+.linkUp{
+line-height: 4rem;
+display: flex;
+justify-content: end;
+}
+
+/* 3.1) Sección "About" */
+.seccion__about{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+/* padding: 70px; */
+}
+
+.about__texto{
+flex: 1;
+order: -1;
+margin-right: 50px;
+/*  padding: 50px; */
+}
+
+.about__imagen{
+width: 300px; 
+flex:1;
+/*  margin-right: 50px; */
+filter: drop-shadow(4px 4px 4px rgba(9, 18, 18, 0.381));
+}
+
+/* 3.1) Sección "Grave"" */
+.seccion__grave{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+padding-top: 100px;
+/* padding-bottom: 70px; */
+}
+
+.grave__texto{
+flex: 1;
+margin-left: 50px;
+/*  padding: 50px; */
+}
+
+.grave__imagen{
+width: 600px; 
+flex:1;
+/* margin-left: 50px; */
+filter: drop-shadow(-4px 4px 4px rgba(9, 18, 18, 0.381))
+}
+
+/* 4) PROPIEDADES DE LA PÁGINA "ARTICLES" */
+/* 5) PROPIEDADES DE LA PÁGINA "GRAVES" */
+/* 6) PROPIEDADES DE LA PÁGINA "LOCATIONS" */
+
+/* 7) PROPIEDADES DE LA PÁGINA "CONTACT" */
+/*7.1) Banner  */
+.wrapContacto{
+    width: 100%;
+    height: 750px;
+    background: url(../assets/imgs/contacto/westminster.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.wrapContacto__imgSobreTexto{
+    color: rgb(186, 164, 128);
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+    padding: 375px;
+    width: 100%;
+}
+
+/* 7.2) Sección "Mail" */
+.mail__contacto{ 
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 25px;
+}
+ .mail__contacto>p{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+ }
+
+ /* 7.3)Sección "Form" */
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 75px;
+    
+   /*  width: 300px;
+    padding: 1px;
+    margin: auto;
+    padding-bottom: 50px;
+    font-family: Oxygen-Regular;
+    background-color: rgb(192, 214, 188); */
+}
+
+form label{
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: justify;
+   /*  width: 70px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: justify;
+    font-size: 1.3rem; */
+}
+
+form input[type="text"], form input[type="email"]{
+    border: 1px solid black;
+    font-family: 
+    Oxygen-Regular;
+    font-size: 1rem;
+    width: 300px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    /* width: 300px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    margin: 8px 0;
+    font-family: Oxygen-Regular;
+    font-size: 16px;
+    display: inline-block; */
+}
+
+form input[type="submit"]{
+    border: 1px solid black;
+    background-color: rgb(93, 122, 120);
+    font-family: Oxygen-Regular;
+    color: rgb(32, 53, 54);
+    font-weight: bolder;
+    font-size: 1.3rem;
+    width: 300px;
+    padding: 8px 16px;
+    color: rgb(186, 164, 128);
+    /* width: 300px;
+    padding: 8px 16px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    color: aquamarine;
+    background-color: rgb(93, 122, 120);
+    font-family: Oxygen-Regular;
+    color: rgb(32, 53, 54);
+    font-weight: bolder;
+    font-size: 1.3rem;
+    display: block; */
+}
+
+form input[type="submit"]:hover {
+    color: rgb(146, 141, 127);
+    transition: all 0.3s;
+ }
+
+textarea{
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    margin: 8px 0;
+    font-family: Oxygen-Regular;
+    font-size: 1rem;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 8px 0;
+    font-family: Oxygen-Regular;
+    font-size: 1rem;
+    /* width: 300px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    margin: 8px 0;
+    font-family: Oxygen-Regular;
+    font-size: 16px;
+    display: block; */
+}
+
+
+
