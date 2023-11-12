@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="styles" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+<!-- Boxicons -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- Mi hoja de estilos CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Acta est fabula - Home</title>
 </head>
+
+</html>
+
 <body>
     <header id="header">
         <div class="titulo"> 
@@ -34,16 +42,36 @@
         </nav>
     </header>
 
+  <!-- CARROUSEL CON BOOTSTRAP - SE VE UNO ABAJO DEL OTRO Y NO FUNCIONA, POR ESO LO DEJO COMENTADO -->
+    <!-- <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg" class="d-block w-100 imgCarousel" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/imgs/inicio/imágenes_carrousel/carrousel4.jpg" class="d-block w-100 imgCarousel" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/imgs/inicio/imágenes_carrousel/carrousel2.jpg" class="d-block w-100 imgCarousel" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> -->
+
     <main class="mainIndex">
-        <section class="ver"><!-- Carrousel de imágenes -->
-        <img src="./assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg" alt="Gisant sur la tombe de Fernand Arbelot" class="mainIndex__carrousel">
-        </section>
         
         <section class="mainIndex__secciones">
             <div class="seccion__about">
                 <div>
-                    <img src="/assets/imgs/inicio/imágenes_carrousel/kiss_of_death.jpg" 
-                    alt="Blindfolded death"
+                    <img src="/assets/imgs/inicio/Inicio3.jpg" 
+                    alt="Kiss of death"
                     class="about__imagen">
                 </div>
                 <div class="about__texto">
@@ -70,25 +98,29 @@
     </main>
 
     <footer>
-        <div class="footer__titulo"> <img src="./assets/imgs/logo/skull.png" alt="logo" class="titulo__imgLogo">
-        <span class="titulo__nombreSitio">ACTA EST FABULA<br></span> 
-        </div>
+         <div class="footer__titulo">
+            <a href="/index.html"><img src="./assets/imgs/logo/skull.png" alt="logo" class="titulo__imgLogo"></a>
+            <a href="/index.html">
+            <span class="titulo__nombreSitio">ACTA EST FABULA<br></span></a>
+            </div>
 
         <div class="footer__redes">
             <div class="redes">
                 <h5>Follow on</h5>
-                <p><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram">Instagram</i></a></p>
+                <p><a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i>Instagram</a></p>
                </div>
    
            <div class="footer__contacto">
                <h5>More information</h5>
-               <p><a href="./html/contacto.html"> Let's get in touch </a></p></div>
-        </div>
-            
-        <div class="footer__disclaimer">All images exhibited on this website, except the ones in the section <span><a href="./html/graves.html">"Graves"</a></span>, are property of other authors. Credits to whom it may correspond.</div>
+               <p><a href="./html/contacto.html"><i class='bx bx-envelope' ></i>Let's get in touch  </a></p></div>
+        </div>   
 
-        <small class="footer__copyright">&copy; 2023 Segunda pre-entrega - Desarollo web - <b>María Eugenia Boni</b></small>
+        <div class="footer__disclaimer">All images exhibited on this website, except the ones in the section&nbsp<span><a href="/html/graves.html"> "The Graves"</a></span>, are property of other authors. Credits to whom it may correspond.</div>
+
+        <small class="footer__copyright">&copy; 2023 Segunda pre-entrega - Desarollo web - &nbsp <b>María Eugenia Boni</b></small>
     </footer>
 
+    <!-- Hoja de estilos JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
