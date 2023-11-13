@@ -43,18 +43,12 @@ header{
     background-color: rgb(69, 92, 80);
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    height: 15vh;
+   /*  flex-wrap: wrap; */
     width: 100%;
-    height: 30%;
+   /*  height: 30%; */
     z-index: 1000;
 }
-/* header{
-    background-color: rgb(69, 92, 80);
-    z-index: 1000;
-    width: 100%;
-    height: 30%;
-    display: inline-block;
-    position: sticky; /* no funciona */
 
 /* 1.1) Propiedades logo y nombre sitio */
 .titulo{
@@ -67,29 +61,11 @@ header{
     margin-left: 25px; /* top derecha bottom izquierda*/
     padding: 15px 25px; /* arriba abajo e izqu y dcha */
 }
-/* .titulo{
-    display: inline-block;
-    position: relative; 
-    width: 49%;
-    top: 10px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
- */
 
 .titulo__imgLogo{
     width: 60px; 
     filter: drop-shadow(4px 4px 4px rgba(9, 18, 18, 0.381))
 }
-/* .imglogo{
-    width: 60px;
-    display: inline-block;
-    position: relative;
-    margin-left: 50px;
-    margin-bottom: 5px;
-    filter: drop-shadow(4px 4px 4px rgba(9, 18, 18, 0.381))
-}
- */
 
 .titulo__nombreSitio{
     font-family: Tombstone-FREE;
@@ -101,19 +77,6 @@ header{
     text-align: center;
     line-height: 2.3rem;
 }
-/* .nombresitio{
-    font-family: Tombstone-FREE;
-    font-size: 3rem;
-    color: rgb(186, 164, 128);
-    text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
-    text-align: center;
-    line-height: 1.6rem;
-    display: inline-block;
-    position: relative;
-    bottom: 5px;
-    margin-left: 3px;
-}
- */
 
  .titulo small{
     font-size: 1.375rem;
@@ -127,25 +90,10 @@ header{
     justify-content: end;
     align-items: end;
     margin:10px 25px 0px 0px; /* top derecha bottom izquierda*/
-    padding: 15px 25px; /* arriba abajo e izqu y dcha */
+    padding: 15px 25px 0px 25px; /* arriba abajo e izqu y dcha */
     /* margin: 25px auto;
     padding: 10px 25px; */
  }
- /* nav{
-    display: inline-block;
-    position:relative;
-    width: 50%;
- }
- */
-
- /* .navbar {
-    display: inline-block;
-    position: relative;
-    top:5px;
-    margin: auto;
-    height: 50px;
-}
- */
 
  .nav__navList{
     display: flex;
@@ -154,27 +102,14 @@ header{
     list-style: none;
     gap: 25px;
     position: relative;
+    padding-bottom: 10px;
+    bottom: 10px;
+   /*  bottom: 10px; */
  }
- /* .navbar .navlist{
-    position: relative;
-    font-size: 1.3rem;
-    list-style: none;
-}
- */
 
 .nav__navList > li{
     position: relative;   
-   /*  margin:10px 25px 0px 0px;  *//* top derecha bottom izquierda*/
-    /* padding: 15px 25px; */ /* arriba abajo e izqu y dcha */
 }
- /* .navlist > li{
-    position: relative;
-    display: inline-block;
-    margin-left: 17px;
-    list-style: none;
-    height: 50px;
-}
- */
 
 .nav__navList > li >a{
     text-decoration: none;
@@ -184,14 +119,6 @@ header{
    /*  margin:10px 25px 0px 0px;  *//* top derecha bottom izquierda*/
     /* padding: 15px 25px; */ /* arriba abajo e izqu y dcha */
 }
- /* .navlist > li > a{
-    display: inline-block;
-    padding: 15px, 20px;
-    color: rgb(186, 164, 128);
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;   
-}
- */
 
  .nav__navList li a:hover{
     color: rgb(146, 141, 127);
@@ -205,26 +132,14 @@ header{
     text-align: center;
     width: 100%;
     position: absolute;
+    top: 35px;
     margin-top: 15px;
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.5s;
     z-index: 10;
 }
- /* .menuVertical{
-    *position: absolute;
-    *list-style: none;
-    *margin-top: 21.5px;
-    *background-color:rgb(32, 53, 54);
-    *text-align: center;
-    *width: 100%;
-   * visibility: hidden;
-    *opacity: 0;
-    *transition: opacity 1.5s;
-    *z-index: 10;
-    }
- */
-
+ 
  .menuVertical li a{
     display:block;
     color: rgb(126, 121, 108);
@@ -232,38 +147,30 @@ header{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
  }
- /* .menuvertical li a{
-        display: block;
-        padding: 15px;
-        color: rgb(126, 121, 108);
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-    }
- */
-
+ 
  .nav__navList li:hover .menuVertical{
     visibility: visible;
     opacity:1;
  }
 
- /* 2) PROPIEDADES FOOTER hacer con grid */
+ /* 1.2.3) Menú Mobile */
+.nav label, #check__menu{
+    font-size: 3rem;
+    color: rgb(146, 141, 127);
+    display: none;
+ }
+
+ /* 2) PROPIEDADES FOOTER */
  footer{
     display: grid;
+    grid-template-columns: 1fr;
     width: 100%;
-    height: 25%;
+   /*  height: 25%; */
     background-color: rgb(32, 53, 54) ;
     color: rgb(186, 164, 128);
     padding-top: 15px;
  }
- /* footer{
-    width: 100%;
-    background-color: rgb(32, 53, 54) ;
-    color: rgb(186, 164, 128);
-    height: 25%
-}
- */
-
-
+ 
  .footer__titulo{
     width: 100%;
     display: flex;
@@ -276,12 +183,6 @@ header{
     margin-top: 15px;
     margin-left: 6px;
  }
- /* .footertitulo{
-    display: block;
-    align-content: center;
-    padding-top: 10px;
-}
- */
 
 .footer__redes{
 display: flex;
@@ -297,20 +198,6 @@ i{
 padding-right: 5px;
  }
 
-/* .redes, .contactofooter {
-    display: inline-block;
-    position: relative;
-    font-size: 1.3rem;
-    margin-top: 0px;
-    padding: 0 15 15 15px;
-    text-align: center;
-    margin-bottom: 20px;
-} */
-/* .redes{
-margin-left: 600px;
-}
- */
-
 .footer__disclaimer{
 display: flex;
 justify-content: center;
@@ -324,24 +211,26 @@ padding-bottom: 15px;
 }
 
 /* 3) PROPIEDADES PÁGINA "INDEX" */
-/* .mainIndex{
-    background-color: rgb(192, 214, 188);
-} */
 
-/* .carousel img {
+.index__container{ 
     width: 100%;
-    height: 750px;
-} */
+    display: flex;
+    flex-direction: column;
+}
 
-/* .mainIndex__carrousel{
-width: 100%;
-} */
+.grid__index{ 
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ;
+    gap: 100px;
+}
 
-.imgCarousel{
+.imgCarousel img{
     width: 100%;
     height: 750px;
 }
 
+/* Secciones del Index ordenadas con FLEX */
 .mainIndex__secciones{
 display: flex;
 flex-direction: column;
@@ -435,6 +324,22 @@ filter: drop-shadow(-4px 4px 4px rgba(9, 18, 18, 0.381))
 }
 
 /* 5) PROPIEDADES DE LA PÁGINA "GRAVES" */
+.graves__container{ /* LO PUEDO SACAR */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid__graves{ /* USADO */
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ;
+}
+
+.main__graves{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 /* 5.1)Banner */
 .wrapGraves{
@@ -459,7 +364,6 @@ filter: drop-shadow(-4px 4px 4px rgba(9, 18, 18, 0.381))
 }
 
 /* 5.2) Propiedades comunes */
-
 .btn-group{
     display: flex;
     justify-content: center;
@@ -478,9 +382,23 @@ filter: drop-shadow(-4px 4px 4px rgba(9, 18, 18, 0.381))
     padding: 25px;
 }
 
+.artists__section, .scientists_section, .thinkers__section{
+    width: 100%;
+    text-align: center;
+    /* font-size: 2rem; */
+    padding: 20px;
+    font-size: 3rem;
+}
+
 figcaption{
-    font-size: 1rem;
+    background-color: rgb(32, 53, 54) ;
+    font-family: Oxygen-Regular;
+    color:rgb(186, 164, 128);
+    font-size: 1.3rem;
+    max-width: 350px;
     font-weight: bold;
+    text-align: center;
+    line-height: 2rem;
 }
 
 .zoom{
@@ -495,33 +413,89 @@ figcaption{
 }
 
 /* 5.3) Sección "Artists" */
-.artists__section{
+.artists__graves{
+    padding: 100px;
     width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px 0px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.artists__graves{
-    /* position: relative;
-    display: inline-block; */
-    /* width: 100%;
-    padding: 10px;
-    margin-left: 50px; */
+.artists__graves>figure>img {
+    width: 350px;
+    height: 350px;
+    border: solid 3px rgb(69, 92, 80);
 }
 
 /* 5.4) Sección "Scientists" */
 .scientists__graves{
-    /* position: relative;
-    display: inline-block;
+    padding: 100px;
     width: 100%;
-    padding: 50px;
-    margin-left: 25px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px 0px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.scientists__graves>figure>img {
+    width: 350px;
+    height: 350px;
+    border: solid 3px rgb(69, 92, 80);
 }
 
 /* 5.5) Sección "Thinkers" */
-   
+.thinkers__graves{
+    padding: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px 0px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.thinkers__graves>figure>img {
+    width: 350px;
+    height: 350px;
+     border: solid 3px rgb(69, 92, 80);
+}
+
 /* 6) PROPIEDADES DE LA PÁGINA "LOCATIONS" */
+.grid__layout{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "cabecera cabecera"
+    "main main"
+    "pie pie"
+    ;
+}
+
+.header__locations{
+    grid-area: cabecera;
+    }
+
+.locations{
+    grid-area: main;
+    display:grid;
+}
+
+.footer_locations{
+    grid-area: pie;
+}
+
+.location__banner{
+    width:100%;
+}
+
 /* 6.1) Banner */
 .wrapLocations{
     width: 100%;
@@ -529,12 +503,12 @@ figcaption{
     background: url(../assets/imgs/locations/locations.jpg);
     background-size: cover;
     background-position: 100% 13%;
-    position: relative;
+   /*  position: relative; */
 }
 
 .wrapLocations__imgSobreTexto{
     color: rgb(186, 164, 128);
-    position: relative;
+    /* position: relative; */
     text-align: center;
     font-size: 3rem;
     font-weight: bolder;
@@ -544,6 +518,39 @@ figcaption{
 }
 
 /* 7) PROPIEDADES DE LA PÁGINA "CONTACT" */
+.contacto__container{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__contacto{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ;
+    grid-template-areas:
+    "cabecera"
+    "main"
+    "footer"
+    ;
+}
+.header__contacto{
+    grid-area: cabecera;
+}
+
+.main__contacto{
+grid-area: main;
+border: solid 40px aquamarine;
+display: flex;
+flex-direction: column;
+}
+
+.footer__contacto{
+grid-area: footer;
+}
+
 /*7.1) Banner  */
 .wrapContacto{
     width: 100%;
@@ -572,6 +579,7 @@ figcaption{
     font-size: 1.3rem;
     padding: 25px;
 }
+
  .mail__contacto>p{
     margin-top: 20px;
     margin-left: 50px;
@@ -586,24 +594,12 @@ form{
     justify-content: center;
     align-items: center;
     padding-bottom: 75px;
-    
-   /*  width: 300px;
-    padding: 1px;
-    margin: auto;
-    padding-bottom: 50px;
-    font-family: Oxygen-Regular;
-    background-color: rgb(192, 214, 188); */
 }
 
 form label{
     font-weight: bold;
     font-size: 1.3rem;
     text-align: justify;
-   /*  width: 70px;
-    font-weight: bold;
-    display: inline-block;
-    text-align: justify;
-    font-size: 1.3rem; */
 }
 
 form input[type="text"], form input[type="email"]{
@@ -614,13 +610,6 @@ form input[type="text"], form input[type="email"]{
     width: 300px;
     padding: 10px 10px;
     margin: 8px 0;
-    /* width: 300px;
-    padding: 10px 10px;
-    border: 1px solid black;
-    margin: 8px 0;
-    font-family: Oxygen-Regular;
-    font-size: 16px;
-    display: inline-block; */
 }
 
 form input[type="submit"]{
@@ -632,19 +621,8 @@ form input[type="submit"]{
     font-size: 1.3rem;
     width: 300px;
     padding: 8px 16px;
+    margin-top: 8px;
     color: rgb(186, 164, 128);
-    /* width: 300px;
-    padding: 8px 16px;
-    margin-top: 25px;
-    margin-bottom: 30px;
-    border: 1px solid black;
-    color: aquamarine;
-    background-color: rgb(93, 122, 120);
-    font-family: Oxygen-Regular;
-    color: rgb(32, 53, 54);
-    font-weight: bolder;
-    font-size: 1.3rem;
-    display: block; */
 }
 
 form input[type="submit"]:hover {
@@ -658,23 +636,108 @@ textarea{
     margin: 8px 0;
     font-family: Oxygen-Regular;
     font-size: 1rem;
-    width: 300px;
-    height: 100px;
+    width: 500px;
+    height: 300px;
     padding: 10px;
     border: 1px solid black;
     margin: 8px 0;
     font-family: Oxygen-Regular;
     font-size: 1rem;
-    /* width: 300px;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid black;
-    background-color: rgb(255, 255, 255);
-    margin: 8px 0;
-    font-family: Oxygen-Regular;
-    font-size: 16px;
-    display: block; */
 }
 
+.icon__menu{
+    cursor: pointer;
+    height: 100%;
+   display: none; 
+}
 
+#check__menu{
+    display:none;
+}
 
+/* RESPONSIVE */
+
+@media (min-width:768px) and(max-width:1024px){
+    header{
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .titulo{
+        width: 100%;
+        display: block;
+    }
+
+    .nav label{
+        display: block;
+     }
+
+     .nav__navList{
+        display:none;
+     }
+
+     #check__menu:checked ~ .nav__navList{
+        width: 100vh;
+        height: 100vh;
+        position:absolute;
+        left:0px;
+        top: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start; 
+        font-size: 2rem; 
+     }
+
+     footer{
+        display: grid;
+        width:100%;
+        grid-template-columns: 1fr;
+        width: 100%;
+       
+     }
+     
+     .footer__titulo{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+     }
+    
+    .footer__redes{
+   flex-direction: row;
+    justify-content: start;
+    padding: 15px;
+    }
+    
+    .footer__disclaimer{
+    flex-direction: row;
+    width: 100vw;
+    justify-content: start;
+    padding-bottom: 15px;
+    }
+    
+    .footer__copyright{
+        display: flex;
+        justify-content: start;
+        padding: 5px;
+    }
+
+   }
+
+    
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+   
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px){
+    
+}
+
+@media screen and (min-width: 961px) and (max-width: 1328px){
+    
+}
