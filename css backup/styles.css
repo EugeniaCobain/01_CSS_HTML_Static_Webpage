@@ -1,0 +1,878 @@
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* PROPIEDADES PARA TODO EL SITIO */
+@font-face {
+    font-family: Tombstone-FREE;
+    src: url(../assets/Fonts/Tombstone-FREE.otf);
+}
+
+@font-face {
+    font-family: Oxygen-Regular;
+    src: url(../assets/Fonts/Oxygen-Regular.ttf);
+}
+
+body{
+    font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif;
+    background-color: rgb(192, 214, 188);
+}
+/* ESTILOS DEL HEADER (excepto el de la página ÍNDEX */
+.header__paginas{
+   position:sticky;
+   top: 0;
+    }
+
+/* ESTILO DE ENLACES (menos los del menú que están estilizados en ese espacio) */
+main a {
+   color:black;
+   font-weight: bold;
+}
+
+footer a, .btn-group a{
+   color: rgb(186, 164, 128);
+   font-weight: bolder;
+}
+
+/* HEADER LOGO */
+.header__logo{
+    width: 100vw;
+    /* max-width:1200px; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color: rgb(69, 92, 80);
+}
+
+.logo img{
+    width: 600px;
+}
+
+/* MENÚ */
+.container__menu{
+    width: 100vw;
+    height: 10vh;
+    padding: 0px 25px;
+    background: rgb(69, 92, 80);
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height:100%;
+}
+
+nav>ul{
+    height: 100%;
+    font-size: 1.3rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    display: flex;
+    justify-content: center;
+}
+
+nav>ul>li{
+    height: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    color: rgb(186, 164, 128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.nav li a:hover{
+    color: rgb(146, 141, 127);
+    transition: all 0.3s;
+ }
+
+ /* MENÚ DROPDOWN/DESPLEGABLE */
+ nav ul li ul{
+    background-color:rgb(32, 53, 54);
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    z-index: 10;
+ }
+
+ nav ul li ul li{
+    padding: 10px;
+ }
+
+ nav ul li ul li a{
+    color: rgb(126, 121, 108);
+    
+ }
+ 
+ nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+ }
+
+ /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
+ .icon__menu{
+    font-size: 2rem;
+    color: rgb(126, 121, 108);
+    cursor: pointer;
+    justify-content: center;
+    width: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #label__check{
+    width: 100px; /* No le puedo cambiar el tamaño */
+    height: 100%;
+    display:none;
+ }
+
+ #check__menu{
+    display:none;
+ }
+
+ /* FOOTER */
+ footer{
+    width: 100%;
+    background-color: rgb(32, 53, 54);
+    color: rgb(186, 164, 128);
+    /* max-width: 1200px;
+    margin: auto; */
+ }
+
+ .footer__titulo{
+    width: 100%;
+    display: grid; 
+    padding: 10px 0px 0px 50px;
+ }
+
+ footer .grupo1 .box figure{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+ }
+
+ footer .grupo1 .box figure img{
+    width: 200px;
+ }
+
+ .footer__redes {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 50px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 35px;
+ }
+
+ i{
+    padding-right: 5px;
+     }
+
+ .footer__disclaimer{
+    display: flex;
+    justify-content: center;
+        padding-bottom: 15px;
+        }
+ 
+ .footer__copyright{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    padding: 10px 10px;
+    text-align: center;
+ }
+
+ footer .grupo2 small{
+    font-size: 1rem;
+ }
+
+/* 1) PÁGINA INICIO */
+.index__container{ 
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.grid__index{ 
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto ;
+   gap: 100px;
+}
+
+.imgCarousel img{
+   width: 100%;
+   height: 750px;
+}
+
+/* Secciones del Index ordenadas con FLEX */
+.mainIndex__secciones{
+display: flex;
+flex-direction: column;
+padding: 150px 75px 75px 75px;
+/* padding: 75px; */
+}
+
+.mainIndex__secciones h3{
+font-size: 3rem;
+display: flex;
+justify-content: center;
+margin-bottom: 10px;
+}
+
+.mainIndex__secciones p{
+font-size: 1.3rem;
+justify-content: center;
+text-align: justify;
+}
+
+.linkUp{
+line-height: 4rem;
+display: flex;
+justify-content: end;
+}
+
+/* 3.1) Sección "About" */
+.seccion__about{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+padding: 25px;
+}
+
+.about__texto{
+flex: 1;
+order: -1;
+margin-right: 50px;
+/*  padding: 50px; */
+}
+
+.about__imagen{
+width: 500px; 
+flex:1;
+/*  margin-right: 50px; */
+filter: drop-shadow(4px 4px 4px rgba(9, 18, 18, 0.381));
+}
+
+/* 3.1) Sección "Grave"" */
+.seccion__grave{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+padding-top: 60px;
+/* padding-bottom: 70px; */
+}
+
+.grave__texto{
+flex: 1;
+margin-left: 50px;
+/*  padding: 50px; */
+}
+
+.grave__imagen{
+width: 500px; 
+flex:1;
+/* margin-left: 50px; */
+filter: drop-shadow(-4px 4px 4px rgba(9, 18, 18, 0.381))
+}
+
+/* 2) PÁGINA ARTICLES */
+/* 2.1) Banner  */
+.wrapArticles{
+   width:100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url(../assets/imgs/articles/Nürnskull.JPG);
+   background-size: cover;
+   background-position: center;
+   background-position: 60% 98%;
+}
+
+.wrapArticles__imgSobreTexto{
+   color: rgb(186, 164, 128);
+   text-align: center;
+   font-size: 3rem;
+   font-weight: bolder;
+   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+
+/* 3) PÁGINA GRAVES */
+/* 3.1) Propiedades generales */
+.graves__container{ 
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.main__graves{
+   display: grid;
+   grid-template-columns: 1fr;
+}
+
+/* 3.2)Banner */
+.wrapGraves{
+   width:100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
+   background-size: cover;
+   background-position: 70% 100%;
+   background-position: center;
+}
+
+.wrapGraves__imgSobreTexto{
+   color: rgb(186, 164, 128);
+   text-align: center;
+   font-size: 3rem;
+   font-weight: bolder;
+   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+
+/* 3.3) Propiedades comunes */
+.btn-group{
+   display: flex;
+   justify-content: center;
+   padding: 75px;
+   gap: 20px;
+}
+
+.btn-personal{
+   background-color: rgb(32, 53, 54) ;
+   font-family: Oxygen-Regular;
+   color:rgb(186, 164, 128);
+   font-weight: bold;
+   font-size: 2rem;
+   width: 300px;
+   padding: 8px 16px;
+   padding: 25px;
+}
+
+.artists__section, .scientists_section, .thinkers__section{
+   width: 100%;
+   text-align: center;
+   /* font-size: 2rem; */
+   padding: 20px;
+   font-size: 3rem;
+}
+
+figcaption{
+   background-color: rgb(32, 53, 54) ;
+   font-family: Oxygen-Regular;
+   color:rgb(186, 164, 128);
+   font-size: 1.3rem;
+   max-width: 350px;
+   font-weight: bold;
+   text-align: center;
+   line-height: 2rem;
+}
+
+.zoom{
+   transition: .5s;
+   width: 300px;
+   height: 300px;
+}
+
+.zoom:hover{
+   transform: scale(1.5);
+   z-index: 100;
+}
+
+/* 3.4) Sección "Artists" */
+.artists__graves{
+   padding: 100px;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 75px 0px;
+   justify-items: center;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.artists__graves>figure>img {
+   width: 350px;
+   height: 350px;
+   border: solid 3px rgb(69, 92, 80);
+}
+
+/* 3.5) Sección "Scientists" */
+.scientists__graves{
+   padding: 100px;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 75px 0px;
+   justify-items: center;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.scientists__graves>figure>img {
+   width: 350px;
+   height: 350px;
+   border: solid 3px rgb(69, 92, 80);
+}
+
+/* 3.6) Sección "Thinkers" */
+.thinkers__graves{
+   padding: 100px;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 75px 0px;
+   justify-items: center;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.thinkers__graves>figure>img {
+   width: 350px;
+   height: 350px;
+    border: solid 3px rgb(69, 92, 80);
+}
+
+/* 4) PAGINA LOCATIONS */
+/* 4.1) Banner */
+.wrapLocations{
+   width:100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url(../assets/imgs/locations/locations.jpg);
+   background-size: cover;
+   background-position: center;
+   background-position: 100% 13%;
+}
+
+.wrapLocations__imgSobreTexto{
+   color: rgb(186, 164, 128);
+   text-align: center;
+   font-size: 3rem;
+   font-weight: bolder;
+   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+
+ /* 5) PÁGINA CONTACTO */
+ /* 5.1) Porpiedades generales */
+.contacto__container{ 
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.grid__contacto{
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto ;
+   grid-template-areas:
+   "cabecera"
+   "main"
+   "footer"
+   ;
+}
+.header__contacto{
+   grid-area: cabecera;
+}
+
+.main__contacto{
+grid-area: main;
+display: flex;
+flex-direction: column;
+}
+
+.footer__contacto{
+grid-area: footer;
+}
+
+/*5.2) Banner  */
+.wrapContacto{
+   width:100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url(../assets/imgs/contacto/westminster.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+.wrapContacto__imgSobreTexto{
+   color: rgb(186, 164, 128);
+   text-align: center;
+   font-size: 3rem;
+   font-weight: bolder;
+   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+
+/* 5.3) Sección "Mail" */
+.mail__contacto{ 
+   width: 100%;
+   text-align: center;
+   font-size: 1.3rem;
+   padding: 25px;
+}
+
+.mail__contacto>p{
+   margin-top: 20px;
+   margin-left: 50px;
+   margin-right: 50px;
+}
+
+/* 5.4)Sección "Form" */
+form{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 75px;
+}
+
+form label{
+   font-weight: bold;
+   font-size: 1.3rem;
+   text-align: justify;
+}
+
+form input[type="text"], form input[type="email"]{
+   border: 1px solid black;
+   font-family: 
+   Oxygen-Regular;
+   font-size: 1rem;
+   width: 300px;
+   padding: 10px 10px;
+   margin: 8px 0;
+}
+
+form input[type="submit"]{
+   border: 1px solid black;
+   background-color: rgb(93, 122, 120);
+   font-family: Oxygen-Regular;
+   color: rgb(32, 53, 54);
+   font-weight: bolder;
+   font-size: 1.3rem;
+   width: 300px;
+   padding: 8px 16px;
+   margin-top: 8px;
+   color: rgb(186, 164, 128);
+}
+
+form input[type="submit"]:hover {
+   color: rgb(146, 141, 127);
+   transition: all 0.3s;
+}
+
+textarea{
+   border: 1px solid black;
+   background-color: rgb(255, 255, 255);
+   margin: 8px 0;
+   font-family: Oxygen-Regular;
+   font-size: 1rem;
+   width: 500px;
+   height: 300px;
+   padding: 10px;
+   border: 1px solid black;
+   margin: 8px 0;
+   font-family: Oxygen-Regular;
+   font-size: 1rem;
+}
+
+.icon__menu{
+   cursor: pointer;
+   height: 100%;
+  display: none; 
+}
+
+#check__menu{
+   display:none;
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
+    .header__logo{
+        padding: 15px;
+    }
+    .logo img{
+        width: 350px;
+    }
+    nav > ul{
+        flex-direction: column;
+        align-items: start;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 221px;/* CÓMO HAGP PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        background-color:rgb(32, 53, 54);
+    }
+  
+    nav ul li a{
+        margin-left: 30px;
+    } 
+    nav ul li ul{
+        flex-direction: row;
+        left: 200px;
+        width: 100px;
+        bottom: 4px;
+     }
+     #label__check{
+        display:block;
+     }
+     .icon__menu{
+        display: flex;
+     }
+     #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+     }
+
+     footer {
+        padding: 25px 0px 0px;
+     }
+
+     .footer__titulo a, .footer__logo a img {
+        width: 250px;
+     }
+
+    .footer__titulo{
+        width: 250px;
+        justify-content: start;
+        align-items: start;
+        margin-left:25px;
+        padding: 0;
+     }
+     .grupo1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:15px;
+        justify-content: space-evenly;
+     }
+
+     .footer__redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        font-size: 1rem;
+        text-align: center;
+        margin-right:25px;
+     }
+
+     .footer__disclaimer{
+        font-size: .9rem;
+        margin: 15px 25px;
+        display:block;
+     }
+
+     .footer__copyright{
+        font-size: .9rem;
+        margin: 0px 25px;
+        padding: 0px;
+        display:block;
+     }
+
+     /* Página inicio */
+     .mainIndex__secciones{
+      padding: 50px;
+      padding-bottom: 0px;
+      }
+
+      .carrousel{
+         object-fit:cover;
+         height: auto;
+      }
+   
+      .seccion__about{
+         align-items: center;
+         justify-content: center;
+         padding-bottom: 100px;
+      }
+
+      .about__texto{
+      flex: -1;
+      order: 1;
+      justify-self: start;
+      }
+      
+      .about__imagen{
+      width: 100%; 
+      }
+      
+      .seccion__grave{
+         justify-content: center;
+         padding: 0;
+         margin: 0;
+      }
+   
+      .grave__imagen{
+      width: 100%; 
+      justify-self: center;
+      margin-left: 15px;
+      }
+
+     /* Página Articles */
+     .wrapArticles{
+      background-position: 5% 25%;
+   }
+
+      /* Página Graves */
+     /* Página Locations */
+
+     /* Página Contacto */
+     form{
+      padding-bottom: 60px;
+   }
+
+    }
+    
+    
+@media screen and (min-width: 350px) and (max-width: 768px){ /* entre 350 y 767 aplican los cambios */
+    nav ul li ul{
+        flex-direction: column;
+        left: 200px;
+        width: 100px;
+        bottom: 4px;
+        background-color:rgb(32, 53, 54);
+    }
+
+    footer {
+        padding: 15px 0px 0px;
+     }
+
+     .footer__titulo{
+        display:flex;
+     }
+
+    .footer__logo{
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        padding: 0;
+     }
+     .grupo1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap:10px;
+        justify-content: space-evenly;
+     }
+
+     .footer__redes {
+        gap: 15px;
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 35px;
+     }
+
+     .footer__disclaimer{
+        font-size: .8rem;
+        margin: 0px 25px;
+        display:block;
+        text-align: center;
+     }
+
+     .footer__copyright{
+        font-size: .6rem;
+        margin: 0px 25px;
+        padding: 0px;
+        display:block;
+     }
+
+     /* Página Inicio */
+     .mainIndex__secciones{
+      padding: 10px;
+      padding-bottom: 0px;
+      }
+
+      .carrousel{
+         object-position: 85% 25%;
+      }
+      .seccion__about, .seccion__grave{
+         width: 100vw;
+         justify-content: center;
+      }  
+      .about__imagen, .grave__imagen{
+      height: 0;
+      }
+      
+      .about__texto, .grave__texto{
+         margin:0;
+         padding:0;
+      }
+
+      .grave__texto{
+         margin:25px;
+      }
+      .seccion__grave{
+         flex:0;
+         padding: 0;
+         margin-left: 0px;
+      }
+
+     /* Página Articles */
+     .wrapArticles{
+      background-position: 5% 25%;
+   }
+
+      /* Página Graves */
+
+     /* Página Locations */
+     .wrapLocations{
+      background-position: 65% 13%;
+   }
+
+   .wrapLocations__imgSobreTexto{
+      font-size: 2.5rem;
+   }
+  
+     /* Página Contacto */
+     form{
+      padding-bottom: 50px;
+   }
+
+     textarea{
+      width: 300px;
+      height: 300px;
+   }
+
+    }

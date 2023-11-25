@@ -1,0 +1,11 @@
+{
+  "name": "preentrega3_boni",
+  "version": "1.0.0",
+  "description": "Proyecto DW con SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugenia B",
+  "license": "ISC"
+}
