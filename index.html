@@ -12,10 +12,10 @@
 </head>
 
 <body class="index__container">
-    <header id="header">
+    <header id="header" class="header__paginas">
         <div class="header__logo">
             <div class="logo">
-                <a href="./index.html"><img src="./assets/imgs/logo/logo header.png" alt="Acta est fabula"></a>
+                <a href="./index.html"><img src="./assets/imgs/logo/logo header.png" alt="Acta est fabula" title="Acta est fabula"></a>
                 </div>
             </div>
         <div class="container__menu">
@@ -46,57 +46,42 @@
             </div>
         </div>
     </header>
-
-    <div class="grid__index">
-            <!-- CARROUSEL CON BOOTSTRAP - SE VE UNO ABAJO DEL OTRO Y NO FUNCIONA, POR ESO LO DEJO COMENTADO -->
-              <!-- <div id="carouselExample" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="/assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg" class="d-block w-100 imgCarousel" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="/assets/imgs/inicio/imágenes_carrousel/carrousel4.jpg" class="d-block w-100 imgCarousel" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="/assets/imgs/inicio/imágenes_carrousel/carrousel2.jpg" class="d-block w-100 imgCarousel" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div> -->
-          
+           
         <main class="mainIndex">
                   
             <section class="imgCarousel"><!-- Acá iría el carrousel de imágenes -->
-                <img src="./assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg" alt="Gisant sur la tombe de Fernand Arbelot" class="carrousel">
+
+              <!--   <picture>
+                    <source media="(mix-width: 465px)" srcset="./assets/imgs/inicio/imágenes_carrousel/reemplazo.webp">
+                    <img src="./assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg" alt="">
+                </picture> -->
+                
             </section>
           
         <section class="mainIndex__secciones">
                 <div class="seccion__about">
-                    <div> <img src="./assets/imgs/inicio/Inicio3.jpg" alt="Kiss of death" class="about__imagen">
-                    </div>
                     <div class="about__texto">
                         <h3 id="about">About the site</h3>
-                        <p>It is a common belief that cemeteries are eerie, creepy places, but in many countries they are seen as big quiet parks where people go walking or jogging, meet their friends, have a picnics, take naps, read and walk their dogs. Some of them are even in the middle of the city, with no walls or fences surrounfing them. In addition to that, they are not only quien but also open air museums. 
-                        <br>If you want to know more, please read these <a href="./html/articles.html">articles</a>
-                        </p>
+                        <p>Welcome to our website, where reverence meets inspiration, and the past echoes through the hallowed grounds of those who shaped the course of history.</p>
+                        <p>Cemeteries are captivating spaces that embody the intersection of art and remembrance and they are living testaments to the enduring power of human achievement and the impact one individual can have on the collective consciousnes</p>
+                        <p>In this sacred virtual space, we understand the profound importance of commemorating the lives of those who changed the world, leaving an enduring impact on the tapestry of human existence. Whether it's the pioneers who paved the way for progress, the visionaries who sparked innovation, or the compassionate souls who dedicated their lives to making the world a better place, our website is a gateway to the final resting places of these remarkable individuals.</p>
+                        <p>As you navigate through our platform, you'll discover a curated collection of information and guides, all designed to assist and inspire your pilgrimage to the burial places of these world-changers.</p>
+                        <p>If you want to know more, please read these <a href="./html/articles.html">articles</a></p>
+    
                         <div class="linkUp"><a href="#header">Back to top</a></div>
                     </div>
-                      </div>
+                    <img src="./assets/imgs/inicio/Inicio3.jpg" alt="Kiss of death" title="The Kiss of Death" class="about__imagen">
+                </div>
           
             <section class="seccion__grave">
-                <div><img src="./assets/imgs/inicio/Inicio2.png" alt="Newton" class="grave__imagen">
-                </div>
+                <img src="./assets/imgs/inicio/Inicio2.png" alt="Newton" title="Newton's grave" class="grave__imagen">
+                
                 <div class="grave__texto">
                     <h3>Grave hunters</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, eligendi dolorem iusto vero iste minus, magni dolorum reiciendis, magnam quidem in placeat deserunt asperiores fuga officia commodi deleniti. Commodi eligendi unde distinctio error eum reprehenderit repudiandae, et laborum.
-                    <br>Let's go hunt some <a href="/html/graves.html">graves</a>!</p>
+                    <p>If you've found your way here, it's likely that, like us, you are drawn by the desire to pay homage to the luminaries whose indelible mark on the world continues to resonate in our hearts and minds. </p>
+                    <p>Each grave is more than just a memorial: it becomes a tangible link to the past, a connection with the legacy left behind by those who have influenced not only societies at large but have also touched our personal lives in profound ways, a place where you can stand in quiet contemplation, surrounded by the echoes of greatness.</p>
+                    <p>Join us on this poignant exploration, as we collectively honor the legacies of those who left an indelible mark on the world and continue to shape our personal narratives.</p>
+                    <p>Let's go hunt some <a href="/html/graves.html">graves</a>!</p>
                     <div class="linkUp"><a href="#header">Back to top</a></div>
                 </div>
             </section>
@@ -104,7 +89,6 @@
             </main>
 
     <footer>
-        <div class="grupo1">
             <div class="footer__titulo">
                 <div class="footer__logo"> <a href="./index.html"><img src="./assets/imgs/logo/logo footer.png" alt="Acta est fabula"></a></div>   
             </div>
@@ -119,13 +103,12 @@
                    <p><a href="./html/contacto.html"><i class='bx bx-envelope' ></i>Let's get in touch  </a></p>
                 </div>
             </div>
-        </div>
 
            <div class="footer__disclaimer">
-            <p></p>All images exhibited on this website, except the ones in the section " <!-- &nbsp --><span><a href="./html/graves.html">    The Graves</a></span>", are property of other authors. Credits to whom it may correspond.
+            <p>>All images exhibited on this website, except the ones in the section "<span></span><a href="./html/graves.html"> The Graves</a>", are property of other authors. Credits to whom it may correspond.</p>
             </div>
 
-           <div class="footer_copyrigt">
+           <div>
                 <small class="footer__copyright">&copy; 2023 Segunda pre-entrega - Desarollo web - &nbsp <b>María Eugenia Boni</b></small>
             </div>
     </footer>

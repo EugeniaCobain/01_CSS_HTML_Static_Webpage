@@ -1,0 +1,390 @@
+@import "./partials/variables";
+@import "./partials/reset";
+@import "./partials/navbar";
+@import "./partials/mixin&function";
+
+
+/* PÁGINA INICIO */
+.index__container{ 
+    width: $w;
+ }
+ 
+ .imgCarousel img{
+    width: $w;
+    height: pxARem(750) ;
+ }
+ 
+ /* Secciones del Index ordenadas con FLEX */
+ .imgCarousel{
+    width:100vw;
+    height: $h;
+    @include usarFlexbox;
+    background: url(../assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg);
+    background-size: cover;
+    background-position: center;
+ }
+
+ .mainIndex__secciones{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column;
+ padding: 75px 25px;
+    h3{
+        font-size: $fs*3;
+        @include usarFlexbox;
+        margin-bottom: $padding;
+    }
+    p{
+        font-size: $fs*1.3;
+        /* justify-content: center; */
+        text-align: justify;
+    }
+    .linkUp{
+        line-height: $fs*4;
+        @include justifyFlexbox(start);
+    }
+
+    /* Sección "About" */
+ .seccion__about{
+    @include usarFlexbox;
+    gap:pxARem(40);
+    margin-bottom:pxARem(75);
+    padding: 25px 50px;
+    width: $w;
+       .about__imagen{
+           min-width: pxARem(500); 
+           filter: $shadow;
+           border-radius: pxARem(10);
+       }
+    }
+
+    /* Sección "Graves" */
+ .seccion__grave{
+    @extend .seccion__about;
+    }
+    .grave__imagen{
+        min-width: pxARem(500); 
+        filter: $shadow;
+        border-radius: pxARem(10);
+    }
+ }
+ 
+/* PÁGINA ARTICLES */
+.wrapArticles{
+    background: url(../assets/imgs/articles/Nürnskull.JPG);
+    background-position: 60% 98%;
+    @include wrapper;   
+    .wrapArticles__imgSobreTexto{
+        @include tituloSeccion;
+     }
+ }
+ 
+.article__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    min-height: $h;
+    .article__wrapper{
+        margin: 50px auto;
+        width: $w*0.9;
+        border: solid 3px;;
+        padding: $padding;
+        img{
+            max-width: pxARem(400);
+           /*  min-width: 150px; */
+            float: left;
+            margin-right: $padding;
+            margin-top: $padding;
+        }
+        .textbox{
+            text-align: justify;
+            h2{
+            font-size: $fs*2;
+            margin-bottom: $padding;
+           }
+           h3{
+            font-size: $fs*1.7;
+            padding-top: pxARem(30); /* NO ME DEJA MULTIPLICAR LA FUNCIÓN DENTRO DE LA VARIABLE $PADDING POR 2 */
+            padding-bottom: $padding;
+           }
+           p{
+            font-size: $fs*1.3;
+            line-height: 1.3;
+           }
+        }
+    }
+}
+
+/* PÁGINA GRAVES */
+.wrapGraves{
+    background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
+    background-position: 70% 100%;
+    @include wrapper;
+    .wrapGraves__imgSobreTexto{
+        @include tituloSeccion;
+ }
+}
+
+.btn-group{
+    @include usarFlexbox;
+    padding: pxARem(75);
+    gap: pxARem(20);
+
+    .btn-personal{
+        background-color: $bgfooter ;
+        font-family: $font;
+        color:$color;
+        font-weight: bold;
+        font-size: $fs*2;
+        width:  pxARem(300);
+        padding: 8px 16px;
+        padding:  pxARem(20);
+        transition: all .3s;
+
+        &:hover{
+            background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
+            transform: scale(1.01);
+            a{
+                color: $colorhover;
+            }
+           
+        }
+     }
+ }
+
+ .artists__section, .scientists_section, .thinkers__section{
+    width: $w;
+    text-align: center;
+    padding: pxARem(20);
+    font-size: $fs*3;
+    padding-top: pxARem(100);
+ }
+ 
+/* CARDS */
+.card_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: pixARem(50) 0;
+
+    .card{
+        width: pxARem(400);
+        background-color: $bgcabecera;
+        box-shadow: 2px 2px 4px rgba(9, 18, 18, 1);
+        margin: pxARem(20);
+        padding-bottom: $padding;
+        border: solid 2px rgb(69, 92, 80);
+       
+        img{
+            width: $w;
+            height: calc($w/2);
+            object-fit:cover;
+        }
+
+        .contenido{
+            padding: 15px;
+            color:$color;
+            font-weight: 600;
+                h3{
+                    font-size: $fs*1.6;
+                    margin-bottom: 15px;
+                    text-align: center;
+                    text-shadow: 2px 2px 4px #203536;
+                }
+                p{
+                    font-size: $fs*1.2;
+                    line-height: 1.3;
+                    text-align: justify;
+                    padding-bottom: 15px;
+                }
+        }
+    }
+}
+
+/* PÁGINA LOCATIONS */
+
+
+ 
+ /* PÁGINA CONTACTO */
+ 
+ .main__contacto{
+ grid-area: main;
+ display: flex;
+ flex-direction: column;
+
+    .wrapContacto{
+        background: url(../assets/imgs/contacto/westminster.jpg);
+        @include wrapper;
+        .wrapContacto__imgSobreTexto{
+           @include tituloSeccion;
+         }
+    }
+
+    .mail__contacto{ 
+        width: $w;
+        text-align: center;
+        font-size: $fs*1.3;
+        padding: pxARem(25);
+        &>p{
+            margin-top: pxARem(20);
+            margin-left: pxARem(50);
+            margin-right: pxARem(50);
+         }
+     }
+ }
+
+ form{
+    @include usarFlexbox;
+    flex-direction: column;
+    width: $w;
+    
+    padding-bottom: pxARem(75);
+
+    label{
+        font-weight: bold;
+        font-size: $fs*1.3;
+        text-align: justify;
+     }
+
+     input[type="submit"]{
+        border: 1px solid black;
+        background-color: $bgcabecera;
+        font-family: $font;
+        color: $bgfooter;
+        font-weight: bolder;
+        font-size: $fs*1.3;
+        width: pxARem(300);
+        padding: 8px 16px;
+        margin-top: 8px;
+        color: $color;
+    
+        &[type="submit"]:hover {
+            color: $colorhover;
+            transition: all 0.3s;
+         }
+     }
+
+     textarea{
+        border: 1px solid black;
+        background-color: rgb(255, 255, 255);
+        margin: 8px 0;
+        font-family: $font;
+        font-size: $fs;
+        width: pxARem(500);
+        height: pxARem(300);
+        padding: pxARem(10);
+        border: 1px solid black;
+        margin: 8px 0;
+        font-family: $font;
+        font-size: $fs;
+     }
+ }
+
+ form input[type="text"], form input[type="email"]{
+    border: 1px solid black;
+    font-family: 
+    $font;
+    font-size: $fs;
+    width: pxARem(300);
+    padding: 10px 10px;
+    margin: 8px 0;
+ }
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ /* PÁGINA GRAVES REVISAR!!!!! */
+
+ /* VENEZOLANO */
+ .artists__gallery{
+   
+    .artists__section{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2rem; 
+        padding: 20px;
+        font-size: 3rem;
+         background-color: aquamarine
+    }
+
+    .grid-container{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: minmax(200px, auto);
+        gap: 20px;
+        padding: 20px;
+        grid-auto-flow: dense;
+
+        .grid-item{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        
+            background-color: #03afff;
+            border-radius: 4px;
+            transition: transform 0.3s ease-in-out;
+        
+            border: solid 1px rgb(255,255,255);
+            font-size: 3rem;
+        
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        
+        
+            &:hover{
+                filter: opacity(0.9);
+                transform: scale(1.04);
+            }
+        }
+        
+    }
+
+ }
+
+
+
+
+.wide{
+    grid-column: span 2;
+}
+
+.tall{
+    grid-row: span 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+@import "./partials/queries";

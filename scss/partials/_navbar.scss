@@ -1,0 +1,98 @@
+/* MENÚ */
+.container__menu{
+    width: $w;
+    height: 7vh; //era 10vh
+    padding: 0px 25px;
+    background: $bgcabecera;
+
+    .menu{
+        max-width: pxARem(1200);
+        margin: auto;
+        height: $w;
+
+        nav{
+            height:$w;
+            &>ul{
+                height: $w;
+                font-size: $fs*1.3;
+                display: flex;
+                justify-content: center;
+
+                &>li{
+                    height: $w;
+                    position: relative;
+                    justify-content: center;
+
+                    &>a{
+                        width: $w;
+                        height: $w;
+                        font-weight: bold;
+                        color: $color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: $fs;
+                        
+                        &:hover{
+                        color: $submenucolor;
+                        transition: all 0.3s;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+ /* MENÚ DROPDOWN/DESPLEGABLE */
+ //Si pongo esto dentro del anidamiento anterior, se rompe todo
+ nav ul li ul{
+    background-color:$bgfooter;
+    width: $w; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    z-index: 10;
+
+     &>li{
+        padding: 10px;
+     }
+ }
+
+ nav ul li ul li a{
+    color: $submenucolor;
+ }
+
+ nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+ }
+ 
+
+ /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
+ .icon__menu{
+    font-size: $fs*2;
+    color: $color;
+    cursor: pointer;
+    width: $fs*2;
+    height: $w;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #label__check{
+    width: 100px;
+    height: $w;
+    display:none;
+ }
+
+ #check__menu{
+    display:none;
+ }

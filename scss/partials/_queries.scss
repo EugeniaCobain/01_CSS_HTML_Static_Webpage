@@ -1,0 +1,274 @@
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px) { /* de 1024 para abajo aplican los cambios */
+   .imgCarousel{
+      background: url(../assets/imgs/inicio/imágenes_carrousel/reemplazo.jpg);
+      background-size: cover;
+      background-position: center;
+   }
+}
+
+@media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
+    
+    nav > ul{
+        flex-direction: column;
+        align-items: start;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        top: 210px/* 210 */; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
+       /*  height: 0px; */
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        background-color:$bgfooter;
+    }
+  
+    nav ul li a{
+        margin-left: pxARem(30);
+    } 
+
+    nav ul li ul{
+        flex-direction: row;
+        left: pxARem(200);
+        width: pxARem(100);
+        bottom: pxARem(4);
+     }
+
+     #label__check{
+        display:block;
+     }
+     .icon__menu{
+        display: flex;
+        margin-left: pxARem(20);
+        font-size: $fs*3;
+        font-weight: bold;
+     }
+     #check__menu:checked ~ nav > ul{
+        height: pxARem(300);
+        visibility: visible;
+        opacity: 1;
+     }
+
+     /* FOOTER */
+      .footer__titulo{
+         display:flex;
+         justify-content: center;
+      }
+
+      .footer__redes{
+         padding-top: pxARem(10);
+         padding-left: pxARem(55);
+         @include usarFlexbox;
+         width:$w;
+      }
+
+      .footer__disclaimer{
+         @include usarFlexbox;
+         margin: 10px 25px;
+         text-justify: center;
+         font-size: $fs*0.9;
+         padding-bottom: pxARem(15);
+          }
+
+     /* PÁGINA INICIO*/
+     .mainIndex__secciones{
+      padding: 100px 15px;
+      .carrousel{
+         object-fit:cover;
+         height: auto;
+      }
+
+      .linkUp{
+         justify-content:center;
+     }
+
+      .seccion__about{
+        width: $w;
+        margin-bottom: pxARem(10);
+        padding:pxARem(25);
+
+         .about__imagen{
+            display: none;
+         }
+      }
+
+      .seccion__grave{
+         width: $w;
+         padding: pxARem(25);
+ 
+          .grave__imagen{
+             display: none;
+          }
+       }
+     }
+   
+     /* PÁGINA ARTICLES */
+     .wrapArticles{
+      background-position: 5% 25%;
+      }
+
+   .article__wrapper{
+      width: $w;
+      border: solid 3px;;
+
+      img{
+          width: $w;
+          padding:0;
+      }
+
+      .textbox{
+          h2{
+          font-size: $fs*1.5;
+          padding: 0;
+          margin-bottom:pxARem(10);
+         }
+         h3{
+          font-size: $fs*1.2;
+          margin:10px 0;
+         }
+         p{
+          font-size: $fs*1.3;
+          line-height: 1.3;
+         }
+      }
+  }
+
+      /* Página Graves */
+      .btn-group{
+        display: flex;
+        flex-direction: column;
+         padding: pxARem(50);
+         gap: pxARem(20);
+      }
+      
+     /* CARDS */
+     .card_container{
+         margin: 25px 0;
+         .card{
+            width: pxARem(500);
+            height: auto;
+            img{
+                width: $w;
+                height: auto;
+            }
+     }
+   }
+
+     /* Página Locations */
+
+     /* PÁGINA CONTACTO */
+     form{
+      padding-bottom: pxARem(60);
+     }
+      }
+    
+@media screen and (min-width: 350px) and (max-width: 767px){ /* entre 350 y 767 aplican los cambios */
+   
+   .logo img{
+    width: pxARem(350);
+     margin: 15px 30px;
+   }
+  
+   nav > ul{
+      top: 200px;/* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
+  }
+   
+    nav ul li ul{
+        flex-direction: column;
+        top: pxARem(4);
+        left: pxARem(200);
+        width: 1pxARem(100);
+        bottom: pxARem(4);
+    }
+
+    .icon__menu{
+      display: flex;
+      margin-left: 10px;
+      padding-bottom: 10px;
+      font-size: $fs*3;
+      font-weight: bold;
+   }
+   
+   /* FOOTER */
+   .footer__logo{
+      img{
+      margin: 0;
+      width: 90%;
+      }
+   }
+
+   .footer__redes{
+      display: flex;
+      padding: 20px 25px 20px 25px;
+         h3{
+            font-size: $fs*0.9;
+         }
+         p{
+            font-size: $fs*0.975;
+            i{
+               display: none;
+            }
+         }
+   }
+
+   .footer__disclaimer{
+      font-size: 0.8rem;
+      padding-bottom: 10px;
+      text-justify:inherit;
+       }
+
+     /* Página Inicio */
+
+     .imgCarousel{
+      background: url(../assets/imgs/inicio/imágenes_carrousel/reemplazo.jpg);
+      background-size: cover;
+      background-position: center;
+   }
+    
+     /* Página Articles */
+     .wrapArticles{
+      background-position: 5% 25%;
+   }
+
+   .article__wrapper{
+      width: $w;
+      border: solid 3px;;
+      .textbox{
+          h2{
+          text-align:center;
+         }
+         h3{
+            text-align:center;
+            padding-top: 20px;
+            padding-bottom: 0;
+         }
+         p{
+          font-size: 1.3rem;
+          line-height: 1.4;
+         }
+      }
+  }
+
+      /* Página Graves */
+
+     /* Página Locations */
+     .wrapLocations{
+      background-position: 65% 13%;
+   }
+
+   .wrapLocations__imgSobreTexto{
+      font-size: $fs*2.5;
+   }
+  
+     /* Página Contacto */
+     form{
+      padding-bottom: pxARem(50);
+
+      textarea{
+         width: pxARem(300);
+         height: pxARem(300);
+      }
+   }
+    } 

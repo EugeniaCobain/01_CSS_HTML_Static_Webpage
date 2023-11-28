@@ -1,0 +1,111 @@
+//RESET Y ESTILOS DE TODO EL SITIO (HEADER + FOOTER)
+
+
+/* RESET */
+*{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* PROPIEDADES PARA TODO EL SITIO */
+@font-face {
+    font-family: Tombstone-FREE;
+    src: url(../assets/Fonts/Tombstone-FREE.otf);
+}
+
+@font-face {
+    font-family: $font;
+    src: url(../assets/Fonts/Oxygen-Regular.ttf);
+}
+
+body{
+    font-family:$font, sans-serif, Arial, Helvetica, sans-serif;
+    background-color: $bgbody;
+}
+
+/* ESTILOS DEL HEADER (excepto el de la página ÍNDEX */
+.header__paginas{
+    position:sticky;
+    top: 0;
+ }
+ 
+ /* ESTILO DE ENLACES (menos los del menú que están estilizados en ese espacio) */
+ main a {
+    color:black;
+    font-weight: bold;
+    transition: all ease-in-out .3s;
+
+    &:hover{
+        color: $color;
+        transform: scale(1.4)
+    }
+ }
+ 
+ footer a, .btn-group a{
+    color: $color;
+    font-weight: bolder;
+ }
+ 
+ /* HEADER LOGO */
+ header{
+    height: 200x;
+ } /* VER ESTO PARA EL MENU DEPSLEGABLE */
+
+.header__logo{
+    width: $w;
+    /* max-width:1200px; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; //era 25
+    background-color: $bgcabecera;
+    .logo img{
+        max-width: 600px;
+    }
+ }
+
+ /* FOOTER */
+ footer{
+    width: 100%;
+    background-color: $bgfooter;
+    color: $color;
+
+        .footer__titulo{
+            width: $w;
+            padding: 10px 0px 0px 50px;
+         }
+
+         .footer__redes {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            font-size: 1.3rem;
+            text-align: center;
+            padding-bottom: 35px;
+
+            i{
+                padding-right: 5px;
+            }  
+         }    
+    }
+
+    .footer__disclaimer{
+        display: flex;
+    justify-content: center;
+        padding-bottom: 15px;
+        }
+     
+     .footer__copyright{
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        padding: 10px 10px;
+        text-align: center;
+        font-size: $fs/1.60;
+     }
+
+ 
