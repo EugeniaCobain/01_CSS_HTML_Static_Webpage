@@ -17,12 +17,12 @@
 }
 
 @font-face {
-    font-family: $font;
+    font-family: Oxygen-Regular;
     src: url(../assets/Fonts/Oxygen-Regular.ttf);
 }
 
 body{
-    font-family:$font, sans-serif, Arial, Helvetica, sans-serif;
+    font-family:Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif;
     background-color: $bgbody;
 }
 
@@ -116,7 +116,7 @@ body{
         padding: 5px;
         padding: 10px 10px;
         text-align: center;
-        font-size: $fs/1.60;
+        font-size: calc($fs/1.60);
      }
 
  

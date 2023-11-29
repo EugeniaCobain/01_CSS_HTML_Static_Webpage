@@ -143,7 +143,7 @@
 
     .btn-personal{
         background-color: $bgfooter ;
-        font-family: $font;
+        font-family: Oxygen-Regular;
         color:$color;
         font-weight: bold;
         font-size: $fs*2;
@@ -386,7 +386,7 @@
      input[type="submit"]{
         border: 1px solid black;
         background-color: $bgcabecera;
-        font-family: $font;
+        font-family: Oxygen-Regular;
         color: $bgfooter;
         font-weight: bolder;
         font-size: $fs*1.3;
@@ -405,14 +405,14 @@
         border: 1px solid black;
         background-color: rgb(255, 255, 255);
         margin: 8px 0;
-        font-family: $font;
+        font-family: Oxygen-Regular;
         font-size: $fs;
         width: pxARem(500);
         height: pxARem(300);
         padding: pxARem(10);
         border: 1px solid black;
         margin: 8px 0;
-        font-family: $font;
+        font-family: Oxygen-Regular;
         font-size: $fs;
      }
  }
@@ -420,7 +420,7 @@
  form input[type="text"], form input[type="email"]{
     border: 1px solid black;
     font-family: 
-    $font;
+    Oxygen-Regular;
     font-size: $fs;
     width: pxARem(300);
     padding: 10px 10px;

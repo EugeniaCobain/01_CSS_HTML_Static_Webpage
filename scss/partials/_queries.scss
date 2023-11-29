@@ -152,13 +152,11 @@
           width: $w;
           padding:0;
       }
-
       .textbox{
           h2{
           font-size: $fs*1.5;
           padding: 0;
           margin-bottom:pxARem(10);
-
          }
          h3{
           font-size: $fs*1.2;
@@ -308,7 +306,6 @@
          padding-bottom:0px;
          border-left: none;
          .locations__pais{
-
             h2{
                font-size: $fs*3; 
                padding-bottom: pxARem(30);
