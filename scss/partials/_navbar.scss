@@ -1,10 +1,9 @@
 /* MENÚ */
 .container__menu{
     width: $w;
-    height: 7vh; //era 10vh
+    height: 7vh; //era 7vh
     padding: 0px 25px;
     background: $bgcabecera;
-
     .menu{
         max-width: pxARem(1200);
         margin: auto;
@@ -31,10 +30,10 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        padding: $fs;
+                        padding: 1rem;
                         
                         &:hover{
-                        color: $submenucolor;
+                        color: rgb(146, 141, 127);
                         transition: all 0.3s;
                         }
                     }
@@ -44,6 +43,7 @@
         }
     }
 }
+
 
  /* MENÚ DROPDOWN/DESPLEGABLE */
  //Si pongo esto dentro del anidamiento anterior, se rompe todo
@@ -67,6 +67,12 @@
 
  nav ul li ul li a{
     color: $submenucolor;
+    font-weight: bold;
+    &:hover{
+        color:$colorhover;
+        color: $color;
+        transition: all 0.3s;
+        }
  }
 
  nav ul li:hover ul{
@@ -78,13 +84,17 @@
  /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
  .icon__menu{
     font-size: $fs*2;
-    color: $color;
+    color: $submenucolor;
     cursor: pointer;
     width: $fs*2;
     height: $w;
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover{
+        color: $colorhover;
+        transition: all 0.3s;
+    }
  }
 
  #label__check{

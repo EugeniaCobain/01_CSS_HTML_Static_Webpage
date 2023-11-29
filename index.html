@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the final resting places of visionaries and trailblazers in our curated guide to the graves of scientists, artists, and philosophers. Uncover the legacies etched in stone, exploring the burial places of those who shaped our world. Join us on a unique pilgrimage to celebrate the intellectual, artistic, and scientific contributions that echo through time, as we pay homage to the resting places of these remarkable minds">
+    <meta name="keywords" content="graveyard, cemetery photography, cemetery appreciation, gravesites of remarkable individuals, graves of renowned figures, burial places of scientists, writers, philosophers, thinkers, graves, tombs">
     <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="styles" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
     <!-- Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Animaciones -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css">
     <title>Acta est fabula - Home</title>
 </head>
@@ -14,7 +25,7 @@
 <body class="index__container">
     <header id="header" class="header__paginas">
         <div class="header__logo">
-            <div class="logo">
+            <div class="logo animate__animated animate__pulse animate__repeat-3	3">
                 <a href="./index.html"><img src="./assets/imgs/logo/logo header.png" alt="Acta est fabula" title="Acta est fabula"></a>
                 </div>
             </div>
@@ -50,11 +61,6 @@
         <main class="mainIndex">
                   
             <section class="imgCarousel"><!-- Acá iría el carrousel de imágenes -->
-
-              <!--   <picture>
-                    <source media="(mix-width: 465px)" srcset="./assets/imgs/inicio/imágenes_carrousel/reemplazo.webp">
-                    <img src="./assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg" alt="">
-                </picture> -->
                 
             </section>
           
@@ -70,11 +76,11 @@
     
                         <div class="linkUp"><a href="#header">Back to top</a></div>
                     </div>
-                    <img src="./assets/imgs/inicio/Inicio3.jpg" alt="Kiss of death" title="The Kiss of Death" class="about__imagen">
+                    <img src="./assets/imgs/inicio/Inicio3.jpg" alt="Kiss of death" title="The Kiss of Death" class="about__imagen" data-aos="fade-left">
                 </div>
           
             <section class="seccion__grave">
-                <img src="./assets/imgs/inicio/Inicio2.png" alt="Newton" title="Newton's grave" class="grave__imagen">
+                <img src="./assets/imgs/inicio/Inicio2.png" alt="Newton" title="Newton's grave" class="grave__imagen" data-aos="fade-right">
                 
                 <div class="grave__texto">
                     <h3>Grave hunters</h3>
@@ -105,7 +111,7 @@
             </div>
 
            <div class="footer__disclaimer">
-            <p>>All images exhibited on this website, except the ones in the section "<span></span><a href="./html/graves.html"> The Graves</a>", are property of other authors. Credits to whom it may correspond.</p>
+            <p>All images exhibited on this website, except the ones in the section "<span></span><a href="./html/graves.html"> The Graves</a>", are property of other authors. Credits to whom it may correspond.</p>
             </div>
 
            <div>
@@ -113,5 +119,10 @@
             </div>
     </footer>
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

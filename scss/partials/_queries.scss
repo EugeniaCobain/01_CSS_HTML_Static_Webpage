@@ -6,7 +6,44 @@
       background-size: cover;
       background-position: center;
    }
-}
+
+   .locations__grid{
+      gap: 25px;
+   }
+   .aside{
+      margin:50px;
+      padding:0px;
+   }
+
+   /* PÁGINA LOCATIONS SIN TERMINAR */
+      .locations__main{
+         padding-left:15px;
+         padding-top: 50px;
+         padding-bottom:0px;
+         border-left: 2px solid $bgfooter;
+         .locations__pais{
+            h2{
+               font-size: $fs*3; 
+               padding-bottom: pxARem(30);
+              }
+              h3{
+               margin:0;
+              }
+             h4{
+               padding-bottom: pxARem(20);
+              }
+              .locations__ciudad{
+               display: flex;
+             flex-direction: column;
+             flex-wrap: wrap;
+             gap:25px;
+            
+            }
+         }
+      }
+      
+  }   
+
 
 @media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
     
@@ -111,8 +148,6 @@
 
    .article__wrapper{
       width: $w;
-      border: solid 3px;;
-
       img{
           width: $w;
           padding:0;
@@ -123,6 +158,7 @@
           font-size: $fs*1.5;
           padding: 0;
           margin-bottom:pxARem(10);
+
          }
          h3{
           font-size: $fs*1.2;
@@ -234,7 +270,6 @@
 
    .article__wrapper{
       width: $w;
-      border: solid 3px;;
       .textbox{
           h2{
           text-align:center;
@@ -251,17 +286,50 @@
       }
   }
 
-      /* Página Graves */
-
-     /* Página Locations */
+     /* Página Locations SIN TERMINAR */
      .wrapLocations{
-      background-position: 65% 13%;
+      background-position: 30% 13%;
    }
 
    .wrapLocations__imgSobreTexto{
-      font-size: $fs*2.5;
+      font-size: $fs*2.5; /* NO ME DEJA ACHICARLO */
    }
-  
+
+   .locations__grid{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 1fr;
+      grid-template-areas: 
+      "principal";
+      .locations__main{
+         margin:25px;
+         margin-bottom: 0px;
+         padding:0;
+         padding-bottom:0px;
+         border-left: none;
+         .locations__pais{
+
+            h2{
+               font-size: $fs*3; 
+               padding-bottom: pxARem(30);
+              }
+              h3{
+               margin:0;
+              }
+             h4{
+               padding-bottom: pxARem(20);
+              }
+              .locations__ciudad{
+               display: flex;
+             flex-direction: column;
+             flex-wrap: wrap;
+             gap:25px;
+            
+            }
+         }
+      }
+      
+  }   
      /* Página Contacto */
      form{
       padding-bottom: pxARem(50);

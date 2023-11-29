@@ -3,10 +3,26 @@ $bgbody: rgb(192, 214, 188);
 $bgfooter: rgb(32, 53, 54);
 $color: rgb(186, 164, 128);
 $colorhover:  rgb(146, 141, 127);
-$submenucolor:  rgb(126, 121, 108); 
+$submenucolor:  #7e796c; 
+$fondos: rgb(43, 69, 66);
+
 $padding: 0.9rem;
 $w: 100%;
 $h: 100vh;
 $fs: 1rem;
 $font: Oxygen-Regular;
 $shadow: drop-shadow(4px 4px 6px rgba(32, 53, 54, 0.381));
+
+
+
+
+
+/* mapa para probar cómo funciona */
+$thinkers:(
+'heidegger',
+'sartre',
+'schopenhauer',
+'hegel'
+)
+
+

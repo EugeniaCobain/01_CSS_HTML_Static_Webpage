@@ -25,8 +25,15 @@
     background-position: center;
 }
 
+@mixin locations{
+    @include justifyFlexbox(start);
+    gap: 50px;
+    margin-bottom: 25px;
+    gap:200px;
+}
+
 @mixin tituloSeccion{
-    color: rgb(186, 164, 128);
+    color: $color;
             text-align: center;
             font-size: $fs*3;
             font-weight: bolder;

@@ -86,17 +86,28 @@ body{
             font-size: 1.3rem;
             text-align: center;
             padding-bottom: 35px;
+           
+            a:hover{
+              color: $submenucolor;  
+              transition: .3s ease-in-out;
+            }
 
             i{
                 padding-right: 5px;
             }  
+
+           
          }    
     }
 
     .footer__disclaimer{
         display: flex;
-    justify-content: center;
+        justify-content: center;
         padding-bottom: 15px;
+        a:hover{
+              color: $submenucolor;  
+              transition: .3s ease-in-out;
+            }
         }
      
      .footer__copyright{
