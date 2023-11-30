@@ -229,6 +229,7 @@
  }
  
 /* En "_variables" hice un mapa para probar cómo funciona con el @EACh. En efecto, en el archivo .CSS se crearon las clases .heideggerimag y demás, pero no las necesito */
+
 @each $thinker in heidegger, sartre, schopenhauer, hegel{
     .#{$thinker}imag{
         background-image: url(../assets/imgs/graves/thinkers/#{$thinker});

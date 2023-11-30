@@ -40,20 +40,17 @@
             
             }
          }
-      }
-      
+      }   
   }   
 
-
-@media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
-    
+@media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */ 
     nav > ul{
         flex-direction: column;
         align-items: start;
         width: 100vw;
         position: fixed;
         left: 0;
-        top: 210px/* 210 */; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
+        top: 210px; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
        /*  height: 0px; */
         transition: all 300ms ease;
         z-index: 100;
