@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* $font: Oxygen-Regular; */
 /* mapa para probar cómo funciona */
 /* RESET */
 * {
@@ -700,8 +699,6 @@ form textarea {
   padding: 0.625rem;
   border: 1px solid black;
   margin: 8px 0;
-  font-family: Oxygen-Regular;
-  font-size: 1rem;
 }
 
 form input[type=text], form input[type=email] {
