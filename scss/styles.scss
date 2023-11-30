@@ -202,12 +202,12 @@
         .contenido{
             padding: 15px;
             color:$color;
-            font-weight: 600;
                 h3{
                     font-size: $fs*1.6;
                     margin-bottom: 15px;
                     text-align: center;
                     text-shadow: 7px 4px 4px $bgfooter;
+                    font-weight: 600;
                 }
                 p{
                     font-size: $fs*1.2;
@@ -426,82 +426,7 @@
  }
  
 
- 
 
- 
- 
- 
- 
-
-
-
-
-
-
-
-
- /* PÁGINA GRAVES REVISAR!!!!! */
-
- /* VENEZOLANO */
- .artists__gallery{
-   
-    .artists__section{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 2rem; 
-        padding: 20px;
-        font-size: 3rem;
-         background-color: aquamarine
-    }
-
-    .grid-container{
-        display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-auto-rows: minmax(200px, auto);
-        gap: 20px;
-        padding: 20px;
-        grid-auto-flow: dense;
-
-        .grid-item{
-            display:flex;
-            align-items: center;
-            justify-content: center;
-        
-            background-color: #03afff;
-            border-radius: 4px;
-            transition: transform 0.3s ease-in-out;
-        
-            border: solid 1px rgb(255,255,255);
-            font-size: 3rem;
-        
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        
-        
-            &:hover{
-                filter: opacity(0.9);
-                transform: scale(1.04);
-            }
-        }
-        
-    }
-
- }
-
-
-
-
-.wide{
-    grid-column: span 2;
-}
-
-.tall{
-    grid-row: span 2;
-}
 
 
 
