@@ -4,31 +4,43 @@
 @import "./partials/mixin&function";
 
 
-/* PÁGINA INICIO */
-.index__container{ 
-    width: $w;
- }
- 
- .imgCarousel img{
-    width: $w;
-    height: pxARem(750) ;
- }
- 
- /* Secciones del Index ordenadas con FLEX */
- .imgCarousel{
-    width:100vw;
-    height: $h;
-    @include usarFlexbox;
-    background: url(../assets/imgs/inicio/imágenes_carrousel/Carrousel.jpg);
-    background-size: cover;
-    background-position: center;
- }
+/* PÁGINA INICIO*/
+/* Carrousel/Slider con animación CSS */
+.slider-frame{
+    width:100%;
+    height: auto;
+    ul{
+        display: flex;
+        padding: 0;
+        width:400%;
+        animation: slider 12s infinite alternate ease-in;
+        li{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @keyframes slider{
+        0%{margin-left: 0%;}
+        20%{margin-left: 0%;}
 
- .mainIndex__secciones{
- display: flex;
- flex-wrap: wrap;
- flex-direction: column;
- padding: 75px 25px;
+        25%{margin-left: -100%;}
+        45%{margin-left: -100%;}
+
+        50%{margin-left: -200%;}
+        70%{margin-left: -200%;}
+
+        75%{margin-left: -300%;}
+        95%{margin-left: -300%;}
+    }
+}
+
+.index__secciones{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 50px 25px;
     h3{
         font-size: $fs*3;
         @include usarFlexbox;
@@ -36,7 +48,6 @@
     }
     p{
         font-size: $fs*1.3;
-        /* justify-content: center; */
         text-align: justify;
     }
     .linkUp{
@@ -45,31 +56,31 @@
     }
 
     /* Sección "About" */
- .seccion__about{
-    @include usarFlexbox;
-    gap:pxARem(40);
-    margin-bottom:pxARem(75);
-    padding: 25px 50px;
-    width: $w;
-       .about__imagen{
-           min-width: pxARem(500); 
-           filter: $shadow;
-           border-radius: pxARem(10);
-           z-index: -100;
-       }
+    .seccion__about{
+        @include usarFlexbox;
+        gap:pxARem(40);
+        margin-bottom:pxARem(75);
+        padding: 25px 50px;
+         width: $w;
+            .about__imagen{
+                width: pxARem(500); 
+                filter: $shadow;
+                border-radius: pxARem(10);
+                z-index: -100;
+            }
     }
 
     /* Sección "Graves" */
- .seccion__grave{
-    @extend .seccion__about;
-    }
-    .grave__imagen{
-        min-width: pxARem(500); 
-        filter: $shadow;
-        border-radius: pxARem(10);
-        z-index: -100;
-    }
- }
+    .seccion__grave{
+        @extend .seccion__about;
+        .grave__imagen{
+         width: pxARem(400); 
+         filter: $shadow;
+            border-radius: pxARem(10);
+            z-index: -100;
+        }
+    }   
+}
  
 /* PÁGINA ARTICLES */
 .wrapArticles{

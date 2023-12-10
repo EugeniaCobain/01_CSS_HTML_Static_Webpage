@@ -1,54 +1,44 @@
 /* MENÚ */
 .container__menu{
-    width: $w;
-    height: 7vh; //era 7vh
-    padding: 0px 25px;
-    background: $bgcabecera;
-
+    background-color: $bgcabecera;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
     .menu{
-        max-width: pxARem(1200);
-        margin: auto;
-        height: $w;
-
-        nav{
-            height:$w;
+        .nav{
             &>ul{
                 height: $w;
                 font-size: $fs*1.3;
                 display: flex;
                 justify-content: center;
-
                 &>li{
                     height: $w;
                     position: relative;
                     justify-content: center;
-
                     &>a{
                         width: $w;
                         height: $w;
-                        font-weight: bold;
                         color: $color;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         padding: 1rem;
-                        
                         &:hover{
                         color: rgb(146, 141, 127);
                         transition: all 0.3s;
                         }
                     }
-                }
-                
+                }  
             }
         }
     }
 }
 
-
  /* MENÚ DROPDOWN/DESPLEGABLE */
  //Si pongo esto dentro del anidamiento anterior, se rompe todo
- nav ul li ul{
+ .nav ul li ul{
     background-color:$bgfooter;
     width: $w; 
     display: flex;
@@ -60,15 +50,13 @@
     opacity: 0;
     transition: opacity 1.5s;
     z-index: 10;
-
      &>li{
         padding: 10px;
      }
  }
 
- nav ul li ul li a{
+ .nav ul li ul li a{
     color: $submenucolor;
-    font-weight: bold;
     &:hover{
         color:$colorhover;
         color: $color;
@@ -76,24 +64,25 @@
         }
  }
 
- nav ul li:hover ul{
+ .nav ul li:hover ul{
     visibility: visible;
     opacity: 1;
  }
  
-
  /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
  .icon__menu{
-    font-size: $fs*2;
-    color: $submenucolor;
+    /* font-size: $fs*2; */
+    /* color: $submenucolor; */
     cursor: pointer;
-    width: $fs*2;
-    height: $w;
+    width: 40px;
+    height:40px;
+    /* height: $w; */
     display: flex;
     justify-content: center;
     align-items: center;
     &:hover{
-        color: $colorhover;
+        /* background-color: $colorhover; */
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 1));
         transition: all 0.3s;
     }
  }

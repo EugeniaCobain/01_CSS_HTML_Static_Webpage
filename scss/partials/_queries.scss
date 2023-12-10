@@ -1,11 +1,72 @@
 /* RESPONSIVE */
 
 @media screen and (max-width: 1024px) { /* de 1024 para abajo aplican los cambios */
-   .imgCarousel{
-      background: url(../assets/imgs/inicio/imágenes_carrousel/reemplazo.jpg);
-      background-size: cover;
-      background-position: center;
+
+/* MENÚ */
+.nav > ul{
+   flex-direction: column;
+   align-items: start;
+   width: 100%;
+   position: fixed;
+   left: 0;
+   top: 200px; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
+     /*  height: 0px; */
+   transition: all 300ms ease;
+   z-index: 100;
+   opacity: 0;
+   visibility: hidden;
+   background-color:$bgfooter;
+}
+.nav ul li a{
+   margin-left: pxARem(25);
+} 
+.nav ul li ul{
+   flex-direction: row;
+   left: pxARem(200);
+   width: pxARem(100);
+   bottom: pxARem(4);
+}
+/* MENÚ HAMBURGUESA */
+#label__check{
+   display:block;
+}
+.icon__menu{
+   display: flex;
+   margin-left: pxARem(20);
+   font-size: $fs*3;
+}
+#check__menu:checked ~ .nav > ul{
+   height: pxARem(300);
+   visibility: visible;
+   opacity: 1;
+}
+
+/* FOOTER */
+footer{
+   .footer__titulo{
+       width: $w;
+       padding: 5px 0px 0px 25px;
+       height: 95px;
    }
+   .footer__redes {
+       display: flex;
+       justify-content: center;
+       gap: 40px;
+       font-size: 1.2rem;
+       padding-bottom: 25px;
+   } 
+   .footer__disclaimer{
+       display: flex;
+       justify-content: center;
+       padding-bottom: 10px;
+       a:hover{
+               color: $submenucolor;  
+               transition: .3s ease-in-out;
+       }
+   }
+}
+
+
 
    .locations__grid{
       gap: 25px;
@@ -44,101 +105,100 @@
   }   
 
 @media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */ 
-    nav > ul{
-        flex-direction: column;
-        align-items: start;
-        width: 100vw;
-        position: fixed;
-        left: 0;
-        top: 210px; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
-       /*  height: 0px; */
-        transition: all 300ms ease;
-        z-index: 100;
-        opacity: 0;
-        visibility: hidden;
-        background-color:$bgfooter;
-    }
-  
-    nav ul li a{
-        margin-left: pxARem(30);
-    } 
 
-    nav ul li ul{
-        flex-direction: row;
-        left: pxARem(200);
-        width: pxARem(100);
-        bottom: pxARem(4);
-     }
-
-     #label__check{
-        display:block;
-     }
-     .icon__menu{
-        display: flex;
-        margin-left: pxARem(20);
-        font-size: $fs*3;
-        font-weight: bold;
-     }
-     #check__menu:checked ~ nav > ul{
-        height: pxARem(300);
-        visibility: visible;
-        opacity: 1;
-     }
-
-     /* FOOTER */
-      .footer__titulo{
-         display:flex;
-         justify-content: center;
+/* HEADER + LOGO */
+header{
+   height: 110px;
+   .container__logo{
+      img{
+            width: 350px;
       }
+   }
+}
 
-      .footer__redes{
-         padding-top: pxARem(10);
-         padding-left: pxARem(55);
-         @include usarFlexbox;
-         width:$w;
+/* MENÚ */
+.container__menu{
+   height: 60px;
+}
+.nav > ul{
+   top:170px;
+}
+.nav ul li {
+   width: 200px;
+   margin:0;
+   padding:0;
+   left:0;  
+}
+.nav ul li a{
+   margin:0;
+} 
+.nav ul li .art{
+   margin: 0;
+   padding:0;
+   padding-bottom:2px;
+   display: flex;
+}
+.nav ul li .gra{
+   flex-direction: column;
+   margin: 0;
+   padding:0;
+   top:7px;   
+      a{
+         display: flex;
+         padding-left: 5px;
       }
+}
 
-      .footer__disclaimer{
-         @include usarFlexbox;
-         margin: 10px 25px;
-         text-justify: center;
-         font-size: $fs*0.9;
-         padding-bottom: pxARem(15);
-          }
-
-     /* PÁGINA INICIO*/
-     .mainIndex__secciones{
-      padding: 100px 15px;
-      .carrousel{
-         object-fit:cover;
-         height: auto;
-      }
-
-      .linkUp{
-         justify-content:center;
-     }
-
-      .seccion__about{
-        width: $w;
-        margin-bottom: pxARem(10);
-        padding:pxARem(25);
-
-         .about__imagen{
-            display: none;
-         }
-      }
-
-      .seccion__grave{
-         width: $w;
-         padding: pxARem(25);
- 
-          .grave__imagen{
-             display: none;
-          }
+/* FOOTER */
+footer{
+   .footer__titulo{
+      padding:0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       .footer__logo img{
+          width: 350px;
        }
-     }
-   
-     /* PÁGINA ARTICLES */
+   }
+   .footer__redes {
+       gap: 35px;
+       font-size: 1.2rem;
+       padding-bottom: 25px;
+   } 
+}
+
+/* INICIO */
+.index__secciones{
+   padding: 30px 30px;
+   h3{
+      font-size: $fs*2;
+      text-align: center;
+   } 
+   .seccion__about{
+      flex-direction: column;
+      width: $w;
+      margin-bottom: pxARem(25);
+      padding:pxARem(10);
+         .about__imagen{
+            width:350px;
+         }
+   }
+   .seccion__grave{
+      width: $w;
+      padding: pxARem(10);
+      .grave__imagen{
+         display: none;
+      }
+   }
+}
+
+
+
+
+
+
+
+       /* PÁGINA ARTICLES */
      .wrapArticles{
       background-position: 5% 25%;
       }
@@ -193,37 +253,103 @@
      form{
       padding-bottom: pxARem(60);
      }
-      }
-    
-@media screen and (min-width: 350px) and (max-width: 767px){ /* entre 350 y 767 aplican los cambios */
-   
-   .logo img{
-    width: pxARem(350);
-     margin: 15px 30px;
-   }
-  
-   nav > ul{
-      top: 200px;/* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
-  }
-   
-    nav ul li ul{
-        flex-direction: column;
-        top: pxARem(4);
-        left: pxARem(200);
-        width: 1pxARem(100);
-        bottom: pxARem(4);
-    }
+}
 
-    .icon__menu{
-      display: flex;
-      margin-left: 10px;
-      padding-bottom: 10px;
-      font-size: $fs*3;
-      font-weight: bold;
+@media screen and (max-width: 350px) { /* de 350 para abajo aplican los cambios*/
+
+/* HEADER + LOGO */
+header{
+   height: 90px;
+   .container__logo{
+      img{
+            width: 300px;
+      }
    }
+}
+
+/* MENÚ */
+.container__menu{
+   height: 50px;
+}
+.nav > ul{
+   top:140px;
+}
+.nav ul li {
+   font-size: 1.1rem;
+   width: 150px;
+}
+.nav ul li ul{
+   left: pxARem(150);
+}
+.nav ul li .art{
+   padding:0;
+   margin:0;
+   padding-bottom:6px;
+}
+.nav ul li .gra{ 
+   a{
+      padding-left: 10px;
+   }
+}
+/* MENÚ HAMBURGUESA */
+.icon__menu{
+   width: 35px;
+   height:35px;
+}
+
+/* FOOTER */
+footer{
+   .footer__titulo{
+      padding: 0px;
+      height:85px;
+       .footer__logo img{
+         padding-top:10px;
+         padding-bottom: 0;
+         width:300px;
+       }
+   }
+   .footer__redes {
+       gap: 35px;
+       font-size: 1.1rem;
+       padding: 0px;
+       padding-bottom:20px;
+       i{
+         display: none;
+       }
+   }
+   .footer__copyright{
+      font-size:calc($fs/1.8)
+   }
+}
+
+
+/* INICIO */
+.index__secciones{
+   padding: 15px 5px;
+   .seccion__about{
+      margin-bottom: pxARem(10);
+      padding:pxARem(20);
+         .about__imagen{
+            display:none;
+         }
+   }
+   .seccion__grave{
+      margin-bottom: pxARem(10);
+      padding:pxARem(20);
+         .grave__imagen{
+            display:none;
+         }  
+   }
+}
+
    
+   
+
+
+
+
    /* FOOTER */
-   .footer__logo{
+   /* .footer__logo{
       img{
       margin: 0;
       width: 90%;
@@ -248,15 +374,15 @@
       font-size: 0.8rem;
       padding-bottom: 10px;
       text-justify:inherit;
-       }
+       } */
 
      /* Página Inicio */
 
-     .imgCarousel{
+    /*  .imgCarousel{
       background: url(../assets/imgs/inicio/imágenes_carrousel/reemplazo.jpg);
       background-size: cover;
       background-position: center;
-   }
+   } */
     
      /* Página Articles */
      .wrapArticles{
@@ -333,4 +459,4 @@
          height: pxARem(300);
       }
    }
-    } 
+}

@@ -8,19 +8,18 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    @font-face {
+        font-family: Oxygen-Regular;
+        src: url(../assets/Fonts/Oxygen-Regular.ttf);
+    }
 }
 
 /* PROPIEDADES PARA TODO EL SITIO */
-@font-face {
+/* @font-face {
     font-family: Tombstone-FREE;
     src: url(../assets/Fonts/Tombstone-FREE.otf);
 }
-
-@font-face {
-    font-family: Oxygen-Regular;
-    src: url(../assets/Fonts/Oxygen-Regular.ttf);
-}
-
+ */
 body{
     font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif;
     background-color: $bgbody;
@@ -37,10 +36,10 @@ body{
     color:black;
     font-weight: bold;
     transition: all ease-in-out .3s;
-
     &:hover{
         color: $color;
-        transform: scale(1.4)
+        transform: scale(1.2);
+        filter: $shadow;
     }
  }
  
@@ -49,74 +48,71 @@ body{
     font-weight: bolder;
  }
  
- /* HEADER LOGO */
+ /* HEADER */
  header{
-    height: 200x;
- } /* VER ESTO PARA EL MENU DEPSLEGABLE */
-
-.header__logo{
-    width: $w;
-    /* max-width:1200px; */
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px; //era 25
     background-color: $bgcabecera;
-    .logo img{
-        max-width: 600px;
+    width: $w;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .container__logo{
+            img{
+                width: 450px;
+            }
     }
  }
 
- /* FOOTER */
- footer{
+/* FOOTER */ /* VER ETIQUETA MARQUEE */
+marquee{
+    overflow-x: hidden;
+}
+footer{
     width: 100%;
     background-color: $bgfooter;
     color: $color;
-
-        .footer__titulo{
-            width: $w;
-            padding: 10px 0px 0px 50px;
-         }
-
-         .footer__redes {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            font-size: 1.3rem;
-            text-align: center;
-            padding-bottom: 35px;
-           
-            a:hover{
-              color: $submenucolor;  
-              transition: .3s ease-in-out;
-            }
-
-            i{
-                padding-right: 5px;
-            }  
-
-           
-         }    
+    .footer__titulo{
+        width: $w;
+        padding: 0px 0px 0px 50px;
+        height: 95px;
+        .footer__logo{
+            height:95px;
+        }
     }
-
+    .footer__redes {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        font-size: 1.3rem;
+        text-align: center;
+        padding-bottom: 35px;
+        a:hover{
+            color: $submenucolor;  
+            transition: .3s ease-in-out;
+        }
+        i{
+                padding-right: 5px;
+        }   
+    } 
     .footer__disclaimer{
         display: flex;
         justify-content: center;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         a:hover{
-              color: $submenucolor;  
-              transition: .3s ease-in-out;
-            }
+                color: $submenucolor;  
+                transition: .3s ease-in-out;
         }
-     
-     .footer__copyright{
+    }
+    .footer__copyright{
         display: flex;
         justify-content: center;
         padding: 5px;
-        padding: 10px 10px;
         text-align: center;
         font-size: calc($fs/1.60);
-     }
+    }  
+}
 
+
+    
  
