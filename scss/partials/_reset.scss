@@ -29,6 +29,12 @@ body{
 .header__paginas{
     position:sticky;
     top: 0;
+    width: 100%;
+    z-index: 100;
+ }
+.nav__paginas{
+    position:fixed;
+    z-index: 100;
  }
  
  /* ESTILO DE ENLACES (menos los del menú que están estilizados en ese espacio) */
@@ -54,7 +60,6 @@ body{
     width: $w;
     height: 140px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     .container__logo{
@@ -74,9 +79,10 @@ footer{
     color: $color;
     .footer__titulo{
         width: $w;
-        padding: 0px 0px 0px 50px;
+        padding: 10px 0px 0px 50px;
         height: 95px;
         .footer__logo{
+            padding-top: 20px;
             height:95px;
         }
     }

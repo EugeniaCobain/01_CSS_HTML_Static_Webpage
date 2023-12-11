@@ -28,6 +28,13 @@ body {
 .header__paginas {
   position: sticky;
   top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav__paginas {
+  position: fixed;
+  z-index: 100;
 }
 
 /* ESTILO DE ENLACES (menos los del menú que están estilizados en ese espacio) */
@@ -53,7 +60,6 @@ header {
   width: 100%;
   height: 140px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -73,10 +79,11 @@ footer {
 }
 footer .footer__titulo {
   width: 100%;
-  padding: 0px 0px 0px 50px;
+  padding: 10px 0px 0px 50px;
   height: 95px;
 }
 footer .footer__titulo .footer__logo {
+  padding-top: 20px;
   height: 95px;
 }
 footer .footer__redes {
@@ -191,7 +198,7 @@ footer .footer__copyright {
 }
 .icon__menu:hover {
   /* background-color: $colorhover; */
-  filter: drop-shadow(4px 4px 4px rgb(0, 0, 0));
+  filter: drop-♀(4px 4px 4px rgb(0, 0, 0));
   transition: all 0.3s;
 }
 
@@ -206,15 +213,16 @@ footer .footer__copyright {
 }
 
 /* PÁGINA INICIO*/
-/* Carrousel/Slider con animación CSS */
 .slider-frame {
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 .slider-frame ul {
   display: flex;
   padding: 0;
   width: 400%;
+  overflow: hidden;
   animation: slider 12s infinite alternate ease-in;
 }
 .slider-frame ul li {
@@ -299,10 +307,11 @@ footer .footer__copyright {
 
 /* PÁGINA ARTICLES */
 .wrapArticles {
-  background: url(../assets/imgs/articles/Nürnskull.JPG);
-  background-position: 60% 98%;
-  width: 100vw;
-  height: 100vh;
+  background: url(../assets/imgs/articles/nürnskull.jpg);
+  background-position: 70% 98%;
+  /* background-attachment: fixed; */
+  width: 100%;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,32 +320,46 @@ footer .footer__copyright {
 }
 .wrapArticles .wrapArticles__imgSobreTexto {
   color: rgb(186, 164, 128);
+  /* justify-content: center;
+  align-items: center; */
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
 }
+@media screen and (max-width: 360px) {
+  .wrapArticles .wrapArticles__imgSobreTexto {
+    font-size: 2.8rem;
+  }
+}
 
 .article__container {
-  display: grid;
-  grid-template-columns: 1fr;
+  width: 100%;
+  padding: 50px 25px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: rgb(43, 69, 66);
 }
 .article__container .article__wrapper {
-  margin: 50px auto;
+  margin: 45px auto;
   width: 90%;
   padding: 0.9rem;
-  background-color: rgb(43, 69, 66);
+  /* padding:0; */
 }
 .article__container .article__wrapper img {
   max-width: 25rem;
-  /*  min-width: 150px; */
-  float: left;
+  min-width: 150px;
   margin-right: 0.9rem;
   margin-top: 0.9rem;
+  float: left;
+  border-radius: 5px;
+  filter: drop-shadow(4px 4px 4px rgb(0, 0, 0));
+}
+.article__container .article__wrapper .right {
+  float: right;
+  padding-left: 15px;
 }
 .article__container .article__wrapper .textbox {
   text-align: justify;
@@ -350,8 +373,8 @@ footer .footer__copyright {
 }
 .article__container .article__wrapper .textbox h3 {
   font-size: 1.7rem;
-  padding-top: 1.875rem; /* NO ME DEJA MULTIPLICAR LA FUNCIÓN DENTRO DE LA VARIABLE $PADDING POR 2 */
-  padding-bottom: 0.9rem;
+  padding-top: 25px;
+  padding-bottom: 15px;
   color: rgb(186, 164, 128);
   font-weight: 600;
   text-shadow: 2px 2px 4px #203536;
@@ -362,12 +385,136 @@ footer .footer__copyright {
   color: rgb(186, 164, 128);
 }
 
+/* PÁGINA CONTACTO */
+.main__contacto {
+  display: flex;
+  flex-direction: column;
+}
+.main__contacto .wrapContacto {
+  background: url(../assets/imgs/contacto/westminster.jpg);
+  width: 100%;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
+  color: rgb(186, 164, 128);
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+@media screen and (max-width: 360px) {
+  .main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
+    font-size: 2.8rem;
+  }
+}
+.main__contacto .mail__contacto {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 1.5625rem;
+}
+.main__contacto .mail__contacto > p {
+  margin-top: 1.25rem;
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
+}
+.main__contacto form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.875rem 0;
+}
+.main__contacto form label {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.main__contacto form input[type=submit] {
+  border: 1px solid black;
+  background-color: rgb(69, 92, 80);
+  font-family: Oxygen-Regular;
+  color: rgb(32, 53, 54);
+  font-weight: bolder;
+  font-size: 1.3rem;
+  width: 18.75rem;
+  padding: 8px 16px;
+  margin-top: 8px;
+  color: rgb(186, 164, 128);
+}
+.main__contacto form input[type=submit][type=submit]:hover {
+  color: rgb(146, 141, 127);
+  background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
+  transition: all 0.3s;
+}
+.main__contacto form textarea {
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  margin: 8px 0;
+  font-family: Oxygen-Regular;
+  font-size: 1rem;
+  width: 31.25rem;
+  height: 18.75rem;
+  padding: 0.625rem;
+  border: 1px solid black;
+  margin: 8px 0;
+}
+.main__contacto form input[type=text], .main__contacto form input[type=email] {
+  border: 1px solid black;
+  font-family: Oxygen-Regular;
+  font-size: 1rem;
+  width: 18.75rem;
+  padding: 10px 10px;
+  margin: 8px 0;
+}
+
+.imagen1 {
+  float: right;
+}
+
+.contenedor {
+  text-align: center;
+}
+
+.izquierda {
+  text-align: right;
+}
+
+.parallax__completo {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/imgs/articles/nürnskull.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-hero {
+  background: #111;
+  padding: 18px;
+  width: 320px;
+  text-align: center;
+  color: white;
+}
+
+/* PÁGINA ARTICLES */
 /* PÁGINA GRAVES */
 .wrapGraves {
   background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
   background-position: 70% 100%;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,10 +523,17 @@ footer .footer__copyright {
 }
 .wrapGraves .wrapGraves__imgSobreTexto {
   color: rgb(186, 164, 128);
+  /* justify-content: center;
+  align-items: center; */
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+@media screen and (max-width: 360px) {
+  .wrapGraves .wrapGraves__imgSobreTexto {
+    font-size: 2.8rem;
+  }
 }
 
 .btn-group {
@@ -545,8 +699,8 @@ footer .footer__copyright {
 /* PÁGINA LOCATIONS SIN TERMINAR */
 .wrapLocations {
   background: url(../assets/imgs/locations/locations.jpg);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -556,10 +710,17 @@ footer .footer__copyright {
 }
 .wrapLocations .wrapLocations__imgSobreTexto {
   color: rgb(186, 164, 128);
+  /* justify-content: center;
+  align-items: center; */
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+@media screen and (max-width: 360px) {
+  .wrapLocations .wrapLocations__imgSobreTexto {
+    font-size: 2.8rem;
+  }
 }
 
 .locations {
@@ -643,92 +804,6 @@ footer .footer__copyright {
   padding-bottom: 3.125rem;
 }
 
-/* PÁGINA CONTACTO */
-.main__contacto {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-}
-.main__contacto .wrapContacto {
-  background: url(../assets/imgs/contacto/westminster.jpg);
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bolder;
-  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
-}
-.main__contacto .mail__contacto {
-  width: 100%;
-  text-align: center;
-  font-size: 1.3rem;
-  padding: 1.5625rem;
-}
-.main__contacto .mail__contacto > p {
-  margin-top: 1.25rem;
-  margin-left: 3.125rem;
-  margin-right: 3.125rem;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding-bottom: 4.6875rem;
-}
-form label {
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-align: justify;
-}
-form input[type=submit] {
-  border: 1px solid black;
-  background-color: rgb(69, 92, 80);
-  font-family: Oxygen-Regular;
-  color: rgb(32, 53, 54);
-  font-weight: bolder;
-  font-size: 1.3rem;
-  width: 18.75rem;
-  padding: 8px 16px;
-  margin-top: 8px;
-  color: rgb(186, 164, 128);
-}
-form input[type=submit][type=submit]:hover {
-  color: rgb(146, 141, 127);
-  transition: all 0.3s;
-}
-form textarea {
-  border: 1px solid black;
-  background-color: rgb(255, 255, 255);
-  margin: 8px 0;
-  font-family: Oxygen-Regular;
-  font-size: 1rem;
-  width: 31.25rem;
-  height: 18.75rem;
-  padding: 0.625rem;
-  border: 1px solid black;
-  margin: 8px 0;
-}
-
-form input[type=text], form input[type=email] {
-  border: 1px solid black;
-  font-family: Oxygen-Regular;
-  font-size: 1rem;
-  width: 18.75rem;
-  padding: 10px 10px;
-  margin: 8px 0;
-}
-
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) { /* de 1024 para abajo aplican los cambios */
   /* MENÚ */
@@ -780,7 +855,7 @@ form input[type=text], form input[type=email] {
     justify-content: center;
     gap: 40px;
     font-size: 1.2rem;
-    padding-bottom: 25px;
+    padding: 25px;
   }
   footer .footer__disclaimer {
     display: flex;
@@ -901,29 +976,39 @@ form input[type=text], form input[type=email] {
   .index__secciones .seccion__grave .grave__imagen {
     display: none;
   }
+  /* CONTACTO */
+  form {
+    padding-bottom: 3.125rem;
+  }
+  form #message {
+    width: 18.75rem;
+  }
   /* PÁGINA ARTICLES */
   .wrapArticles {
     background-position: 5% 25%;
   }
-  .article__wrapper {
-    width: 100%;
+  .article__container {
+    padding: 30px 10px;
   }
-  .article__wrapper img {
-    width: 100%;
+  .article__container .article__wrapper {
+    margin: 10px auto;
+    width: 90%;
     padding: 0;
   }
-  .article__wrapper .textbox h2 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin-bottom: 0.625rem;
+  .article__container .article__wrapper img {
+    max-width: 100%;
+    min-width: 150px;
+    margin: 15px 0px;
+    padding: 0px;
+    text-align: center;
+    border-radius: 5px;
+    filter: drop-shadow(4px 4px 4px rgb(0, 0, 0));
   }
-  .article__wrapper .textbox h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
+  .article__container .article__wrapper .right {
+    padding: 0px;
   }
-  .article__wrapper .textbox p {
-    font-size: 1.3rem;
-    line-height: 1.3;
+  .article__container .article__wrapper .textbox {
+    text-align: center;
   }
   /* Página Graves */
   .btn-group {
@@ -945,12 +1030,8 @@ form input[type=text], form input[type=email] {
     height: auto;
   }
   /* Página Locations */
-  /* PÁGINA CONTACTO */
-  form {
-    padding-bottom: 3.75rem;
-  }
 }
-@media screen and (max-width: 350px) { /* de 350 para abajo aplican los cambios*/
+@media screen and (max-width: 360px) { /* de 350 para abajo aplican los cambios*/
   /* HEADER + LOGO */
   header {
     height: 90px;
@@ -998,7 +1079,7 @@ form input[type=text], form input[type=email] {
   footer .footer__redes {
     gap: 35px;
     font-size: 1.1rem;
-    padding: 0px;
+    padding: 15px;
     padding-bottom: 20px;
   }
   footer .footer__redes i {
@@ -1025,39 +1106,21 @@ form input[type=text], form input[type=email] {
   .index__secciones .seccion__grave .grave__imagen {
     display: none;
   }
-  /* FOOTER */
-  /* .footer__logo{
-     img{
-     margin: 0;
-     width: 90%;
-     }
+  /* ARTICLES */
+  .article__container {
+    padding: 15px;
   }
-
-  .footer__redes{
-     display: flex;
-     padding: 20px 25px 20px 25px;
-        h3{
-           font-size: $fs*0.9;
-        }
-        p{
-           font-size: $fs*0.975;
-           i{
-              display: none;
-           }
-        }
+  .article__container .png img {
+    width: 30px;
   }
-
-  .footer__disclaimer{
-     font-size: 0.8rem;
-     padding-bottom: 10px;
-     text-justify:inherit;
-      } */
-  /* Página Inicio */
-  /*  .imgCarousel{
-     background: url(../assets/imgs/inicio/imágenes_carrousel/reemplazo.jpg);
-     background-size: cover;
-     background-position: center;
-  } */
+  /* CONTACTO */
+  form input[type=submit], form input[type=text], form input[type=email] {
+    background-color: aquamarine;
+    width: 250px;
+  }
+  form #message {
+    width: 250px;
+  }
   /* Página Articles */
   .wrapArticles {
     background-position: 5% 25%;

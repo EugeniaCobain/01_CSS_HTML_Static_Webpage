@@ -13,40 +13,39 @@
 </head>
 <body>
     <header class="header__paginas">
-        <div class="header__logo">
-            <div class="logo">
-                <a href="../index.html"><img src="../assets/imgs/logo/logo header.png" alt="Acta est fabula"></a>
+        <div class="container__logo">
+                <a href="../index.html"><img src="../assets/imgs/logo/logo header.png" alt="Acta est fabula" title="Acta est fabula"></a>
+                </div>
             </div>
-        </div>
-        <div class="container__menu">
-            <div class="menu">
-                <input type="checkbox" id="check__menu">
-                 <label id="label__check"  for="check__menu"><i class='bx bx-menu icon__menu'></i></label>
-
-                <nav class="nav">
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#about">About the site</a>
-                            <ul>
-                                <li ><a href="./articles.html">Articles</a></li>
-                            </ul>
-                        </li>
-                            
-                        <li><a href="./graves.html">The Graves</a>
-                            <ul>
-                                <li><a href="./graves.html#artists">Artists</a></li>
-                                <li><a href="./graves.html#scientists">Scientists</a></li>
-                                <li><a href="./graves.html#thinkers">Thinkers</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./locations.html">Locations</a></li>
-                        <li><a href="./contacto.html">Contact</a></li>
-                    </ul>
-
-                </nav>
-            </div>
-        </div>
     </header>
+    <nav class="container__menu nav__paginas">
+        <div class="menu">
+            <input type="checkbox" id="check__menu">
+            <label id="label__check"  for="check__menu">
+            <img src="../assets/imgs/logo/iconohamb.png" class="icon__menu" alt="">
+            </label>
+            <div class="nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about">About the site</a>
+                        <ul class="art">
+                            <li ><a href="./articles.html">Articles</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./graves.html">The Graves</a>
+                        <ul class="gra">
+                            <li><a href="./graves.html#artists">Artists</a></li>
+                            <li><a href="./graves.html#scientists">Scientists</a></li>
+                            <li><a href="./graves.html#thinkers">Thinkers</a></li>
+                        </ul>
+                        </li>
+                    <li><a href="./locations.html">Locations</a></li>
+                    <li><a href="./contacto.html">Contact</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
 
     <main class="main__contacto">
         <section class="wrapContacto">
@@ -78,9 +77,10 @@
         </section>
     </main>
 
+
     <footer>
         <div class="footer__titulo">
-            <div class="footer__logo"><a href="../index.html"><img src="../assets/imgs/logo/logo footer.png" alt="Acta est fabula"></a></div>   
+            <div class="footer__logo"> <a href="../index.html"><img src="../assets/imgs/logo/logo footer.png" alt="Acta est fabula"></a></div>   
         </div>
         <div class="footer__redes">
             <div class="redes">
@@ -89,19 +89,17 @@
             </div>
 
             <div class="footer__contacto">
-               <h5>More information</h5>
-               <p><a href="./contacto.html"><i class='bx bx-envelope'></i>Let's get in touch</a></p>
+                <h5>More information</h5>
+                <p><a href="./contacto.html"><i class='bx bx-envelope' ></i>Let's get in touch  </a></p>
             </div>
         </div>
-
-       <div class="footer__disclaimer">
-        <p>All images exhibited on this website, except the ones in the section "<a href="./graves.html">The Graves</a>", are property of other authors. Credits to whom it may correspond.</p>
+        <div class="footer__disclaimer">
+            <marquee direction="left" width="80%">All images exhibited on this website, except the ones in the section "<span></span><a href="./graves.html"> The Graves</a>", are property of other authors. Credits to whom it may correspond.</marquee>
         </div>
-
-       <div>
-            <small class="footer__copyright">&copy; 2023 Tercera pre-entrega - Desarollo web - &nbsp <b>María Eugenia Boni</b></small>
+        <div>
+            <small class="footer__copyright">&copy; 2023 Trabajo Final - Desarollo web - Comisión 46980 - &nbsp <b>María Eugenia Boni</b></small>
         </div>
-</footer>
+    </footer>
 
 </body>
 </html>
