@@ -66,43 +66,39 @@ footer{
    }
 }
 
-
-
-   .locations__grid{
-      gap: 25px;
+/* LOCATIONS */
+.locations{
+   .aside  {
+       padding: 35px 25px;
+       details{
+           summary{
+               padding: 10px;
+               &::before{
+                   padding-right: 10px;
+               }
+           }
+      }
    }
-   .aside{
-      margin:50px;
-      padding:0px;
+   .locations__main{
+       padding: 35px;
+       .locations__pais{
+              padding-bottom: 15px;
+           .locations__ciudad {
+            padding: 10px;
+            gap:100px;
+            margin-bottom: 15px;
+                  h4, ul{
+                   
+                     padding: 10px;
+                  }
+            iframe{
+               width:200px;
+            }      
+           }
+       }   
    }
-
-   /* PÁGINA LOCATIONS SIN TERMINAR */
-      .locations__main{
-         padding-left:15px;
-         padding-top: 50px;
-         padding-bottom:0px;
-         border-left: 2px solid $bgfooter;
-         .locations__pais{
-            h2{
-               font-size: $fs*3; 
-               padding-bottom: pxARem(30);
-              }
-              h3{
-               margin:0;
-              }
-             h4{
-               padding-bottom: pxARem(20);
-              }
-              .locations__ciudad{
-               display: flex;
-             flex-direction: column;
-             flex-wrap: wrap;
-             gap:25px;
-            
-            }
-         }
-      }   
-  }   
+}
+}   
 
 @media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */ 
 
@@ -192,16 +188,7 @@ footer{
    }
 }
 
-/* CONTACTO */
-form{
-   padding-bottom: pxARem(50);
-    #message{
-       width: pxARem(300);
-    }
-}
-
-
-/* PÁGINA ARTICLES */
+/* ARTICLES */
 .wrapArticles{
    background-position: 5% 25%;
 }
@@ -210,7 +197,7 @@ form{
    .article__wrapper{
        margin: 10px auto;
        width: $w*0.9;
-       padding:0;
+       padding:30px 0 30px 0px;
        img{
            max-width: 100%;
            min-width: 150px;
@@ -223,39 +210,126 @@ form{
        .right{
            padding: 0px;
         }
+        .png{
+         padding-left: 10px;
+        }
        .textbox{
            text-align: center;
        }
    }
 }
 
-
-
-
-
-      /* Página Graves */
-      .btn-group{
-        display: flex;
-        flex-direction: column;
-         padding: pxARem(50);
-         gap: pxARem(20);
-      }
-      
-     /* CARDS */
-     .card_container{
-         margin: 25px 0;
-         .card{
-            width: pxARem(500);
-            height: auto;
-            img{
-                width: $w;
-                height: auto;
-            }
-     }
+/* GRAVES */
+.main__graves{
+   .graves__section{
+       padding-top: pxARem(30);
+    }
+   .btn-group{
+      display: flex;
+      flex-direction: column;
+      padding: pxARem(50);
+      gap: pxARem(20);
+    }
+   .grave__container{
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+       grid-auto-rows: minmax(400px, auto);
+       gap:25px;
+       padding: 50px 15px;    
    }
+}
 
-     /* Página Locations */
+/* LOCATIONS */
+.locations{
+   .locations__grid{
+      gap:0px;
+      grid-template-columns: 40% 70%;
+  } 
+   .aside  {
+       padding: 35px 5px 0 5px;
+       details{
+         font-size: 1rem;
+           summary{
+               padding: 5px;
+               &::before{
+                   padding-right: 10px;
+               }
+           }
+      }
+   }
+   .locations__main{
+       display: flex;
+       flex-direction: column;
+       margin:35px 5px 0 5px;
+       padding:0;
+       gap:0;
+       .locations__pais{
+              padding-bottom: 15px;
+              padding-left:0px;
+              gap:0;
+              font-size:1.5;
+           .locations__ciudad {
+            flex-direction: column;
+            padding: 0;
+            gap:20px;
+            margin-bottom: 15px;
+                  h4, ul{
+                     font-size: 1rem;
+                     padding: 0px;
+                  }
+            iframe{
+               width:100px;
+            }      
+           }
+       }   
+   }
+}
 
+
+/* .locations{
+   .aside  {
+       padding: 35px 20px;
+       details{
+           summary{
+               padding: 10px;
+               &::before{
+                   padding-right: 10px;
+               }
+           }
+      }
+   }
+   .locations__main{
+      background-color: aqua;
+      display: flex;
+      flex-direction: column;
+       padding: 35px 20px;
+       .locations__pais{
+              padding-bottom: 15px;
+           .locations__ciudad {
+            flex-direction: column;
+            padding: 10px;
+            gap: 15px;
+            margin-bottom: 15px;
+                  h4, ul{
+                   
+                     padding: 10px;
+                  }       
+           }
+       }   
+   }
+} */
+
+
+
+
+
+/* CONTACTO */
+form{
+   padding-bottom: pxARem(50);
+    #message{
+       width: pxARem(300);
+    }
+}
 }
 
 @media screen and (max-width: 360px) { /* de 350 para abajo aplican los cambios*/
@@ -350,9 +424,61 @@ footer{
    .png{
       img{
          width:30px;
+         margin-left: 5px;
       }
    }
 }
+
+/* LOCATIONS */
+/* .locations{
+   .locations__grid{
+      display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "aside principal";
+  } 
+   .aside  {
+       padding: 35px 5px 0 5px;
+       background-color: aquamarine;
+       details{
+         font-size: 1rem;
+           summary{
+               padding: 5px;
+               &::before{
+                   padding-right: 10px;
+               }
+           }
+      }
+   }
+   .locations__main{
+       display: flex;
+       flex-direction: column;
+       margin:35px 5px 0 5px;
+       padding:0;
+       gap:0;
+       .locations__pais{
+              padding-bottom: 15px;
+              padding-left:0px;
+              gap:0;
+              font-size:1.5;
+           .locations__ciudad {
+            flex-direction: column;
+            padding: 0;
+            gap:20px;
+            background-color: red;
+            margin-bottom: 15px;
+                  h4, ul{
+                     font-size: 1rem;
+                     padding: 0px;
+                  }
+            iframe{
+               width:100px;
+            }      
+           }
+       }   
+   }
+} */
 
 /* CONTACTO */
 form{
@@ -364,84 +490,4 @@ form{
       width: 250px;
    }
 }
-
-
-
-
-    
-     /* Página Articles */
-     .wrapArticles{
-      background-position: 5% 25%;
-   }
-
-   .article__wrapper{
-      width: $w;
-      .textbox{
-          h2{
-          text-align:center;
-         }
-         h3{
-            text-align:center;
-            padding-top: 20px;
-            padding-bottom: 0;
-         }
-         p{
-          font-size: 1.3rem;
-          line-height: 1.4;
-         }
-      }
-  }
-
-     /* Página Locations SIN TERMINAR */
-     .wrapLocations{
-      background-position: 30% 13%;
-   }
-
-   .wrapLocations__imgSobreTexto{
-      font-size: $fs*2.5; /* NO ME DEJA ACHICARLO */
-   }
-
-   .locations__grid{
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: 1fr;
-      grid-template-areas: 
-      "principal";
-      .locations__main{
-         margin:25px;
-         margin-bottom: 0px;
-         padding:0;
-         padding-bottom:0px;
-         border-left: none;
-         .locations__pais{
-            h2{
-               font-size: $fs*3; 
-               padding-bottom: pxARem(30);
-              }
-              h3{
-               margin:0;
-              }
-             h4{
-               padding-bottom: pxARem(20);
-              }
-              .locations__ciudad{
-               display: flex;
-             flex-direction: column;
-             flex-wrap: wrap;
-             gap:25px;
-            
-            }
-         }
-      }
-      
-  }   
-     /* Página Contacto */
-     form{
-      padding-bottom: pxARem(50);
-
-      textarea{
-         width: pxARem(300);
-         height: pxARem(300);
-      }
-   }
 }

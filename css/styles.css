@@ -262,7 +262,7 @@ footer .footer__copyright {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 50px 25px;
+  padding: 50px 125px;
   /* Sección "About" */
   /* Sección "Graves" */
 }
@@ -309,12 +309,13 @@ footer .footer__copyright {
 .wrapArticles {
   background: url(../assets/imgs/articles/nürnskull.jpg);
   background-position: 70% 98%;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   width: 100%;
   height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*  background-attachment: fixed; */
   background-size: cover;
   background-position: center;
 }
@@ -335,7 +336,7 @@ footer .footer__copyright {
 
 .article__container {
   width: 100%;
-  padding: 50px 25px;
+  /* padding: 50px 25px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -343,7 +344,7 @@ footer .footer__copyright {
   background-color: rgb(43, 69, 66);
 }
 .article__container .article__wrapper {
-  margin: 45px auto;
+  margin: 50px auto;
   width: 90%;
   padding: 0.9rem;
   /* padding:0; */
@@ -384,6 +385,166 @@ footer .footer__copyright {
   line-height: 1.3;
   color: rgb(186, 164, 128);
 }
+.article__container .article__parallax {
+  background-image: url(../assets/imgs/articles/seneca2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 96% 12%;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px;
+}
+.article__container .article__parallax2 {
+  background-image: url(../assets/imgs/articles/highgate.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+/* PÁGINA GRAVES */
+.main__graves {
+  background-color: rgb(43, 69, 66);
+}
+.main__graves .wrapGraves {
+  background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
+  background-position: 70% 100%;
+  width: 100%;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  background-attachment: fixed; */
+  background-size: cover;
+  background-position: center;
+}
+.main__graves .wrapGraves .wrapGraves__imgSobreTexto {
+  color: rgb(186, 164, 128);
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+@media screen and (max-width: 360px) {
+  .main__graves .wrapGraves .wrapGraves__imgSobreTexto {
+    font-size: 2.8rem;
+  }
+}
+.main__graves .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4.6875rem;
+  gap: 1.25rem;
+}
+.main__graves .btn-group .btn-personal {
+  background-color: rgb(32, 53, 54);
+  font-family: Oxygen-Regular;
+  color: rgb(186, 164, 128);
+  font-weight: bold;
+  font-size: 2rem;
+  width: 18.75rem;
+  padding: 8px 16px;
+  padding: 1.25rem;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+.main__graves .btn-group .btn-personal:hover {
+  background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
+  transform: scale(1.01);
+}
+.main__graves .btn-group .btn-personal:hover a {
+  color: rgb(146, 141, 127);
+}
+.main__graves .graves__section {
+  width: 100%;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 3rem;
+  color: rgb(186, 164, 128);
+  text-shadow: 7px 4px 4px rgb(32, 53, 54);
+  /* text-shadow: 2px 2px 4px #203536; */
+  padding-top: 3.125rem;
+}
+.main__graves .grave__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: minmax(600px, auto);
+  gap: 50px;
+  padding: 50px 100px;
+}
+.main__graves .grave__container .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  object-fit: cover;
+  color: rgb(186, 164, 128);
+  border-radius: 4px;
+  font-size: 3rem;
+}
+.main__graves .grave__container .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.main__graves .grave__container .card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 4px 20px black;
+}
+.main__graves .grave__container .card .front img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main__graves .grave__container .card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: rgb(43, 69, 66);
+  padding: 5px;
+}
+.main__graves .grave__container .card .front p {
+  justify-content: center;
+  align-items: center;
+}
+.main__graves .grave__container .card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: rgb(32, 53, 54);
+  padding: 15px;
+  color: rgb(186, 164, 128);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 20px black;
+}
+.main__graves .grave__container .card .back h3 {
+  font-size: 1.3rem;
+}
+.main__graves .grave__container .card .back p {
+  font-size: 1rem;
+  padding: 15px;
+  text-justify: justify;
+}
+.main__graves .grave__container .card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+.main__graves .grave__container .card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
 
 /* PÁGINA CONTACTO */
 .main__contacto {
@@ -397,6 +558,7 @@ footer .footer__copyright {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*  background-attachment: fixed; */
   background-size: cover;
   background-position: center;
 }
@@ -476,156 +638,6 @@ footer .footer__copyright {
   margin: 8px 0;
 }
 
-.imagen1 {
-  float: right;
-}
-
-.contenedor {
-  text-align: center;
-}
-
-.izquierda {
-  text-align: right;
-}
-
-.parallax__completo {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../assets/imgs/articles/nürnskull.jpg);
-  background-position: bottom;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.texto-hero {
-  background: #111;
-  padding: 18px;
-  width: 320px;
-  text-align: center;
-  color: white;
-}
-
-/* PÁGINA ARTICLES */
-/* PÁGINA GRAVES */
-.wrapGraves {
-  background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
-  background-position: 70% 100%;
-  width: 100%;
-  height: 750px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.wrapGraves .wrapGraves__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  /* justify-content: center;
-  align-items: center; */
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bolder;
-  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
-}
-@media screen and (max-width: 360px) {
-  .wrapGraves .wrapGraves__imgSobreTexto {
-    font-size: 2.8rem;
-  }
-}
-
-.btn-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4.6875rem;
-  gap: 1.25rem;
-}
-.btn-group .btn-personal {
-  background-color: rgb(32, 53, 54);
-  font-family: Oxygen-Regular;
-  color: rgb(186, 164, 128);
-  font-weight: bold;
-  font-size: 2rem;
-  width: 18.75rem;
-  padding: 8px 16px;
-  padding: 1.25rem;
-  transition: all 0.3s;
-}
-.btn-group .btn-personal:hover {
-  background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
-  transform: scale(1.01);
-}
-.btn-group .btn-personal:hover a {
-  color: rgb(146, 141, 127);
-}
-
-.artists__section, .scientists_section, .thinkers__section {
-  width: 100%;
-  text-align: center;
-  padding: 1.25rem;
-  font-size: 3rem;
-  color: rgb(186, 164, 128);
-  text-shadow: 7px 4px 4px rgb(32, 53, 54);
-  /* text-shadow: 2px 2px 4px #203536; */
-  padding-top: 6.25rem;
-}
-
-/* CARDS */
-.grid__graves {
-  background-color: rgb(43, 69, 66);
-}
-
-.card_container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 50px 0;
-}
-.card_container .card {
-  width: 25rem;
-  background-color: rgb(43, 69, 66);
-  box-shadow: 2px 2px 4px rgb(9, 18, 18);
-  border-radius: 10px;
-  margin: 1.25rem;
-  padding-bottom: 0.9rem;
-  /*  border: solid 2px rgb(69, 92, 80); */
-}
-.card_container .card img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  border: 5px;
-}
-.card_container .card .contenido {
-  padding: 15px;
-  color: rgb(186, 164, 128);
-}
-.card_container .card .contenido h3 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 7px 4px 4px rgb(32, 53, 54);
-  font-weight: 600;
-}
-.card_container .card .contenido p {
-  font-size: 1.2rem;
-  line-height: 1.3;
-  text-align: justify;
-  padding-bottom: 15px;
-}
-
-.zoom {
-  transition: 0.5s;
-}
-
-.zoom:hover {
-  transform: scale(1.07);
-  z-index: 1;
-}
-
 /* En "_variables" hice un mapa para probar cómo funciona con el @EACh. En efecto, en el archivo .CSS se crearon las clases .heideggerimag y demás, pero no las necesito */
 .heideggerimag {
   background-image: url(../assets/imgs/graves/thinkers/heidegger);
@@ -696,19 +708,26 @@ footer .footer__copyright {
 }
 
 /* Funcionó, pero no sé cómo usar esas clases que acabo de crear en mi proyecto. Mi intención era crear de esta manera las cards que faltan sin tener que hacerlas de a 1 */
-/* PÁGINA LOCATIONS SIN TERMINAR */
-.wrapLocations {
+/* LOCATIONS */
+.locations {
+  background-color: rgb(43, 69, 66);
+  /*  .locations__grid > *{
+       height:100%;
+   } */
+}
+.locations .wrapLocations {
   background: url(../assets/imgs/locations/locations.jpg);
   width: 100%;
   height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*  background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   background-position: 100% 14%;
 }
-.wrapLocations .wrapLocations__imgSobreTexto {
+.locations .wrapLocations .wrapLocations__imgSobreTexto {
   color: rgb(186, 164, 128);
   /* justify-content: center;
   align-items: center; */
@@ -718,90 +737,102 @@ footer .footer__copyright {
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
 }
 @media screen and (max-width: 360px) {
-  .wrapLocations .wrapLocations__imgSobreTexto {
+  .locations .wrapLocations .wrapLocations__imgSobreTexto {
     font-size: 2.8rem;
   }
 }
-
-.locations {
-  background-color: rgb(43, 69, 66);
-}
-
-.locations__grid > * {
-  padding: 100px;
-  height: 100%;
-}
-
-.locations__grid {
+.locations .locations__grid {
   display: grid;
   grid-template-columns: 30% 70%;
   grid-template-rows: 1fr;
   grid-template-areas: "aside principal";
 }
-
-.aside {
+.locations .aside {
   grid-area: aside;
   height: 100%;
+  padding: 100px;
 }
-
-.aside > ul > li {
-  font-size: 2.5rem;
-  font-weight: 600;
+.locations .aside details {
+  width: 100%;
+  cursor: pointer;
   color: rgb(186, 164, 128);
-}
-
-.burials {
   font-size: 1.5rem;
-  padding-left: 1.25rem;
+  border-bottom: solid 1px rgb(32, 53, 54);
+  border-right: solid 1px rgb(32, 53, 54);
+}
+.locations .aside details summary {
+  padding: 15px 10px;
+}
+.locations .aside details summary:hover {
+  background-color: rgb(69, 92, 80);
+}
+.locations .aside details summary::before {
+  content: url(../assets/imgs/logo/bx-world.png);
+  padding-right: 5px;
+}
+.locations .aside details ul li {
+  padding: 10px;
+  font-size: 1rem;
   color: rgb(186, 164, 128);
-  padding-bottom: 1.5625rem;
 }
-.burials a {
+.locations .aside details ul li a {
   color: rgb(186, 164, 128);
+  font-weight: 400;
+  transition: all ease-in-out 0.3s;
 }
-.burials a:hover {
-  color: rgb(146, 141, 127);
+.locations .aside details ul li a:hover {
+  color: #7e796c;
+  transform: scale(1.2);
 }
-
-.locations__main {
+.locations .aside details ul li:hover {
+  color: #7e796c;
+  transition: 0.3s ease-in-out;
+}
+.locations .locations__main {
   grid-area: principal;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  padding: 100px 35px;
 }
-.locations__main .locations__pais h2 {
-  font-size: 3rem;
+.locations .locations__main .locations__pais h2 {
+  font-size: 2rem;
   color: rgb(186, 164, 128);
   font-weight: 600;
   text-shadow: 2px 2px 4px #203536;
   padding-bottom: 1.875rem;
 }
-.locations__main .locations__pais h3 {
-  font-size: 2.8rem;
+.locations .locations__main .locations__pais h3 {
+  font-size: 1.5rem;
   color: rgb(186, 164, 128);
+  padding-bottom: 15px;
   font-weight: 600;
   text-shadow: 2px 2px 4px #203536;
   justify-content: start;
 }
-.locations__main .locations__pais h4 {
-  font-size: 2.5rem;
+.locations .locations__main .locations__pais h4 {
+  font-size: 1rem;
   line-height: 1.3;
   color: rgb(186, 164, 128);
-  padding-bottom: 3.125rem;
+  padding-bottom: 1.25rem;
 }
-.locations__main .locations__pais li {
-  font-size: 2rem;
+.locations .locations__main .locations__pais li {
+  font-size: 1rem;
   line-height: 1.3;
-  font-weight: 600;
   color: rgb(186, 164, 128);
 }
-.locations__main .locations__pais .locations__ciudad {
+.locations .locations__main .locations__pais .locations__ciudad {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 50px;
+  gap: 150px;
   margin-bottom: 25px;
-  gap: 200px;
+  /* gap:200px; */
   padding-bottom: 3.125rem;
+}
+.locations .locations__main .locations__pais .locations__ciudad iframe {
+  width: 300px;
+  height: 100px;
 }
 
 /* RESPONSIVE */
@@ -866,35 +897,32 @@ footer .footer__copyright {
     color: #7e796c;
     transition: 0.3s ease-in-out;
   }
-  .locations__grid {
-    gap: 25px;
+  /* LOCATIONS */
+  .locations .aside {
+    padding: 35px 25px;
   }
-  .aside {
-    margin: 50px;
-    padding: 0px;
+  .locations .aside details summary {
+    padding: 10px;
   }
-  /* PÁGINA LOCATIONS SIN TERMINAR */
-  .locations__main {
-    padding-left: 15px;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    border-left: 2px solid rgb(32, 53, 54);
+  .locations .aside details summary::before {
+    padding-right: 10px;
   }
-  .locations__main .locations__pais h2 {
-    font-size: 3rem;
-    padding-bottom: 1.875rem;
+  .locations .locations__main {
+    padding: 35px;
   }
-  .locations__main .locations__pais h3 {
-    margin: 0;
+  .locations .locations__main .locations__pais {
+    padding-bottom: 15px;
   }
-  .locations__main .locations__pais h4 {
-    padding-bottom: 1.25rem;
+  .locations .locations__main .locations__pais .locations__ciudad {
+    padding: 10px;
+    gap: 100px;
+    margin-bottom: 15px;
   }
-  .locations__main .locations__pais .locations__ciudad {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 25px;
+  .locations .locations__main .locations__pais .locations__ciudad h4, .locations .locations__main .locations__pais .locations__ciudad ul {
+    padding: 10px;
+  }
+  .locations .locations__main .locations__pais .locations__ciudad iframe {
+    width: 200px;
   }
 }
 @media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
@@ -976,14 +1004,7 @@ footer .footer__copyright {
   .index__secciones .seccion__grave .grave__imagen {
     display: none;
   }
-  /* CONTACTO */
-  form {
-    padding-bottom: 3.125rem;
-  }
-  form #message {
-    width: 18.75rem;
-  }
-  /* PÁGINA ARTICLES */
+  /* ARTICLES */
   .wrapArticles {
     background-position: 5% 25%;
   }
@@ -993,7 +1014,7 @@ footer .footer__copyright {
   .article__container .article__wrapper {
     margin: 10px auto;
     width: 90%;
-    padding: 0;
+    padding: 30px 0 30px 0px;
   }
   .article__container .article__wrapper img {
     max-width: 100%;
@@ -1007,29 +1028,111 @@ footer .footer__copyright {
   .article__container .article__wrapper .right {
     padding: 0px;
   }
+  .article__container .article__wrapper .png {
+    padding-left: 10px;
+  }
   .article__container .article__wrapper .textbox {
     text-align: center;
   }
-  /* Página Graves */
-  .btn-group {
+  /* GRAVES */
+  .main__graves .graves__section {
+    padding-top: 1.875rem;
+  }
+  .main__graves .btn-group {
     display: flex;
     flex-direction: column;
     padding: 3.125rem;
     gap: 1.25rem;
   }
-  /* CARDS */
-  .card_container {
-    margin: 25px 0;
+  .main__graves .grave__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-auto-rows: minmax(400px, auto);
+    gap: 25px;
+    padding: 50px 15px;
   }
-  .card_container .card {
-    width: 31.25rem;
-    height: auto;
+  /* LOCATIONS */
+  .locations .locations__grid {
+    gap: 0px;
+    grid-template-columns: 40% 70%;
   }
-  .card_container .card img {
-    width: 100%;
-    height: auto;
+  .locations .aside {
+    padding: 35px 5px 0 5px;
   }
-  /* Página Locations */
+  .locations .aside details {
+    font-size: 1rem;
+  }
+  .locations .aside details summary {
+    padding: 5px;
+  }
+  .locations .aside details summary::before {
+    padding-right: 10px;
+  }
+  .locations .locations__main {
+    display: flex;
+    flex-direction: column;
+    margin: 35px 5px 0 5px;
+    padding: 0;
+    gap: 0;
+  }
+  .locations .locations__main .locations__pais {
+    padding-bottom: 15px;
+    padding-left: 0px;
+    gap: 0;
+    font-size: 1.5;
+  }
+  .locations .locations__main .locations__pais .locations__ciudad {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .locations .locations__main .locations__pais .locations__ciudad h4, .locations .locations__main .locations__pais .locations__ciudad ul {
+    font-size: 1rem;
+    padding: 0px;
+  }
+  .locations .locations__main .locations__pais .locations__ciudad iframe {
+    width: 100px;
+  }
+  /* .locations{
+     .aside  {
+         padding: 35px 20px;
+         details{
+             summary{
+                 padding: 10px;
+                 &::before{
+                     padding-right: 10px;
+                 }
+             }
+        }
+     }
+     .locations__main{
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+         padding: 35px 20px;
+         .locations__pais{
+                padding-bottom: 15px;
+             .locations__ciudad {
+              flex-direction: column;
+              padding: 10px;
+              gap: 15px;
+              margin-bottom: 15px;
+                    h4, ul{
+
+                       padding: 10px;
+                    }       
+             }
+         }   
+     }
+  } */
+  /* CONTACTO */
+  form {
+    padding-bottom: 3.125rem;
+  }
+  form #message {
+    width: 18.75rem;
+  }
 }
 @media screen and (max-width: 360px) { /* de 350 para abajo aplican los cambios*/
   /* HEADER + LOGO */
@@ -1112,7 +1215,58 @@ footer .footer__copyright {
   }
   .article__container .png img {
     width: 30px;
+    margin-left: 5px;
   }
+  /* LOCATIONS */
+  /* .locations{
+     .locations__grid{
+        display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          grid-template-areas: 
+          "aside principal";
+    } 
+     .aside  {
+         padding: 35px 5px 0 5px;
+         background-color: aquamarine;
+         details{
+           font-size: 1rem;
+             summary{
+                 padding: 5px;
+                 &::before{
+                     padding-right: 10px;
+                 }
+             }
+        }
+     }
+     .locations__main{
+         display: flex;
+         flex-direction: column;
+         margin:35px 5px 0 5px;
+         padding:0;
+         gap:0;
+         .locations__pais{
+                padding-bottom: 15px;
+                padding-left:0px;
+                gap:0;
+                font-size:1.5;
+             .locations__ciudad {
+              flex-direction: column;
+              padding: 0;
+              gap:20px;
+              background-color: red;
+              margin-bottom: 15px;
+                    h4, ul{
+                       font-size: 1rem;
+                       padding: 0px;
+                    }
+              iframe{
+                 width:100px;
+              }      
+             }
+         }   
+     }
+  } */
   /* CONTACTO */
   form input[type=submit], form input[type=text], form input[type=email] {
     background-color: aquamarine;
@@ -1120,69 +1274,6 @@ footer .footer__copyright {
   }
   form #message {
     width: 250px;
-  }
-  /* Página Articles */
-  .wrapArticles {
-    background-position: 5% 25%;
-  }
-  .article__wrapper {
-    width: 100%;
-  }
-  .article__wrapper .textbox h2 {
-    text-align: center;
-  }
-  .article__wrapper .textbox h3 {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 0;
-  }
-  .article__wrapper .textbox p {
-    font-size: 1.3rem;
-    line-height: 1.4;
-  }
-  /* Página Locations SIN TERMINAR */
-  .wrapLocations {
-    background-position: 30% 13%;
-  }
-  .wrapLocations__imgSobreTexto {
-    font-size: 2.5rem; /* NO ME DEJA ACHICARLO */
-  }
-  .locations__grid {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr;
-    grid-template-areas: "principal";
-  }
-  .locations__grid .locations__main {
-    margin: 25px;
-    margin-bottom: 0px;
-    padding: 0;
-    padding-bottom: 0px;
-    border-left: none;
-  }
-  .locations__grid .locations__main .locations__pais h2 {
-    font-size: 3rem;
-    padding-bottom: 1.875rem;
-  }
-  .locations__grid .locations__main .locations__pais h3 {
-    margin: 0;
-  }
-  .locations__grid .locations__main .locations__pais h4 {
-    padding-bottom: 1.25rem;
-  }
-  .locations__grid .locations__main .locations__pais .locations__ciudad {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 25px;
-  }
-  /* Página Contacto */
-  form {
-    padding-bottom: 3.125rem;
-  }
-  form textarea {
-    width: 18.75rem;
-    height: 18.75rem;
   }
 }
 
