@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* mapa para probar cómo funciona */
+/*  @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
 /* RESET */
 * {
   margin: 0;
@@ -14,13 +15,8 @@
 }
 
 /* PROPIEDADES PARA TODO EL SITIO */
-/* @font-face {
-    font-family: Tombstone-FREE;
-    src: url(../assets/Fonts/Tombstone-FREE.otf);
-}
- */
 body {
-  font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif;
+  font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif !important;
   background-color: rgb(192, 214, 188);
 }
 
@@ -68,10 +64,6 @@ header .container__logo img {
 }
 
 /* FOOTER */ /* VER ETIQUETA MARQUEE */
-marquee {
-  overflow-x: hidden;
-}
-
 footer {
   width: 100%;
   background-color: rgb(32, 53, 54);
@@ -92,7 +84,7 @@ footer .footer__redes {
   gap: 50px;
   font-size: 1.3rem;
   text-align: center;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
 }
 footer .footer__redes a:hover {
   color: #7e796c;
@@ -109,6 +101,9 @@ footer .footer__disclaimer {
 footer .footer__disclaimer a:hover {
   color: #7e796c;
   transition: 0.3s ease-in-out;
+}
+footer .footer__disclaimer marquee {
+  overflow-x: hidden;
 }
 footer .footer__copyright {
   display: flex;
@@ -174,7 +169,6 @@ footer .footer__copyright {
   color: #7e796c;
 }
 .nav ul li ul li a:hover {
-  color: rgb(146, 141, 127);
   color: rgb(186, 164, 128);
   transition: all 0.3s;
 }
@@ -186,24 +180,20 @@ footer .footer__copyright {
 
 /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
 .icon__menu {
-  /* font-size: $fs*2; */
-  /* color: $submenucolor; */
   cursor: pointer;
   width: 40px;
   height: 40px;
-  /* height: $w; */
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0px 0px 5px rgb(192, 214, 188));
 }
 .icon__menu:hover {
-  /* background-color: $colorhover; */
-  filter: drop-♀(4px 4px 4px rgb(0, 0, 0));
+  filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
   transition: all 0.3s;
 }
 
 #label__check {
-  width: 100px;
   height: 100%;
   display: none;
 }
@@ -253,7 +243,7 @@ footer .footer__copyright {
   75% {
     margin-left: -300%;
   }
-  95% {
+  100% {
     margin-left: -300%;
   }
 }
@@ -311,26 +301,30 @@ footer .footer__copyright {
   background-position: 70% 98%;
   background-attachment: fixed;
   width: 100%;
-  height: 750px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*  background-attachment: fixed; */
   background-size: cover;
   background-position: center;
 }
 .wrapArticles .wrapArticles__imgSobreTexto {
   color: rgb(186, 164, 128);
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
 }
+@media screen and (max-width: 768px) {
+  .wrapArticles .wrapArticles__imgSobreTexto {
+    font-size: 2.7rem;
+  }
+}
 @media screen and (max-width: 360px) {
   .wrapArticles .wrapArticles__imgSobreTexto {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -392,7 +386,7 @@ footer .footer__copyright {
   background-position: 96% 12%;
   background-attachment: fixed;
   width: 100%;
-  height: 500px;
+  height: 550px;
 }
 .article__container .article__parallax2 {
   background-image: url(../assets/imgs/articles/highgate.jpg);
@@ -412,26 +406,30 @@ footer .footer__copyright {
   background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
   background-position: 70% 100%;
   width: 100%;
-  height: 750px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*  background-attachment: fixed; */
   background-size: cover;
   background-position: center;
 }
 .main__graves .wrapGraves .wrapGraves__imgSobreTexto {
   color: rgb(186, 164, 128);
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
 }
+@media screen and (max-width: 768px) {
+  .main__graves .wrapGraves .wrapGraves__imgSobreTexto {
+    font-size: 2.7rem;
+  }
+}
 @media screen and (max-width: 360px) {
   .main__graves .wrapGraves .wrapGraves__imgSobreTexto {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 }
 .main__graves .btn-group {
@@ -466,9 +464,18 @@ footer .footer__copyright {
   padding: 1.25rem;
   font-size: 3rem;
   color: rgb(186, 164, 128);
-  text-shadow: 7px 4px 4px rgb(32, 53, 54);
-  /* text-shadow: 2px 2px 4px #203536; */
+  text-shadow: 7px 4px 4px rgb(69, 92, 80);
   padding-top: 3.125rem;
+}
+@media screen and (max-width: 768px) {
+  .main__graves .graves__section {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .main__graves .graves__section {
+    font-size: 2.5rem;
+  }
 }
 .main__graves .grave__container {
   display: grid;
@@ -476,6 +483,7 @@ footer .footer__copyright {
   grid-auto-rows: minmax(600px, auto);
   gap: 50px;
   padding: 50px 100px;
+  /* FLIPPING CARDS */
 }
 .main__graves .grave__container .card {
   display: flex;
@@ -485,7 +493,6 @@ footer .footer__copyright {
   object-fit: cover;
   color: rgb(186, 164, 128);
   border-radius: 4px;
-  font-size: 3rem;
 }
 .main__graves .grave__container .card .face {
   position: absolute;
@@ -511,14 +518,10 @@ footer .footer__copyright {
   bottom: 0;
   width: 100%;
   height: 45px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   background-color: rgb(43, 69, 66);
   padding: 5px;
-}
-.main__graves .grave__container .card .front p {
-  justify-content: center;
-  align-items: center;
 }
 .main__graves .grave__container .card .back {
   transform: perspective(600px) rotateY(180deg);
@@ -546,6 +549,157 @@ footer .footer__copyright {
   transform: perspective(600px) rotateY(360deg);
 }
 
+/* LOCATIONS */
+.locations {
+  background-color: rgb(43, 69, 66);
+  /*  .locations__grid > *{
+       height:100%;
+   } */
+}
+.locations .wrapLocations {
+  background: url(../assets/imgs/locations/locations.jpg);
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-position: 15% 10%;
+}
+.locations .wrapLocations .wrapLocations__imgSobreTexto {
+  color: rgb(186, 164, 128);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+}
+@media screen and (max-width: 768px) {
+  .locations .wrapLocations .wrapLocations__imgSobreTexto {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .locations .wrapLocations .wrapLocations__imgSobreTexto {
+    font-size: 2.5rem;
+  }
+}
+.locations .locations__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "aside principal";
+}
+.locations .locations__grid .aside {
+  grid-area: aside;
+  height: 100%;
+  padding: 35px 50px;
+}
+.locations .locations__grid .aside details {
+  width: 100%;
+  cursor: pointer;
+  color: rgb(186, 164, 128);
+  font-size: 1.5rem;
+  border-bottom: solid 1px rgb(32, 53, 54);
+  border-right: solid 1px rgb(32, 53, 54);
+}
+.locations .locations__grid .aside details summary {
+  padding: 15px 10px;
+}
+.locations .locations__grid .aside details summary:hover {
+  background-color: rgb(69, 92, 80);
+  color: #7e796c;
+  transition: 0.3s ease-in-out;
+}
+.locations .locations__grid .aside details summary::before {
+  content: url(../assets/imgs/logo/bx-world.png);
+  padding-right: 5px;
+}
+.locations .locations__grid .aside details ul li {
+  padding: 10px 35px;
+  font-size: 1.2rem;
+  color: rgb(186, 164, 128);
+}
+.locations .locations__grid .aside details ul li a {
+  color: rgb(186, 164, 128);
+  font-weight: 400;
+}
+.locations .locations__grid .aside details ul li a:hover {
+  color: #7e796c;
+  transition: all 0.3s;
+}
+.locations .locations__grid .aside details ul li:hover {
+  color: #7e796c;
+  transition: 0.3s ease-in-out;
+}
+.locations .locations__grid .aside details[open] summary::before {
+  content: url(../assets/imgs/logo/close.png);
+  padding-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.locations .locations__grid .locations__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  /* display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 100px 35px; */
+}
+.locations .locations__grid .locations__main .locations__pais {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+}
+.locations .locations__grid .locations__main .locations__pais h2 {
+  font-size: 2rem;
+  color: rgb(186, 164, 128);
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #203536;
+  padding-bottom: 1.875rem;
+}
+.locations .locations__grid .locations__main .locations__pais h3 {
+  font-size: 1.5rem;
+  color: rgb(186, 164, 128);
+  padding-bottom: 15px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #203536;
+  justify-content: start;
+}
+.locations .locations__grid .locations__main .locations__pais h4 {
+  font-size: 1rem;
+  line-height: 1.3;
+  color: rgb(186, 164, 128);
+  padding-bottom: 1.25rem;
+}
+.locations .locations__grid .locations__main .locations__pais li {
+  font-size: 1rem;
+  line-height: 1.3;
+  color: rgb(186, 164, 128);
+}
+.locations .locations__grid .locations__main .locations__pais .locations__ciudad {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 25px;
+  /* gap:200px; */
+  padding-bottom: 3.125rem;
+}
+.locations .locations__grid .locations__main .locations__pais .locations__ciudad .ciudad__titulo {
+  width: 40%;
+}
+.locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
+  width: 300px;
+  height: 100px;
+}
+
 /* PÁGINA CONTACTO */
 .main__contacto {
   display: flex;
@@ -554,26 +708,30 @@ footer .footer__copyright {
 .main__contacto .wrapContacto {
   background: url(../assets/imgs/contacto/westminster.jpg);
   width: 100%;
-  height: 750px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*  background-attachment: fixed; */
   background-size: cover;
   background-position: center;
 }
 .main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
   color: rgb(186, 164, 128);
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
 }
+@media screen and (max-width: 768px) {
+  .main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
+    font-size: 2.7rem;
+  }
+}
 @media screen and (max-width: 360px) {
   .main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 }
 .main__contacto .mail__contacto {
@@ -602,7 +760,7 @@ footer .footer__copyright {
 }
 .main__contacto form input[type=submit] {
   border: 1px solid black;
-  background-color: rgb(69, 92, 80);
+  background-color: rgb(32, 53, 54);
   font-family: Oxygen-Regular;
   color: rgb(32, 53, 54);
   font-weight: bolder;
@@ -610,6 +768,7 @@ footer .footer__copyright {
   width: 18.75rem;
   padding: 8px 16px;
   margin-top: 8px;
+  border-radius: 5px;
   color: rgb(186, 164, 128);
 }
 .main__contacto form input[type=submit][type=submit]:hover {
@@ -627,6 +786,7 @@ footer .footer__copyright {
   height: 18.75rem;
   padding: 0.625rem;
   border: 1px solid black;
+  border-radius: 5px;
   margin: 8px 0;
 }
 .main__contacto form input[type=text], .main__contacto form input[type=email] {
@@ -636,6 +796,57 @@ footer .footer__copyright {
   width: 18.75rem;
   padding: 10px 10px;
   margin: 8px 0;
+  border-radius: 5px;
+}
+
+/* PÁGINA ERROR */
+.error__header {
+  background-color: rgb(32, 53, 54);
+  padding-top: 30px;
+}
+
+.contenedor__error {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(32, 53, 54);
+  color: rgb(186, 164, 128);
+}
+.contenedor__error h1 {
+  font-size: 4rem;
+  padding-bottom: 30px;
+}
+.contenedor__error h2 {
+  font-size: 3rem;
+  padding-bottom: 20px;
+}
+.contenedor__error p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.contenedor__error a {
+  color: rgb(186, 164, 128);
+  font-weight: lighter;
+  line-height: 3rem;
+  cursor: pointer;
+}
+.contenedor__error a i {
+  padding-right: 10px;
+}
+.contenedor__error a:hover {
+  color: #7e796c;
+}
+
+.error__footer {
+  background-color: rgb(32, 53, 54);
+  height: auto;
+}
+.error__footer .img__error {
+  width: 100%;
 }
 
 /* En "_variables" hice un mapa para probar cómo funciona con el @EACh. En efecto, en el archivo .CSS se crearon las clases .heideggerimag y demás, pero no las necesito */
@@ -708,133 +919,6 @@ footer .footer__copyright {
 }
 
 /* Funcionó, pero no sé cómo usar esas clases que acabo de crear en mi proyecto. Mi intención era crear de esta manera las cards que faltan sin tener que hacerlas de a 1 */
-/* LOCATIONS */
-.locations {
-  background-color: rgb(43, 69, 66);
-  /*  .locations__grid > *{
-       height:100%;
-   } */
-}
-.locations .wrapLocations {
-  background: url(../assets/imgs/locations/locations.jpg);
-  width: 100%;
-  height: 750px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /*  background-attachment: fixed; */
-  background-size: cover;
-  background-position: center;
-  background-position: 100% 14%;
-}
-.locations .wrapLocations .wrapLocations__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  /* justify-content: center;
-  align-items: center; */
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bolder;
-  text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
-}
-@media screen and (max-width: 360px) {
-  .locations .wrapLocations .wrapLocations__imgSobreTexto {
-    font-size: 2.8rem;
-  }
-}
-.locations .locations__grid {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 1fr;
-  grid-template-areas: "aside principal";
-}
-.locations .aside {
-  grid-area: aside;
-  height: 100%;
-  padding: 100px;
-}
-.locations .aside details {
-  width: 100%;
-  cursor: pointer;
-  color: rgb(186, 164, 128);
-  font-size: 1.5rem;
-  border-bottom: solid 1px rgb(32, 53, 54);
-  border-right: solid 1px rgb(32, 53, 54);
-}
-.locations .aside details summary {
-  padding: 15px 10px;
-}
-.locations .aside details summary:hover {
-  background-color: rgb(69, 92, 80);
-}
-.locations .aside details summary::before {
-  content: url(../assets/imgs/logo/bx-world.png);
-  padding-right: 5px;
-}
-.locations .aside details ul li {
-  padding: 10px;
-  font-size: 1rem;
-  color: rgb(186, 164, 128);
-}
-.locations .aside details ul li a {
-  color: rgb(186, 164, 128);
-  font-weight: 400;
-  transition: all ease-in-out 0.3s;
-}
-.locations .aside details ul li a:hover {
-  color: #7e796c;
-  transform: scale(1.2);
-}
-.locations .aside details ul li:hover {
-  color: #7e796c;
-  transition: 0.3s ease-in-out;
-}
-.locations .locations__main {
-  grid-area: principal;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  padding: 100px 35px;
-}
-.locations .locations__main .locations__pais h2 {
-  font-size: 2rem;
-  color: rgb(186, 164, 128);
-  font-weight: 600;
-  text-shadow: 2px 2px 4px #203536;
-  padding-bottom: 1.875rem;
-}
-.locations .locations__main .locations__pais h3 {
-  font-size: 1.5rem;
-  color: rgb(186, 164, 128);
-  padding-bottom: 15px;
-  font-weight: 600;
-  text-shadow: 2px 2px 4px #203536;
-  justify-content: start;
-}
-.locations .locations__main .locations__pais h4 {
-  font-size: 1rem;
-  line-height: 1.3;
-  color: rgb(186, 164, 128);
-  padding-bottom: 1.25rem;
-}
-.locations .locations__main .locations__pais li {
-  font-size: 1rem;
-  line-height: 1.3;
-  color: rgb(186, 164, 128);
-}
-.locations .locations__main .locations__pais .locations__ciudad {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 150px;
-  margin-bottom: 25px;
-  /* gap:200px; */
-  padding-bottom: 3.125rem;
-}
-.locations .locations__main .locations__pais .locations__ciudad iframe {
-  width: 300px;
-  height: 100px;
-}
-
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) { /* de 1024 para abajo aplican los cambios */
   /* MENÚ */
@@ -844,8 +928,7 @@ footer .footer__copyright {
     width: 100%;
     position: fixed;
     left: 0;
-    top: 200px; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
-    /*  height: 0px; */
+    top: 200px;
     transition: all 300ms ease;
     z-index: 100;
     opacity: 0;
@@ -867,8 +950,6 @@ footer .footer__copyright {
   }
   .icon__menu {
     display: flex;
-    margin-left: 1.25rem;
-    font-size: 3rem;
   }
   #check__menu:checked ~ .nav > ul {
     height: 18.75rem;
@@ -893,36 +974,32 @@ footer .footer__copyright {
     justify-content: center;
     padding-bottom: 10px;
   }
-  footer .footer__disclaimer a:hover {
-    color: #7e796c;
-    transition: 0.3s ease-in-out;
-  }
   /* LOCATIONS */
-  .locations .aside {
-    padding: 35px 25px;
+  .locations .locations__grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
   }
-  .locations .aside details summary {
-    padding: 10px;
+  .locations .locations__grid .locations__main {
+    margin: 0;
+    gap: 0px;
   }
-  .locations .aside details summary::before {
-    padding-right: 10px;
+  .locations .locations__grid .locations__main .locations__pais {
+    padding-bottom: 0;
   }
-  .locations .locations__main {
-    padding: 35px;
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0px;
   }
-  .locations .locations__main .locations__pais {
-    padding-bottom: 15px;
-  }
-  .locations .locations__main .locations__pais .locations__ciudad {
-    padding: 10px;
-    gap: 100px;
-    margin-bottom: 15px;
-  }
-  .locations .locations__main .locations__pais .locations__ciudad h4, .locations .locations__main .locations__pais .locations__ciudad ul {
-    padding: 10px;
-  }
-  .locations .locations__main .locations__pais .locations__ciudad iframe {
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
     width: 200px;
+  }
+  /* PÁGINA ERROR */
+  .contenedor__error {
+    padding: 50px;
+    background-color: rgb(32, 53, 54);
   }
 }
 @media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
@@ -977,12 +1054,10 @@ footer .footer__copyright {
   }
   footer .footer__redes {
     gap: 35px;
-    font-size: 1.2rem;
-    padding-bottom: 25px;
   }
   /* INICIO */
   .index__secciones {
-    padding: 30px 30px;
+    padding: 30px;
   }
   .index__secciones h3 {
     font-size: 2rem;
@@ -1009,7 +1084,7 @@ footer .footer__copyright {
     background-position: 5% 25%;
   }
   .article__container {
-    padding: 30px 10px;
+    /* padding: 30px 10px; */
   }
   .article__container .article__wrapper {
     margin: 10px auto;
@@ -1053,85 +1128,59 @@ footer .footer__copyright {
   }
   /* LOCATIONS */
   .locations .locations__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "aside" "principal";
+    padding: 0;
+    margin: 0;
+  }
+  .locations .locations__grid .aside {
+    width: 100%;
+    border-right: none;
+    padding: 0 0px 0 50px;
+  }
+  .locations .locations__grid .locations__main {
+    margin: 0px 50px 0px 50px;
     gap: 0px;
-    grid-template-columns: 40% 70%;
   }
-  .locations .aside {
-    padding: 35px 5px 0 5px;
+  .locations .locations__grid .locations__main .locations__pais {
+    padding-bottom: 0;
   }
-  .locations .aside details {
-    font-size: 1rem;
-  }
-  .locations .aside details summary {
-    padding: 5px;
-  }
-  .locations .aside details summary::before {
-    padding-right: 10px;
-  }
-  .locations .locations__main {
-    display: flex;
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
     flex-direction: column;
-    margin: 35px 5px 0 5px;
-    padding: 0;
-    gap: 0;
-  }
-  .locations .locations__main .locations__pais {
-    padding-bottom: 15px;
-    padding-left: 0px;
-    gap: 0;
-    font-size: 1.5;
-  }
-  .locations .locations__main .locations__pais .locations__ciudad {
-    flex-direction: column;
-    padding: 0;
-    gap: 20px;
-    margin-bottom: 15px;
-  }
-  .locations .locations__main .locations__pais .locations__ciudad h4, .locations .locations__main .locations__pais .locations__ciudad ul {
-    font-size: 1rem;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
     padding: 0px;
   }
-  .locations .locations__main .locations__pais .locations__ciudad iframe {
-    width: 100px;
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad .ciudad__titulo {
+    width: 100%;
   }
-  /* .locations{
-     .aside  {
-         padding: 35px 20px;
-         details{
-             summary{
-                 padding: 10px;
-                 &::before{
-                     padding-right: 10px;
-                 }
-             }
-        }
-     }
-     .locations__main{
-        background-color: aqua;
-        display: flex;
-        flex-direction: column;
-         padding: 35px 20px;
-         .locations__pais{
-                padding-bottom: 15px;
-             .locations__ciudad {
-              flex-direction: column;
-              padding: 10px;
-              gap: 15px;
-              margin-bottom: 15px;
-                    h4, ul{
-
-                       padding: 10px;
-                    }       
-             }
-         }   
-     }
-  } */
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
+    width: 250px;
+    height: 200px;
+  }
   /* CONTACTO */
   form {
     padding-bottom: 3.125rem;
   }
   form #message {
     width: 18.75rem;
+  }
+  /* PÁGINA ERROR */
+  .error__header img {
+    width: 350px;
+    padding-top: 50px;
+  }
+  .contenedor__error {
+    padding: 30px;
+  }
+  .contenedor__error h1 {
+    font-size: 3rem;
+  }
+  .contenedor__error h2 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
   }
 }
 @media screen and (max-width: 360px) { /* de 350 para abajo aplican los cambios*/
@@ -1210,63 +1259,40 @@ footer .footer__copyright {
     display: none;
   }
   /* ARTICLES */
-  .article__container {
-    padding: 15px;
-  }
   .article__container .png img {
     width: 30px;
     margin-left: 5px;
   }
   /* LOCATIONS */
-  /* .locations{
-     .locations__grid{
-        display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr;
-          grid-template-areas: 
-          "aside principal";
-    } 
-     .aside  {
-         padding: 35px 5px 0 5px;
-         background-color: aquamarine;
-         details{
-           font-size: 1rem;
-             summary{
-                 padding: 5px;
-                 &::before{
-                     padding-right: 10px;
-                 }
-             }
-        }
-     }
-     .locations__main{
-         display: flex;
-         flex-direction: column;
-         margin:35px 5px 0 5px;
-         padding:0;
-         gap:0;
-         .locations__pais{
-                padding-bottom: 15px;
-                padding-left:0px;
-                gap:0;
-                font-size:1.5;
-             .locations__ciudad {
-              flex-direction: column;
-              padding: 0;
-              gap:20px;
-              background-color: red;
-              margin-bottom: 15px;
-                    h4, ul{
-                       font-size: 1rem;
-                       padding: 0px;
-                    }
-              iframe{
-                 width:100px;
-              }      
-             }
-         }   
-     }
-  } */
+  .locations .locations__grid .aside {
+    width: 100%;
+    border-right: none;
+    padding: 0px 0px 35px 35px;
+  }
+  .locations .locations__grid .locations__main {
+    margin: 0px 25px;
+    /* margin:0px 0px 35px 50px; */
+    gap: 0px;
+  }
+  .locations .locations__grid .locations__main .locations__pais {
+    /*  padding: 35px; */
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0px;
+  }
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad h4 {
+    padding-bottom: 10px;
+  }
+  .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
+    width: 200px;
+    height: 200px;
+  }
   /* CONTACTO */
   form input[type=submit], form input[type=text], form input[type=email] {
     background-color: aquamarine;
@@ -1274,6 +1300,22 @@ footer .footer__copyright {
   }
   form #message {
     width: 250px;
+  }
+  /* PÁGINA ERROR */
+  .error__header img {
+    width: 300px;
+  }
+  .contenedor__error {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  .contenedor__error h1 {
+    font-size: 3rem;
+  }
+  .contenedor__error h2 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
   }
 }
 

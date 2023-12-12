@@ -1,7 +1,6 @@
 /* RESPONSIVE */
 
 @media screen and (max-width: 1024px) { /* de 1024 para abajo aplican los cambios */
-
 /* MENÚ */
 .nav > ul{
    flex-direction: column;
@@ -9,8 +8,7 @@
    width: 100%;
    position: fixed;
    left: 0;
-   top: 200px; /* CÓMO HAGO PARA QUE EN TODOS LOS DISPOSITIVOS QUEDE PEGADO AL HEADER ?*/
-     /*  height: 0px; */
+   top: 200px; 
    transition: all 300ms ease;
    z-index: 100;
    opacity: 0;
@@ -32,8 +30,6 @@
 }
 .icon__menu{
    display: flex;
-   margin-left: pxARem(20);
-   font-size: $fs*3;
 }
 #check__menu:checked ~ .nav > ul{
    height: pxARem(300);
@@ -59,44 +55,38 @@ footer{
        display: flex;
        justify-content: center;
        padding-bottom: 10px;
-       a:hover{
-               color: $submenucolor;  
-               transition: .3s ease-in-out;
-       }
    }
 }
 
 /* LOCATIONS */
 .locations{
-   .aside  {
-       padding: 35px 25px;
-       details{
-           summary{
-               padding: 10px;
-               &::before{
-                   padding-right: 10px;
-               }
-           }
+   .locations__grid{
+      display: grid;
+      grid-template-columns: 30% 70%;
+      .locations__main{
+         margin:0;
+         gap: 0px;
+         .locations__pais{
+            padding-bottom: 0;
+             .locations__ciudad {
+               flex-direction: column;
+               justify-content: start;
+               align-items: flex-start;
+               gap: 15px;
+               padding:0px;
+              iframe{
+                 width:200px;
+              }      
+            }
+         }   
       }
    }
-   .locations__main{
-       padding: 35px;
-       .locations__pais{
-              padding-bottom: 15px;
-           .locations__ciudad {
-            padding: 10px;
-            gap:100px;
-            margin-bottom: 15px;
-                  h4, ul{
-                   
-                     padding: 10px;
-                  }
-            iframe{
-               width:200px;
-            }      
-           }
-       }   
-   }
+} 
+
+/* PÁGINA ERROR */
+.contenedor__error{
+   padding:50px;
+   background-color: $bgfooter;
 }
 }   
 
@@ -158,14 +148,12 @@ footer{
    }
    .footer__redes {
        gap: 35px;
-       font-size: 1.2rem;
-       padding-bottom: 25px;
    } 
 }
 
 /* INICIO */
 .index__secciones{
-   padding: 30px 30px;
+   padding: 30px;
    h3{
       font-size: $fs*2;
       text-align: center;
@@ -193,7 +181,7 @@ footer{
    background-position: 5% 25%;
 }
 .article__container{
-   padding: 30px 10px;
+   /* padding: 30px 10px; */
    .article__wrapper{
        margin: 10px auto;
        width: $w*0.9;
@@ -242,86 +230,41 @@ footer{
 /* LOCATIONS */
 .locations{
    .locations__grid{
-      gap:0px;
-      grid-template-columns: 40% 70%;
-  } 
-   .aside  {
-       padding: 35px 5px 0 5px;
-       details{
-         font-size: 1rem;
-           summary{
-               padding: 5px;
-               &::before{
-                   padding-right: 10px;
-               }
-           }
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "aside"
+      "principal";
+      padding:0;
+      margin:0;
+      .aside{
+         width:100%;
+         border-right:none;
+         padding:0 0px 0 50px;
+      }
+      .locations__main{
+         margin:0px 50px 0px 50px;
+         gap: 0px;
+         .locations__pais{
+            padding-bottom: 0;
+             .locations__ciudad {
+               flex-direction: column;
+               justify-content: start;
+               align-items: flex-start;
+               gap: 15px;
+               padding:0px;
+               .ciudad__titulo{
+                  width: 100%;
+              }
+              iframe{
+                 width:250px;
+                 height:200px;
+              }      
+            }
+         }   
       }
    }
-   .locations__main{
-       display: flex;
-       flex-direction: column;
-       margin:35px 5px 0 5px;
-       padding:0;
-       gap:0;
-       .locations__pais{
-              padding-bottom: 15px;
-              padding-left:0px;
-              gap:0;
-              font-size:1.5;
-           .locations__ciudad {
-            flex-direction: column;
-            padding: 0;
-            gap:20px;
-            margin-bottom: 15px;
-                  h4, ul{
-                     font-size: 1rem;
-                     padding: 0px;
-                  }
-            iframe{
-               width:100px;
-            }      
-           }
-       }   
-   }
-}
-
-
-/* .locations{
-   .aside  {
-       padding: 35px 20px;
-       details{
-           summary{
-               padding: 10px;
-               &::before{
-                   padding-right: 10px;
-               }
-           }
-      }
-   }
-   .locations__main{
-      background-color: aqua;
-      display: flex;
-      flex-direction: column;
-       padding: 35px 20px;
-       .locations__pais{
-              padding-bottom: 15px;
-           .locations__ciudad {
-            flex-direction: column;
-            padding: 10px;
-            gap: 15px;
-            margin-bottom: 15px;
-                  h4, ul{
-                   
-                     padding: 10px;
-                  }       
-           }
-       }   
-   }
-} */
-
-
-
-
+} 
 
 /* CONTACTO */
 form{
@@ -330,6 +273,26 @@ form{
        width: pxARem(300);
     }
 }
+
+/* PÁGINA ERROR */
+.error__header{
+   img{
+      width: 350px;
+      padding-top:50px;
+}
+}
+.contenedor__error{
+   padding: 30px;
+   h1{
+       font-size: $fs*3;
+   }
+   h2{
+       font-size: $fs*2.5;
+       padding-bottom: 20px;
+   }
+  
+}
+
 }
 
 @media screen and (max-width: 360px) { /* de 350 para abajo aplican los cambios*/
@@ -420,7 +383,6 @@ footer{
 
 /* ARTICLES */
 .article__container{
-   padding: 15px;
    .png{
       img{
          width:30px;
@@ -430,55 +392,39 @@ footer{
 }
 
 /* LOCATIONS */
-/* .locations{
+.locations{
    .locations__grid{
-      display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "aside principal";
-  } 
-   .aside  {
-       padding: 35px 5px 0 5px;
-       background-color: aquamarine;
-       details{
-         font-size: 1rem;
-           summary{
-               padding: 5px;
-               &::before{
-                   padding-right: 10px;
-               }
-           }
+      .aside{
+         width:100%;
+         border-right:none;
+         padding:0px  0px 35px 35px;
+      }
+      .locations__main{
+         margin: 0px 25px ;
+         /* margin:0px 0px 35px 50px; */
+         gap: 0px;
+         .locations__pais{
+      /*  padding: 35px; */
+            padding-top: 15px;
+            padding-bottom: 0;
+             .locations__ciudad {
+               flex-direction: column;
+               justify-content: start;
+               align-items: flex-start;
+               gap: 15px;
+               padding:0px;
+               h4{
+                  padding-bottom:10px;
+              }
+              iframe{
+                 width:200px;
+                 height:200px;
+              }      
+            }
+         }   
       }
    }
-   .locations__main{
-       display: flex;
-       flex-direction: column;
-       margin:35px 5px 0 5px;
-       padding:0;
-       gap:0;
-       .locations__pais{
-              padding-bottom: 15px;
-              padding-left:0px;
-              gap:0;
-              font-size:1.5;
-           .locations__ciudad {
-            flex-direction: column;
-            padding: 0;
-            gap:20px;
-            background-color: red;
-            margin-bottom: 15px;
-                  h4, ul{
-                     font-size: 1rem;
-                     padding: 0px;
-                  }
-            iframe{
-               width:100px;
-            }      
-           }
-       }   
-   }
-} */
+} 
 
 /* CONTACTO */
 form{
@@ -490,4 +436,25 @@ form{
       width: 250px;
    }
 }
+
+/* PÁGINA ERROR */
+.error__header{
+   img{
+      width: 300px;
+}
+}
+.contenedor__error{
+   text-align: center;
+   padding-top: 150px;
+   padding-bottom: 50px;
+   h1{
+       font-size: $fs*3;
+   }
+   h2{
+       font-size: $fs*2.5;
+       padding-bottom: 20px;
+   }
+  
+}
+
 }

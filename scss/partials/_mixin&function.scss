@@ -20,30 +20,48 @@
 
 @mixin wrapper{
     width:100%;
-    height: 750px;
+    height: 700px;
     @include usarFlexbox();
-   /*  background-attachment: fixed; */
     background-size: cover;
     background-position: center;
 }
 
 @mixin locations{
     @include justifyFlexbox(start);
-    gap: 150px;
+    gap: 50px;
     margin-bottom: 25px;
     /* gap:200px; */
 }
 
+@mixin gravesSection{
+        width: $w;
+        text-align: center;
+        padding: pxARem(20);
+        font-size: $fs*3;
+        color: $color;
+        text-shadow: 7px 4px 4px $bgcabecera;
+        padding-top: pxARem(50);
+        @media screen and (max-width: 768px){
+            font-size: $fs*2.7;
+        }
+        @media screen and (max-width: 360px){
+            font-size: $fs*2.5;
+        }
+}
+
 @mixin tituloSeccion{
     color: $color;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: $fs*3;
     font-weight: bolder;
     text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+    @media screen and (max-width: 768px){
+        font-size: $fs*2.7;
+    }
     @media screen and (max-width: 360px){
-        font-size: $fs*2.8;
+        font-size: $fs*2.5;
     }
 
 }

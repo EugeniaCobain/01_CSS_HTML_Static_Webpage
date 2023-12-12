@@ -3,7 +3,6 @@
 @import "./partials/navbar";
 @import "./partials/mixin&function";
 
-//TEXT-SHADOW: 5PX 5 PX 5'X FFFFF;
 /* PÁGINA INICIO*/
 //Carrousel/Slider con animación CSS
 .slider-frame{
@@ -34,7 +33,7 @@
         70%{margin-left: -200%;}
 
         75%{margin-left: -300%;}
-        95%{margin-left: -300%;}
+        100%{margin-left: -300%;}
     }
 }
 .index__secciones{
@@ -92,7 +91,7 @@
     .wrapArticles__imgSobreTexto{
         @include tituloSeccion;
      }
- }
+}
 
  .article__container{
     width: 100%;
@@ -102,7 +101,6 @@
     justify-content: center;
     align-items: center;
     background-color: $fondos;
-
     .article__wrapper{
         margin: 50px auto;
         width: $w*0.9;
@@ -152,7 +150,7 @@
         background-position:96% 12%;
         background-attachment: fixed;
         width:100%;
-        height: 500px;
+        height: 550px;
     }
     .article__parallax2{
         background-image: url(../assets/imgs/articles/highgate.jpg);
@@ -197,19 +195,11 @@
                 a{
                     color: $colorhover;
                 }
-               
             }
          }
      }
     .graves__section{
-        width: $w;
-        text-align: center;
-        padding: pxARem(20);
-        font-size: $fs*3;
-        color: $color;
-        text-shadow: 7px 4px 4px $bgfooter;
-        /* text-shadow: 2px 2px 4px #203536; */
-        padding-top: pxARem(50);
+       @include gravesSection
      }
     .grave__container{
         display: grid;
@@ -217,6 +207,7 @@
         grid-auto-rows: minmax(600px, auto);
         gap:50px;
         padding: 50px 100px;
+        /* FLIPPING CARDS */
         .card{
             display:flex;
             align-items:center;
@@ -225,7 +216,6 @@
             object-fit: cover;
             color: $color;
             border-radius: 4px;
-            font-size: 3rem;
             .face{
                 position:absolute;
                 width:100%;
@@ -249,14 +239,10 @@
                     bottom: 0;
                     width:100%;
                     height: 45px;
-                    font-size: 1rem;
+                    font-size: 1.3rem;
                     text-align: center;
                     background-color: $fondos;
                     padding:5px;
-                }
-                p{
-                    justify-content: center;
-                    align-items: center;
                 }
             }
             .back{
@@ -280,13 +266,139 @@
             }
             &:hover .front{
                 transform: perspective(600px) rotateY(180deg);
-                
             }
             &:hover .back{
                 transform: perspective(600px) rotateY(360deg);
             }
         }
     }   
+}
+
+/* LOCATIONS */
+.locations{
+    background-color: $fondos;
+    .wrapLocations{
+        background: url(../assets/imgs/locations/locations.jpg);
+        @include wrapper;
+        background-position: 15% 10%;
+        .wrapLocations__imgSobreTexto{
+           @include tituloSeccion;
+         }
+    }
+   /*  .locations__grid > *{
+        height:100%;
+    } */
+    .locations__grid{
+        width:100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "aside principal";
+        .aside  {
+        grid-area: aside;
+        height: $w;
+        padding: 35px 50px;
+            details{
+                width:100%;
+                cursor:pointer;
+                color: $color;
+                font-size: 1.5rem;
+                border-bottom: solid 1px $bgfooter ;
+                border-right: solid 1px $bgfooter ;
+                summary{
+                    padding: 15px 10px;
+                    &:hover{
+                        background-color: $bgcabecera;
+                        color: $submenucolor;  
+                        transition: .3s ease-in-out
+                    }
+                    &::before{
+                        content: url(../assets/imgs/logo/bx-world.png);
+                        padding-right: 5px;
+                    }
+                }
+                ul li{
+                    padding: 10px 35px;
+                    font-size: 1.2rem;
+                    color: $color;
+                    a{
+                        color:$color;
+                        font-weight: 400;
+                        &:hover{
+                        color: $submenucolor;
+                        transition: all 0.3s;
+                        }
+                    }
+                    &:hover{
+                    color: $submenucolor;  
+                    transition: .3s ease-in-out;
+                    }      
+                }
+            }
+                details[open] summary::before{
+                    content: url(../assets/imgs/logo/close.png);
+                    padding-right: 5px;
+                    width:20px;
+                    height:20px;
+                }
+        }
+        .locations__main{
+            display: flex;
+            flex-direction: column;
+            gap:0px;
+            /* display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            padding: 100px 35px; */
+            .locations__pais{
+                display:flex;
+                flex-direction: column;
+                padding-top:35px;
+                h2{
+                    font-size: $fs*2; 
+                    color:$color;
+                    font-weight: 600;
+                    text-shadow: 2px 2px 4px #203536;
+                    padding-bottom: pxARem(30);
+                   }
+                   h3{
+                    font-size: $fs*1.5;
+                    color:$color;
+                    padding-bottom:15px;
+                    font-weight: 600;
+                    text-shadow: 2px 2px 4px #203536;
+                    justify-content: start;
+                   }
+                  h4{
+                    font-size: $fs*1;
+                    line-height: 1.3;
+                    color: $color;
+                    padding-bottom: pxARem(20);
+                   }
+                   li{
+                    font-size: $fs*1;
+                    line-height: 1.3;
+                    color: $color;
+                   }
+                .locations__ciudad {
+                    .ciudad__titulo{
+                        width: 40%;
+                    }
+                    display:flex;
+                    flex-direction: row;
+                    @include locations;
+                    padding-bottom: pxARem(50);
+                    iframe{
+                        width:300px;
+                        height:100px;
+                    }
+                }
+            }   
+        }
+    } 
+    
+    
 }
 
 /* PÁGINA CONTACTO */
@@ -323,7 +435,7 @@
             }
             input[type="submit"]{
                 border: 1px solid black;
-                background-color: $bgcabecera;
+                background-color: $bgfooter;
                 font-family: Oxygen-Regular;
                 color: $bgfooter;
                 font-weight: bolder;
@@ -331,6 +443,8 @@
                 width: pxARem(300);
                 padding: 8px 16px;
                 margin-top: 8px;
+                border-radius: 5px;
+
                 color: $color;
                 &[type="submit"]:hover {
                     color: $colorhover;
@@ -348,6 +462,7 @@
                 height: pxARem(300);
                 padding: pxARem(10);
                 border: 1px solid black;
+                border-radius: 5px;
                 margin: 8px 0;
             }
         }   
@@ -358,8 +473,68 @@
             width: pxARem(300);
             padding: 10px 10px;
             margin: 8px 0;
+            border-radius: 5px;
         }
 }
+
+/* PÁGINA ERROR */
+.error__header{
+    background-color: $bgfooter;
+    padding-top: 30px;
+}
+.contenedor__error{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgfooter;
+    color: $color;
+    h1{
+        font-size: $fs*4;
+        padding-bottom: 30px;
+       
+    }
+    h2{
+        font-size: $fs*3;
+        padding-bottom: 20px;
+    }
+    p{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    a{
+        color:$color;
+        font-weight: lighter;
+        line-height: 3rem;
+        cursor: pointer;
+        i{
+            padding-right:10px;
+        }
+        &:hover{
+            color:$submenucolor;
+        }
+    }  
+}
+
+.error__footer{
+    background-color: $bgfooter;
+    height: auto;
+    .img__error{
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
 
  
 /* En "_variables" hice un mapa para probar cómo funciona con el @EACh. En efecto, en el archivo .CSS se crearon las clases .heideggerimag y demás, pero no las necesito */
@@ -389,113 +564,6 @@
 
 /* Funcionó, pero no sé cómo usar esas clases que acabo de crear en mi proyecto. Mi intención era crear de esta manera las cards que faltan sin tener que hacerlas de a 1 */
 
-/* LOCATIONS */
-.locations{
-    background-color: $fondos;
-    .wrapLocations{
-        background: url(../assets/imgs/locations/locations.jpg);
-        @include wrapper;
-        background-position: 100% 14%;
-        .wrapLocations__imgSobreTexto{
-           @include tituloSeccion;
-         }
-    }
-   /*  .locations__grid > *{
-        height:100%;
-    } */
-    .locations__grid{
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "aside principal";
-    } 
-    .aside  {
-        grid-area: aside;
-        height: $w;
-        padding: 100px;
-        details{
-            width:100%;
-            cursor:pointer;
-            color: $color;
-            font-size: 1.5rem;
-            border-bottom: solid 1px $bgfooter ;
-            border-right: solid 1px $bgfooter ;
-            summary{
-                padding: 15px 10px;
-                &:hover{
-                    background-color: $bgcabecera;
-
-                }
-                &::before{
-                    content: url(../assets/imgs/logo/bx-world.png);
-                    padding-right: 5px;
-                }
-            }
-            ul li{
-                padding: 10px;
-                font-size: 1rem;
-                color: $color;
-                a{
-                    color:$color;
-                    font-weight: 400;
-                    transition: all ease-in-out .3s;
-                    &:hover{
-                    color: $submenucolor;
-                    transform: scale(1.2);
-                }
-                }
-                &:hover{
-                    color: $submenucolor;  
-                    transition: .3s ease-in-out;
-               }  
-            }
-    }
-    }
-    .locations__main{
-        grid-area: principal;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        padding: 100px 35px;
-        .locations__pais{
-            h2{
-                font-size: $fs*2; 
-                color:$color;
-                font-weight: 600;
-                text-shadow: 2px 2px 4px #203536;
-                padding-bottom: pxARem(30);
-               }
-               h3{
-                font-size: $fs*1.5;
-                color:$color;
-                padding-bottom:15px;
-                font-weight: 600;
-                text-shadow: 2px 2px 4px #203536;
-                justify-content: start;
-               }
-              h4{
-                font-size: $fs*1;
-                line-height: 1.3;
-                color: $color;
-                padding-bottom: pxARem(20);
-               }
-               li{
-                font-size: $fs*1;
-                line-height: 1.3;
-                color: $color;
-               }
-            .locations__ciudad {
-                @include locations;
-                padding-bottom: pxARem(50);
-                iframe{
-                    width:300px;
-                    height:100px;
-                }
-            }
-        }   
-    }
-}
 
 
 

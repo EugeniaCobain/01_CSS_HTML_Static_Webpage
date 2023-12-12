@@ -1,4 +1,5 @@
 //RESET Y ESTILOS DE TODO EL SITIO (HEADER + FOOTER)
+ /*  @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
 
 
 /* RESET */
@@ -15,13 +16,8 @@
 }
 
 /* PROPIEDADES PARA TODO EL SITIO */
-/* @font-face {
-    font-family: Tombstone-FREE;
-    src: url(../assets/Fonts/Tombstone-FREE.otf);
-}
- */
 body{
-    font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif;
+    font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif !important;
     background-color: $bgbody;
 }
 
@@ -70,9 +66,7 @@ body{
  }
 
 /* FOOTER */ /* VER ETIQUETA MARQUEE */
-marquee{
-    overflow-x: hidden;
-}
+
 footer{
     width: 100%;
     background-color: $bgfooter;
@@ -92,7 +86,7 @@ footer{
         gap: 50px;
         font-size: 1.3rem;
         text-align: center;
-        padding-bottom: 35px;
+        padding-bottom: 30px;
         a:hover{
             color: $submenucolor;  
             transition: .3s ease-in-out;
@@ -108,6 +102,9 @@ footer{
         a:hover{
                 color: $submenucolor;  
                 transition: .3s ease-in-out;
+        }
+        marquee{
+            overflow-x: hidden;
         }
     }
     .footer__copyright{

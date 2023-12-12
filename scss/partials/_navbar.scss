@@ -58,7 +58,6 @@
  .nav ul li ul li a{
     color: $submenucolor;
     &:hover{
-        color:$colorhover;
         color: $color;
         transition: all 0.3s;
         }
@@ -71,24 +70,20 @@
  
  /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
  .icon__menu{
-    /* font-size: $fs*2; */
-    /* color: $submenucolor; */
     cursor: pointer;
     width: 40px;
     height:40px;
-    /* height: $w; */
     display: flex;
     justify-content: center;
     align-items: center;
+     filter:drop-shadow(0px 0px 5px $bgbody);
     &:hover{
-        /* background-color: $colorhover; */
-        filter: drop-♀(4px 4px 4px rgba(0, 0, 0, 1));
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
         transition: all 0.3s;
     }
  }
 
  #label__check{
-    width: 100px;
     height: $w;
     display:none;
  }
