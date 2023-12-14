@@ -217,7 +217,7 @@ footer{
        display: grid;
        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
        grid-auto-rows: minmax(400px, auto);
-       gap:25px;
+       gap:50px;
        @include pad($lr:15px)   
    }
 }

@@ -157,6 +157,7 @@
 /* PÁGINA GRAVES */
 .main__graves{
     background-color: map-get($palette , colorbody2 );
+    padding-bottom: pxARem(50);
     .wrapGraves{
         background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
         background-position: 70% 100%;
@@ -168,6 +169,7 @@
         gap: pxARem(20);
         .btn-personal{
             @include button;
+            font-family: Oxygen-Regular !important;
             font-size: $fs*2;
             width:  pxARem(300);
             padding:  pxARem(20);
@@ -183,14 +185,15 @@
          }
      }
     .graves__section{
-       @include gravesSection
+       @include gravesSection;
      }
     .grave__container{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-auto-rows: minmax(600px, auto);
-        gap:pxARem(50);
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-auto-rows: minmax(700px, auto);
+        gap:pxARem(65);
         @include pad($lr:100px);
+        
         /* FLIPPING CARDS */
         .card{
             @include flexBox(row, center, center);
@@ -207,7 +210,7 @@
                 transition:.7s;
             }
             .front{
-                transform: perspective(600px) rotateY(0deg);
+                transform: perspective(500px) rotateY(0deg);
                 box-shadow: 0 4px 20px rgba(#000, 1);
                 img{
                     position: absolute;
@@ -216,7 +219,6 @@
                     object-fit:cover;
                 }
                 h3{
-                    
                     position: absolute;
                     bottom: 0;
                     width:$w;
@@ -228,7 +230,7 @@
                 }
             }
             .back{
-                transform: perspective(600px) rotateY(180deg);
+                transform: perspective(500px) rotateY(180deg);
                 @include flexBox(column, center, center);
                 background-color: $bgfooter;
                 padding: $padding;
@@ -374,6 +376,7 @@
 /* PÁGINA CONTACTO */
 .main__contacto{
     @include flexBox(column, center, center);
+        margin-bottom: 50px;
        .wrapContacto{
            background: url(../assets/imgs/contacto/westminster.jpg);
            @include wrapper;
@@ -388,7 +391,6 @@
             margin-top: pxARem(20);
             margin-left: pxARem(50);
             margin-right: pxARem(50);
-
             }
         }
         form{
@@ -402,11 +404,12 @@
             }
             input[type="submit"]{
                 @include button;
+                font-family: Oxygen-Regular !important;
                 width: pxARem(300);
                 color: $color;
                 font-size: $fs*1.3;
                 margin-top: 10px;
-                filter: drop-shadow(0px 4px 6px rgba($bgfooter, .4));;
+                filter: drop-shadow(0px 4px 6px rgba($bgfooter, .4));
                 transition: all .3s;
                 &[type="submit"]:hover {
                     color: $colorhover;
@@ -443,7 +446,7 @@
 /* PÁGINA ERROR */
 .error__header{
     background-color: $bgfooter;
-    padding-top: 30px;
+    padding-top: pxARem(30);
 }
 .contenedor__error{
     width:$w;
@@ -454,15 +457,15 @@
     color: $color;
     h1{
         font-size: $fs*4;
-        padding-bottom: 30px;
+        padding-bottom: pxARem(30);
        
     }
     h2{
         font-size: $fs*3;
-        padding-bottom: 20px;
+        padding-bottom: pxARem(20);
     }
     p{
-        font-size: 1.5rem;
+        font-size: $fs*1.5;
         line-height: 2rem;
     }
     a{
@@ -471,7 +474,7 @@
         line-height: 3rem;
         cursor: pointer;
         i{
-            padding-right:10px;
+            padding-right:pxARem(10);
         }
         &:hover{
             color:$submenucolor;
@@ -482,7 +485,7 @@
     background-color: $bgfooter;
     height: auto;
     .img__error{
-        width:100%;
+        width:$w;
     }
 }
 
