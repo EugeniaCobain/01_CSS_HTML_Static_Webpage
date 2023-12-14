@@ -58,7 +58,8 @@
 }
 
 @mixin locations{
-    @include flexBox(row, start, center);
+    @include flexBox(row, start, start);
+    flex-wrap: wrap;
     gap: pxARem(50);
     margin-bottom: pxARem(25);
 }
