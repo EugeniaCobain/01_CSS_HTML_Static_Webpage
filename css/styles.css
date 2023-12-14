@@ -300,7 +300,8 @@ footer .footer__copyright {
 
 /* PÁGINA ARTICLES */
 .wrapArticle {
-  background: url(../assets/imgs/articles/funciona.jpg);
+  background: url(../assets/imgs/articles/nürnberg.jpg);
+  background-position: 70% 98%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -327,8 +328,6 @@ footer .footer__copyright {
   }
 }
 
-/*  background-position: 70% 98%; */
-/*  */
 .article__container {
   width: 100%;
   display: flex;
@@ -442,6 +441,7 @@ footer .footer__copyright {
   background-color: #203536;
   font-family: Oxygen-Regular !important;
   color: #baa480;
+  border: none;
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 0.625rem;
@@ -450,6 +450,7 @@ footer .footer__copyright {
   width: 18.75rem;
   padding: 1.25rem;
   border-radius: 0.625rem;
+  filter: drop-shadow(0px 4px 6px #203536);
   transition: all 0.3s;
 }
 .main__graves .btn-group .btn-personal:hover {
@@ -761,6 +762,7 @@ footer .footer__copyright {
   background-color: #203536;
   font-family: Oxygen-Regular !important;
   color: #baa480;
+  border: none;
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 0.625rem;
@@ -772,33 +774,39 @@ footer .footer__copyright {
   filter: drop-shadow(0px 4px 6px rgba(32, 53, 54, 0.4));
   transition: all 0.3s;
 }
-.main__contacto form input[type=submit][type=submit]:hover {
+.main__contacto form input[type=submit][type=submit]:hover:active {
   color: #928d7f;
   background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
 }
 .main__contacto form textarea {
   filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
-  border: 1px solid black;
   background-color: rgb(255, 255, 255);
   margin: 8px 0;
-  font-family: Oxygen-Regular;
+  font-family: Oxygen-Regular !important;
   font-size: 1rem;
   width: 31.25rem;
   height: 18.75rem;
   padding: 0.625rem;
-  border: 1px solid black;
+  border: none;
   border-radius: 10px;
   margin: 8px 0;
 }
+.main__contacto form textarea:focus {
+  outline: 2px solid rgba(32, 53, 54, 0.6);
+}
 .main__contacto form input[type=text], .main__contacto form input[type=email] {
   border: 1px solid black;
-  font-family: Oxygen-Regular;
+  font-family: Oxygen-Regular !important;
   font-size: 1rem;
   width: 18.75rem;
   padding: 0.625rem;
   margin: 10px 0 20px 0;
   border-radius: 0.625rem;
+  border: none;
   filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
+}
+.main__contacto form input[type=text][type=text]:focus, .main__contacto form input[type=text][type=email], .main__contacto form input[type=email][type=text]:focus, .main__contacto form input[type=email][type=email] {
+  outline: 2px solid rgba(32, 53, 54, 0.6);
 }
 
 /* PÁGINA ERROR */
@@ -905,12 +913,6 @@ footer .footer__copyright {
     display: flex;
     justify-content: center;
     padding-bottom: 0.625rem;
-  }
-  .up {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 5px;
   }
   /* LOCATIONS */
   .locations .locations__grid {
@@ -1020,7 +1022,7 @@ footer .footer__copyright {
     display: none;
   }
   /* ARTICLES */
-  .wrapArticles {
+  .wrapArticle {
     background-position: 5% 25%;
   }
   .article__container {
