@@ -80,6 +80,29 @@
     }   
 }
 
+/* LINKS UP */
+.up{
+    background-color: $color;
+    @include flexBox(row, center, center);
+    width:30px; 
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    right: 0;
+    margin-right: 15px;
+    position: fixed;
+    bottom:245px;
+    filter: $shadow;
+    a{
+        color: $bgfooter;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
 /* PÁGINA ARTICLES */
 .wrapArticles{
     background: url(../assets/imgs/articles/nürnskull.jpg);
@@ -253,7 +276,8 @@
                 transform: perspective(600px) rotateY(360deg);
             }
         }
-    }   
+    }
+    
 }
 
 /* LOCATIONS */
