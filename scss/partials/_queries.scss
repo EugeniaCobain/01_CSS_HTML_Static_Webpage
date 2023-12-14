@@ -202,7 +202,8 @@ footer{
            padding: 0px;
         }
         .png{
-         padding-left: pxARem(15);
+         padding-left: pxARem(5);
+         margin-bottom: 5px;
         }
        .textbox{
            text-align: center;
@@ -385,7 +386,6 @@ footer{
    .png{
       img{
          width:pxARem(30);
-         margin-left: pxARem(50);
       }
    }
 }

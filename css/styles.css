@@ -299,8 +299,8 @@ footer .footer__copyright {
 }
 
 /* PÁGINA ARTICLES */
-.wrapArticles {
-  background: url(../assets/imgs/articles/nürnskull.jpg);
+.wrapArticle {
+  background: url(../assets/imgs/articles/funciona.jpg);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -314,20 +314,21 @@ footer .footer__copyright {
   height: 43.75rem;
   background-size: cover;
   background-position: center;
-  background-position: 70% 98%;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 }
 @media screen and (max-width: 768px) {
-  .wrapArticles {
+  .wrapArticle {
     font-size: 2.7rem;
   }
 }
 @media screen and (max-width: 360px) {
-  .wrapArticles {
+  .wrapArticle {
     font-size: 2.5rem;
   }
 }
 
+/*  background-position: 70% 98%; */
+/*  */
 .article__container {
   width: 100%;
   display: flex;
@@ -1043,7 +1044,8 @@ footer .footer__copyright {
     padding: 0px;
   }
   .article__container .article__wrapper .png {
-    padding-left: 0.9375rem;
+    padding-left: 0.3125rem;
+    margin-bottom: 5px;
   }
   .article__container .article__wrapper .textbox {
     text-align: center;
@@ -1203,7 +1205,6 @@ footer .footer__copyright {
   /* ARTICLES */
   .article__container .png img {
     width: 1.875rem;
-    margin-left: 3.125rem;
   }
   /* LOCATIONS */
   .locations .locations__grid .aside {

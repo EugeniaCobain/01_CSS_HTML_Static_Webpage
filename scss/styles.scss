@@ -81,12 +81,14 @@
 }
 
 /* PÁGINA ARTICLES */
-.wrapArticles{
-    background: url(../assets/imgs/articles/nürnskull.jpg);
-    @include wrapper; 
-    background-position: 70% 98%;
-    /* background-attachment: fixed; */
+.wrapArticle{
+    background: url(../assets/imgs/articles/funciona.jpg);
+    @include wrapper;
+    background-attachment: fixed;
 }
+
+/*  background-position: 70% 98%; */
+    /*  */
 
  .article__container{
     width: $w;
