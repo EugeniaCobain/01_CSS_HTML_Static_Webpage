@@ -24,13 +24,13 @@ body{
 
 /* ESTILOS DEL HEADER (excepto el de la página ÍNDEX */
 .header__paginas{
-   /*  position:sticky;
-    top: 0; */
+    position:sticky;
+    top: 0;
     width: $w;
     z-index: 100;
  }
 .nav__paginas, nav>ul{
-    /* position:fixed; */
+    position:fixed;
     z-index: 100;
  }
  
@@ -117,7 +117,6 @@ footer{
         font-size: calc($fs/1.60);
     }  
 }
-
 
 
     
