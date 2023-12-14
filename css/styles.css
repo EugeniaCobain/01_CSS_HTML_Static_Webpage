@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/* mapa para probar cómo funciona */
-/*  @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
 /* RESET */
 * {
   margin: 0;
@@ -17,7 +16,7 @@
 /* PROPIEDADES PARA TODO EL SITIO */
 body {
   font-family: Oxygen-Regular, sans-serif, Arial, Helvetica, sans-serif !important;
-  background-color: rgb(192, 214, 188);
+  background-color: #c0d6bc;
 }
 
 /* ESTILOS DEL HEADER (excepto el de la página ÍNDEX */
@@ -28,7 +27,7 @@ body {
   z-index: 100;
 }
 
-.nav__paginas {
+.nav__paginas, nav > ul {
   position: fixed;
   z-index: 100;
 }
@@ -40,21 +39,22 @@ main a {
   transition: all ease-in-out 0.3s;
 }
 main a:hover {
-  color: rgb(186, 164, 128);
+  color: #baa480;
   transform: scale(1.2);
-  filter: drop-shadow(4px 4px 6px rgba(32, 53, 54, 0.381));
+  filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
 }
 
 footer a, .btn-group a {
-  color: rgb(186, 164, 128);
-  font-weight: bolder;
+  color: #baa480;
+  font-weight: bold;
 }
 
 /* HEADER */
 header {
-  background-color: rgb(69, 92, 80);
+  background-color: #455c50;
   width: 100%;
   height: 140px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,8 +66,8 @@ header .container__logo img {
 /* FOOTER */ /* VER ETIQUETA MARQUEE */
 footer {
   width: 100%;
-  background-color: rgb(32, 53, 54);
-  color: rgb(186, 164, 128);
+  background-color: #203536;
+  color: #baa480;
 }
 footer .footer__titulo {
   width: 100%;
@@ -87,7 +87,7 @@ footer .footer__redes {
   padding-bottom: 30px;
 }
 footer .footer__redes a:hover {
-  color: #7e796c;
+  color: hsl(43, 8%, 46%);
   transition: 0.3s ease-in-out;
 }
 footer .footer__redes i {
@@ -99,7 +99,7 @@ footer .footer__disclaimer {
   padding-bottom: 10px;
 }
 footer .footer__disclaimer a:hover {
-  color: #7e796c;
+  color: hsl(43, 8%, 46%);
   transition: 0.3s ease-in-out;
 }
 footer .footer__disclaimer marquee {
@@ -115,8 +115,8 @@ footer .footer__copyright {
 
 /* MENÚ */
 .container__menu {
-  background-color: rgb(69, 92, 80);
-  height: 60px;
+  background-color: #455c50;
+  height: pxARem(60);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +136,7 @@ footer .footer__copyright {
 .container__menu .menu .nav > ul > li > a {
   width: 100%;
   height: 100%;
-  color: rgb(186, 164, 128);
+  color: #baa480;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +149,7 @@ footer .footer__copyright {
 
 /* MENÚ DROPDOWN/DESPLEGABLE */
 .nav ul li ul {
-  background-color: rgb(32, 53, 54);
+  background-color: #203536;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -166,10 +166,10 @@ footer .footer__copyright {
 }
 
 .nav ul li ul li a {
-  color: #7e796c;
+  color: hsl(43, 8%, 46%);
 }
 .nav ul li ul li a:hover {
-  color: rgb(186, 164, 128);
+  color: #baa480;
   transition: all 0.3s;
 }
 
@@ -181,12 +181,12 @@ footer .footer__copyright {
 /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
 .icon__menu {
   cursor: pointer;
-  width: 40px;
+  width: pxARem(40);
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0px 0px 5px rgb(192, 214, 188));
+  filter: drop-shadow(0px 0px 5px #c0d6bc);
 }
 .icon__menu:hover {
   filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
@@ -207,6 +207,7 @@ footer .footer__copyright {
   width: 100%;
   height: auto;
   overflow: hidden;
+  filter: drop-shadow(0px 4px 6px rgba(32, 53, 54, 0.4));
 }
 .slider-frame ul {
   display: flex;
@@ -250,18 +251,17 @@ footer .footer__copyright {
 
 .index__secciones {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 50px 125px;
   /* Sección "About" */
   /* Sección "Graves" */
 }
 .index__secciones h3 {
   font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0.9rem;
+  text-align: center;
+  margin-bottom: 0.9375rem;
 }
 .index__secciones p {
   font-size: 1.3rem;
@@ -270,29 +270,31 @@ footer .footer__copyright {
 .index__secciones .linkUp {
   line-height: 4rem;
   display: flex;
+  flex-direction: row;
   justify-content: start;
   align-items: center;
 }
 .index__secciones .seccion__about, .index__secciones .seccion__grave {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 25px 50px;
   gap: 2.5rem;
   margin-bottom: 4.6875rem;
-  padding: 25px 50px;
   width: 100%;
 }
 .index__secciones .seccion__about .about__imagen, .index__secciones .seccion__grave .about__imagen {
   width: 31.25rem;
-  filter: drop-shadow(4px 4px 6px rgba(32, 53, 54, 0.381));
+  filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
   border-radius: 0.625rem;
   z-index: -100;
 }
 .index__secciones .seccion__grave .grave__imagen {
   width: 25rem;
-  filter: drop-shadow(4px 4px 6px rgba(32, 53, 54, 0.381));
+  filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
+  filter: drop-shadow(-4px 4px 6px rgba(32, 53, 54, 0.4));
   border-radius: 0.625rem;
-  z-index: -100;
 }
 
 /* PÁGINA ARTICLES */
@@ -300,84 +302,80 @@ footer .footer__copyright {
   background: url(../assets/imgs/articles/nürnskull.jpg);
   background-position: 70% 98%;
   background-attachment: fixed;
-  width: 100%;
-  height: 700px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.wrapArticles .wrapArticles__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  justify-content: center;
-  align-items: center;
+  color: #baa480;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+  width: 100%;
+  height: 43.75rem;
+  background-size: cover;
+  background-position: center;
 }
 @media screen and (max-width: 768px) {
-  .wrapArticles .wrapArticles__imgSobreTexto {
+  .wrapArticles {
     font-size: 2.7rem;
   }
 }
 @media screen and (max-width: 360px) {
-  .wrapArticles .wrapArticles__imgSobreTexto {
+  .wrapArticles {
     font-size: 2.5rem;
   }
 }
 
 .article__container {
   width: 100%;
-  /* padding: 50px 25px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(43, 69, 66);
+  background-color: #2b4542;
 }
 .article__container .article__wrapper {
   margin: 50px auto;
+  padding: 50px 125px;
   width: 90%;
-  padding: 0.9rem;
-  /* padding:0; */
 }
 .article__container .article__wrapper img {
   max-width: 25rem;
-  min-width: 150px;
-  margin-right: 0.9rem;
-  margin-top: 0.9rem;
+  min-width: 9.375rem;
+  margin-right: 0.9375rem;
+  margin-top: 0.9375rem;
   float: left;
-  border-radius: 5px;
-  filter: drop-shadow(4px 4px 4px rgb(0, 0, 0));
+  border-radius: 0.625rem;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.7));
 }
 .article__container .article__wrapper .right {
   float: right;
-  padding-left: 15px;
+  padding-left: 0.9375rem;
 }
 .article__container .article__wrapper .textbox {
   text-align: justify;
 }
 .article__container .article__wrapper .textbox h2 {
   font-size: 2rem;
-  margin-bottom: 0.9rem;
-  color: rgb(186, 164, 128);
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #baa480;
   font-weight: 600;
-  text-shadow: 2px 2px 4px #203536;
+  text-shadow: 4px 4px 4px #203536;
 }
 .article__container .article__wrapper .textbox h3 {
   font-size: 1.7rem;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  color: rgb(186, 164, 128);
+  padding-top: 1.5625rem;
+  padding-bottom: 0.9375rem;
+  color: #baa480;
   font-weight: 600;
   text-shadow: 2px 2px 4px #203536;
 }
 .article__container .article__wrapper .textbox p {
   font-size: 1.3rem;
   line-height: 1.3;
-  color: rgb(186, 164, 128);
+  color: #baa480;
 }
 .article__container .article__parallax {
   background-image: url(../assets/imgs/articles/seneca2.jpg);
@@ -386,7 +384,7 @@ footer .footer__copyright {
   background-position: 96% 12%;
   background-attachment: fixed;
   width: 100%;
-  height: 550px;
+  height: 34.375rem;
 }
 .article__container .article__parallax2 {
   background-image: url(../assets/imgs/articles/highgate.jpg);
@@ -400,71 +398,70 @@ footer .footer__copyright {
 
 /* PÁGINA GRAVES */
 .main__graves {
-  background-color: rgb(43, 69, 66);
+  background-color: #2b4542;
 }
 .main__graves .wrapGraves {
   background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
   background-position: 70% 100%;
-  width: 100%;
-  height: 700px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.main__graves .wrapGraves .wrapGraves__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  justify-content: center;
-  align-items: center;
+  color: #baa480;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+  width: 100%;
+  height: 43.75rem;
+  background-size: cover;
+  background-position: center;
 }
 @media screen and (max-width: 768px) {
-  .main__graves .wrapGraves .wrapGraves__imgSobreTexto {
+  .main__graves .wrapGraves {
     font-size: 2.7rem;
   }
 }
 @media screen and (max-width: 360px) {
-  .main__graves .wrapGraves .wrapGraves__imgSobreTexto {
+  .main__graves .wrapGraves {
     font-size: 2.5rem;
   }
 }
 .main__graves .btn-group {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 4.6875rem;
   gap: 1.25rem;
 }
 .main__graves .btn-group .btn-personal {
-  background-color: rgb(32, 53, 54);
-  font-family: Oxygen-Regular;
-  color: rgb(186, 164, 128);
+  background-color: #203536;
+  font-family: Oxygen-Regular !important;
+  color: #baa480;
   font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 0.625rem;
   font-size: 2rem;
   width: 18.75rem;
-  padding: 8px 16px;
   padding: 1.25rem;
+  border-radius: 0.625rem;
   transition: all 0.3s;
-  border-radius: 10px;
 }
 .main__graves .btn-group .btn-personal:hover {
   background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
   transform: scale(1.01);
 }
 .main__graves .btn-group .btn-personal:hover a {
-  color: rgb(146, 141, 127);
+  color: #928d7f;
 }
 .main__graves .graves__section {
   width: 100%;
   text-align: center;
   padding: 1.25rem;
   font-size: 3rem;
-  color: rgb(186, 164, 128);
-  text-shadow: 7px 4px 4px rgb(69, 92, 80);
+  color: #baa480;
+  text-shadow: 4px 4px 4px #203536;
   padding-top: 3.125rem;
 }
 @media screen and (max-width: 768px) {
@@ -481,27 +478,27 @@ footer .footer__copyright {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-auto-rows: minmax(600px, auto);
-  gap: 50px;
+  gap: 3.125rem;
   padding: 50px 100px;
   /* FLIPPING CARDS */
 }
 .main__graves .grave__container .card {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   position: relative;
   object-fit: cover;
-  color: rgb(186, 164, 128);
-  border-radius: 4px;
+  color: #baa480;
 }
 .main__graves .grave__container .card .face {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 0.9375rem;
   overflow: hidden;
-  transition: 0.5s;
+  transition: 0.7s;
 }
 .main__graves .grave__container .card .front {
   transform: perspective(600px) rotateY(0deg);
@@ -517,20 +514,21 @@ footer .footer__copyright {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 45px;
+  height: 2.8125rem;
   font-size: 1.3rem;
   text-align: center;
-  background-color: rgb(43, 69, 66);
-  padding: 5px;
+  background-color: #2b4542;
+  padding: 0.3125rem;
 }
 .main__graves .grave__container .card .back {
   transform: perspective(600px) rotateY(180deg);
-  background-color: rgb(32, 53, 54);
-  padding: 15px;
-  color: rgb(186, 164, 128);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: #203536;
+  padding: 0.9375rem;
+  color: #baa480;
   text-align: center;
   box-shadow: 0 4px 20px black;
 }
@@ -539,7 +537,7 @@ footer .footer__copyright {
 }
 .main__graves .grave__container .card .back p {
   font-size: 1rem;
-  padding: 15px;
+  padding: 0.9375rem;
   text-justify: justify;
 }
 .main__graves .grave__container .card:hover .front {
@@ -551,38 +549,32 @@ footer .footer__copyright {
 
 /* LOCATIONS */
 .locations {
-  background-color: rgb(43, 69, 66);
-  /*  .locations__grid > *{
-       height:100%;
-   } */
+  background-color: #2b4542;
 }
 .locations .wrapLocations {
   background: url(../assets/imgs/locations/locations.jpg);
-  width: 100%;
-  height: 700px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  background-position: 15% 10%;
-}
-.locations .wrapLocations .wrapLocations__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  justify-content: center;
-  align-items: center;
+  color: #baa480;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+  width: 100%;
+  height: 43.75rem;
+  background-size: cover;
+  background-position: center;
+  background-position: 15% 10%;
 }
 @media screen and (max-width: 768px) {
-  .locations .wrapLocations .wrapLocations__imgSobreTexto {
+  .locations .wrapLocations {
     font-size: 2.7rem;
   }
 }
 @media screen and (max-width: 360px) {
-  .locations .wrapLocations .wrapLocations__imgSobreTexto {
+  .locations .wrapLocations {
     font-size: 2.5rem;
   }
 }
@@ -601,17 +593,17 @@ footer .footer__copyright {
 .locations .locations__grid .aside details {
   width: 100%;
   cursor: pointer;
-  color: rgb(186, 164, 128);
+  color: #baa480;
   font-size: 1.5rem;
-  border-bottom: solid 1px rgb(32, 53, 54);
-  border-right: solid 1px rgb(32, 53, 54);
+  border-bottom: solid 1px #203536;
+  border-right: solid 1px #203536;
 }
 .locations .locations__grid .aside details summary {
   padding: 15px 10px;
 }
 .locations .locations__grid .aside details summary:hover {
-  background-color: rgb(69, 92, 80);
-  color: #7e796c;
+  background-color: #455c50;
+  color: hsl(43, 8%, 46%);
   transition: 0.3s ease-in-out;
 }
 .locations .locations__grid .aside details summary::before {
@@ -621,18 +613,18 @@ footer .footer__copyright {
 .locations .locations__grid .aside details ul li {
   padding: 10px 35px;
   font-size: 1.2rem;
-  color: rgb(186, 164, 128);
+  color: #baa480;
 }
 .locations .locations__grid .aside details ul li a {
-  color: rgb(186, 164, 128);
+  color: #baa480;
   font-weight: 400;
 }
 .locations .locations__grid .aside details ul li a:hover {
-  color: #7e796c;
+  color: hsl(43, 8%, 46%);
   transition: all 0.3s;
 }
 .locations .locations__grid .aside details ul li:hover {
-  color: #7e796c;
+  color: hsl(43, 8%, 46%);
   transition: 0.3s ease-in-out;
 }
 .locations .locations__grid .aside details[open] summary::before {
@@ -645,92 +637,86 @@ footer .footer__copyright {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  /* display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  padding: 100px 35px; */
 }
 .locations .locations__grid .locations__main .locations__pais {
   display: flex;
   flex-direction: column;
-  padding-top: 35px;
+  padding-top: 2.1875rem;
 }
 .locations .locations__grid .locations__main .locations__pais h2 {
   font-size: 2rem;
-  color: rgb(186, 164, 128);
+  color: #baa480;
   font-weight: 600;
-  text-shadow: 2px 2px 4px #203536;
+  text-shadow: 4px 4px 4px #203536;
   padding-bottom: 1.875rem;
 }
 .locations .locations__grid .locations__main .locations__pais h3 {
   font-size: 1.5rem;
-  color: rgb(186, 164, 128);
+  color: #baa480;
   padding-bottom: 15px;
   font-weight: 600;
-  text-shadow: 2px 2px 4px #203536;
   justify-content: start;
 }
 .locations .locations__grid .locations__main .locations__pais h4 {
   font-size: 1rem;
   line-height: 1.3;
-  color: rgb(186, 164, 128);
+  color: #baa480;
   padding-bottom: 1.25rem;
 }
 .locations .locations__grid .locations__main .locations__pais li {
   font-size: 1rem;
   line-height: 1.3;
-  color: rgb(186, 164, 128);
+  color: #baa480;
 }
 .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
   display: flex;
   flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 50px;
-  margin-bottom: 25px;
-  /* gap:200px; */
+  gap: 3.125rem;
+  margin-bottom: 1.5625rem;
   padding-bottom: 3.125rem;
 }
 .locations .locations__grid .locations__main .locations__pais .locations__ciudad .ciudad__titulo {
   width: 40%;
 }
 .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
-  width: 300px;
-  height: 100px;
+  width: 18.75rem;
+  height: 6.25rem;
 }
 
 /* PÁGINA CONTACTO */
 .main__contacto {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .main__contacto .wrapContacto {
   background: url(../assets/imgs/contacto/westminster.jpg);
-  width: 100%;
-  height: 700px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
-  color: rgb(186, 164, 128);
-  justify-content: center;
-  align-items: center;
+  color: #baa480;
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
   text-shadow: 3px 4px 4px rgba(19, 18, 18, 0.381);
+  width: 100%;
+  height: 43.75rem;
+  background-size: cover;
+  background-position: center;
 }
 @media screen and (max-width: 768px) {
-  .main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
+  .main__contacto .wrapContacto {
     font-size: 2.7rem;
   }
 }
 @media screen and (max-width: 360px) {
-  .main__contacto .wrapContacto .wrapContacto__imgSobreTexto {
+  .main__contacto .wrapContacto {
     font-size: 2.5rem;
   }
 }
@@ -739,6 +725,7 @@ footer .footer__copyright {
   text-align: center;
   font-size: 1.3rem;
   padding: 1.5625rem;
+  padding-bottom: 0;
 }
 .main__contacto .mail__contacto > p {
   margin-top: 1.25rem;
@@ -747,9 +734,9 @@ footer .footer__copyright {
 }
 .main__contacto form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
   padding: 1.875rem 0;
 }
@@ -759,24 +746,25 @@ footer .footer__copyright {
   text-align: justify;
 }
 .main__contacto form input[type=submit] {
-  border: 1px solid black;
-  background-color: rgb(32, 53, 54);
-  font-family: Oxygen-Regular;
-  color: rgb(32, 53, 54);
-  font-weight: bolder;
-  font-size: 1.3rem;
-  width: 18.75rem;
+  background-color: #203536;
+  font-family: Oxygen-Regular !important;
+  color: #baa480;
+  font-weight: bold;
   padding: 8px 16px;
-  margin-top: 8px;
-  border-radius: 5px;
-  color: rgb(186, 164, 128);
-}
-.main__contacto form input[type=submit][type=submit]:hover {
-  color: rgb(146, 141, 127);
-  background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
+  border-radius: 0.625rem;
+  width: 18.75rem;
+  color: #baa480;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  filter: drop-shadow(0px 4px 6px rgba(32, 53, 54, 0.4));
   transition: all 0.3s;
 }
+.main__contacto form input[type=submit][type=submit]:hover {
+  color: #928d7f;
+  background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
+}
 .main__contacto form textarea {
+  filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
   border: 1px solid black;
   background-color: rgb(255, 255, 255);
   margin: 8px 0;
@@ -786,7 +774,7 @@ footer .footer__copyright {
   height: 18.75rem;
   padding: 0.625rem;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 8px 0;
 }
 .main__contacto form input[type=text], .main__contacto form input[type=email] {
@@ -794,14 +782,15 @@ footer .footer__copyright {
   font-family: Oxygen-Regular;
   font-size: 1rem;
   width: 18.75rem;
-  padding: 10px 10px;
-  margin: 8px 0;
-  border-radius: 5px;
+  padding: 0.625rem;
+  margin: 10px 0 20px 0;
+  border-radius: 0.625rem;
+  filter: drop-shadow(4px 4px 4px rgba(32, 53, 54, 0.4));
 }
 
 /* PÁGINA ERROR */
 .error__header {
-  background-color: rgb(32, 53, 54);
+  background-color: #203536;
   padding-top: 30px;
 }
 
@@ -809,12 +798,12 @@ footer .footer__copyright {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: rgb(32, 53, 54);
-  color: rgb(186, 164, 128);
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #203536;
+  color: #baa480;
 }
 .contenedor__error h1 {
   font-size: 4rem;
@@ -829,7 +818,7 @@ footer .footer__copyright {
   line-height: 2rem;
 }
 .contenedor__error a {
-  color: rgb(186, 164, 128);
+  color: #baa480;
   font-weight: lighter;
   line-height: 3rem;
   cursor: pointer;
@@ -838,87 +827,17 @@ footer .footer__copyright {
   padding-right: 10px;
 }
 .contenedor__error a:hover {
-  color: #7e796c;
+  color: hsl(43, 8%, 46%);
 }
 
 .error__footer {
-  background-color: rgb(32, 53, 54);
+  background-color: #203536;
   height: auto;
 }
 .error__footer .img__error {
   width: 100%;
 }
 
-/* En "_variables" hice un mapa para probar cómo funciona con el @EACh. En efecto, en el archivo .CSS se crearon las clases .heideggerimag y demás, pero no las necesito */
-.heideggerimag {
-  background-image: url(../assets/imgs/graves/thinkers/heidegger);
-}
-
-.sartreimag {
-  background-image: url(../assets/imgs/graves/thinkers/sartre);
-}
-
-.schopenhauerimag {
-  background-image: url(../assets/imgs/graves/thinkers/schopenhauer);
-}
-
-.hegelimag {
-  background-image: url(../assets/imgs/graves/thinkers/hegel);
-}
-
-.heideggerimag {
-  background-image: url(../assets/imgs/graves/thinkers/heidegger);
-  width: 25rem;
-}
-
-.sartreimag {
-  background-image: url(../assets/imgs/graves/thinkers/sartre);
-  width: 25rem;
-}
-
-.schopenhauerimag {
-  background-image: url(../assets/imgs/graves/thinkers/schopenhauer);
-  width: 25rem;
-}
-
-.hegelimag {
-  background-image: url(../assets/imgs/graves/thinkers/hegel);
-  width: 25rem;
-}
-
-.card-1 {
-  background-color: rgb(43, 69, 66);
-  box-shadow: 2px 2px 4px rgb(9, 18, 18);
-  border-radius: 10px;
-  margin: 1.25rem;
-  padding-bottom: 0.9rem;
-}
-
-.card-2 {
-  background-color: rgb(43, 69, 66);
-  box-shadow: 2px 2px 4px rgb(9, 18, 18);
-  border-radius: 10px;
-  margin: 1.25rem;
-  padding-bottom: 0.9rem;
-}
-
-.card-3 {
-  background-color: rgb(43, 69, 66);
-  box-shadow: 2px 2px 4px rgb(9, 18, 18);
-  border-radius: 10px;
-  margin: 1.25rem;
-  padding-bottom: 0.9rem;
-}
-
-.card-4 {
-  background-color: rgb(43, 69, 66);
-  box-shadow: 2px 2px 4px rgb(9, 18, 18);
-  border-radius: 10px;
-  margin: 1.25rem;
-  padding-bottom: 0.9rem;
-}
-
-/* Funcionó, pero no sé cómo usar esas clases que acabo de crear en mi proyecto. Mi intención era crear de esta manera las cards que faltan sin tener que hacerlas de a 1 */
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) { /* de 1024 para abajo aplican los cambios */
   /* MENÚ */
@@ -933,7 +852,7 @@ footer .footer__copyright {
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    background-color: rgb(32, 53, 54);
+    background-color: #203536;
   }
   .nav ul li a {
     margin-left: 1.5625rem;
@@ -965,14 +884,14 @@ footer .footer__copyright {
   footer .footer__redes {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 2.5rem;
     font-size: 1.2rem;
-    padding: 25px;
+    padding: 1.5625rem;
   }
   footer .footer__disclaimer {
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   /* LOCATIONS */
   .locations .locations__grid {
@@ -987,38 +906,39 @@ footer .footer__copyright {
     padding-bottom: 0;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-    gap: 15px;
+    gap: 0.9375rem;
     padding: 0px;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
-    width: 200px;
+    width: 12.5rem;
   }
   /* PÁGINA ERROR */
   .contenedor__error {
-    padding: 50px;
-    background-color: rgb(32, 53, 54);
+    padding: 3.125rem;
+    background-color: #203536;
   }
 }
 @media screen and (max-width: 768px) { /* de 768 para abajo aplican los cambios */
   /* HEADER + LOGO */
   header {
-    height: 110px;
+    height: 6.875rem;
   }
   header .container__logo img {
-    width: 350px;
+    width: 21.875rem;
   }
   /* MENÚ */
   .container__menu {
-    height: 60px;
+    height: 3.75rem;
   }
   .nav > ul {
-    top: 170px;
+    top: 10.625rem;
   }
   .nav ul li {
-    width: 200px;
+    width: 12.5rem;
     margin: 0;
     padding: 0;
     left: 0;
@@ -1029,35 +949,36 @@ footer .footer__copyright {
   .nav ul li .art {
     margin: 0;
     padding: 0;
-    padding-bottom: 2px;
+    padding-bottom: 0.125rem;
     display: flex;
   }
   .nav ul li .gra {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    top: 7px;
+    top: 0.4375rem;
   }
   .nav ul li .gra a {
     display: flex;
-    padding-left: 5px;
+    padding-left: 0.3125rem;
   }
   /* FOOTER */
   footer .footer__titulo {
     padding: 0px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
   footer .footer__titulo .footer__logo img {
-    width: 350px;
+    width: 21.875rem;
   }
   footer .footer__redes {
-    gap: 35px;
+    gap: 2.1875rem;
   }
   /* INICIO */
   .index__secciones {
-    padding: 30px;
+    padding: 1.875rem;
   }
   .index__secciones h3 {
     font-size: 2rem;
@@ -1070,7 +991,7 @@ footer .footer__copyright {
     padding: 0.625rem;
   }
   .index__secciones .seccion__about .about__imagen, .index__secciones .seccion__grave .about__imagen {
-    width: 350px;
+    width: 21.875rem;
   }
   .index__secciones .seccion__grave {
     width: 100%;
@@ -1093,18 +1014,18 @@ footer .footer__copyright {
   }
   .article__container .article__wrapper img {
     max-width: 100%;
-    min-width: 150px;
+    min-width: 9.375rem;
     margin: 15px 0px;
     padding: 0px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     filter: drop-shadow(4px 4px 4px rgb(0, 0, 0));
   }
   .article__container .article__wrapper .right {
     padding: 0px;
   }
   .article__container .article__wrapper .png {
-    padding-left: 10px;
+    padding-left: 0.9375rem;
   }
   .article__container .article__wrapper .textbox {
     text-align: center;
@@ -1116,6 +1037,8 @@ footer .footer__copyright {
   .main__graves .btn-group {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 3.125rem;
     gap: 1.25rem;
   }
@@ -1147,18 +1070,19 @@ footer .footer__copyright {
     padding-bottom: 0;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-    gap: 15px;
+    gap: 0.9375rem;
     padding: 0px;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad .ciudad__titulo {
     width: 100%;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
-    width: 250px;
-    height: 200px;
+    width: 15.625rem;
+    height: 12.5rem;
   }
   /* CONTACTO */
   form {
@@ -1169,38 +1093,38 @@ footer .footer__copyright {
   }
   /* PÁGINA ERROR */
   .error__header img {
-    width: 350px;
-    padding-top: 50px;
+    width: 9.375rem;
+    padding-top: 3.125rem;
   }
   .contenedor__error {
-    padding: 30px;
+    padding: 1.875rem;
   }
   .contenedor__error h1 {
     font-size: 3rem;
   }
   .contenedor__error h2 {
     font-size: 2.5rem;
-    padding-bottom: 20px;
+    padding-bottom: 2pxARem 200;
   }
 }
 @media screen and (max-width: 360px) { /* de 350 para abajo aplican los cambios*/
   /* HEADER + LOGO */
   header {
-    height: 90px;
+    height: 5.625rem;
   }
   header .container__logo img {
-    width: 300px;
+    width: 18.75rem;
   }
   /* MENÚ */
   .container__menu {
-    height: 50px;
+    height: 3.125rem;
   }
   .nav > ul {
-    top: 140px;
+    top: 8.75rem;
   }
   .nav ul li {
     font-size: 1.1rem;
-    width: 150px;
+    width: 9.375rem;
   }
   .nav ul li ul {
     left: 9.375rem;
@@ -1208,31 +1132,31 @@ footer .footer__copyright {
   .nav ul li .art {
     padding: 0;
     margin: 0;
-    padding-bottom: 6px;
+    padding-bottom: 0.375rem;
   }
   .nav ul li .gra a {
-    padding-left: 10px;
+    padding-left: 0.625rem;
   }
   /* MENÚ HAMBURGUESA */
   .icon__menu {
-    width: 35px;
-    height: 35px;
+    width: 2.1875rem;
+    height: 2.1875rem;
   }
   /* FOOTER */
   footer .footer__titulo {
     padding: 0px;
-    height: 85px;
+    height: 5.3125rem;
   }
   footer .footer__titulo .footer__logo img {
-    padding-top: 10px;
+    padding-top: 0.625rem;
     padding-bottom: 0;
-    width: 300px;
+    width: 18.75rem;
   }
   footer .footer__redes {
-    gap: 35px;
+    gap: 2.1875rem;
     font-size: 1.1rem;
-    padding: 15px;
-    padding-bottom: 20px;
+    padding: 0.9375rem;
+    padding-bottom: 1.25rem;
   }
   footer .footer__redes i {
     display: none;
@@ -1260,8 +1184,8 @@ footer .footer__copyright {
   }
   /* ARTICLES */
   .article__container .png img {
-    width: 30px;
-    margin-left: 5px;
+    width: 1.875rem;
+    margin-left: 3.125rem;
   }
   /* LOCATIONS */
   .locations .locations__grid .aside {
@@ -1271,44 +1195,42 @@ footer .footer__copyright {
   }
   .locations .locations__grid .locations__main {
     margin: 0px 25px;
-    /* margin:0px 0px 35px 50px; */
     gap: 0px;
   }
   .locations .locations__grid .locations__main .locations__pais {
-    /*  padding: 35px; */
-    padding-top: 15px;
+    padding-top: 0.9375rem;
     padding-bottom: 0;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad {
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-    gap: 15px;
+    gap: 0.9375rem;
     padding: 0px;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad h4 {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   .locations .locations__grid .locations__main .locations__pais .locations__ciudad iframe {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
   }
   /* CONTACTO */
   form input[type=submit], form input[type=text], form input[type=email] {
-    background-color: aquamarine;
-    width: 250px;
+    width: 15.625rem;
   }
   form #message {
-    width: 250px;
+    width: 15.625rem;
   }
   /* PÁGINA ERROR */
   .error__header img {
-    width: 300px;
+    width: 18.75rem;
   }
   .contenedor__error {
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 50px;
+    padding-top: 9.375rem;
+    padding-bottom: 3.125rem;
   }
   .contenedor__error h1 {
     font-size: 3rem;

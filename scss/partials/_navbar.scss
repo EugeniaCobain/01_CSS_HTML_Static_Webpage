@@ -1,11 +1,11 @@
 /* MENÚ */
 .container__menu{
-    background-color: $bgcabecera;
-    height: 60px;
+    background-color: map-get($palette, colorheader);
+    height: pxARem(60);
     display: flex;
     align-items: center;
     justify-content: center;
-    width:100%;
+    width:$w;
     .menu{
         .nav{
             &>ul{
@@ -71,7 +71,7 @@
  /* ELEMENTO RESPONSIVE: MENÚ HAMBURGUESA */
  .icon__menu{
     cursor: pointer;
-    width: 40px;
+    width: pxARem(40);
     height:40px;
     display: flex;
     justify-content: center;

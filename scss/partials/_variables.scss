@@ -1,27 +1,38 @@
-$bgcabecera: rgb(69, 92, 80);
-$bgbody: rgb(192, 214, 188);
-$bgfooter: rgb(32, 53, 54);
-$color: rgb(186, 164, 128);
-$colorhover:  rgb(146, 141, 127);
-$submenucolor:  #7e796c; 
-$fondos: rgb(43, 69, 66);
-
-$padding: 0.9rem;
+//VARIABLES
+$bgcabecera: #455c50;
+$bgbody: #c0d6bc;
+$fondos: #2b4542;
+$bgfooter: #203536;
+$color: #baa480;
+$colorhover:  #928d7f;
+$submenucolor:  hsl(43, 8%, 46%); 
+$padding: 0.9375rem;
 $w: 100%;
 $h: 100vh;
 $fs: 1rem;
-$shadow: drop-shadow(4px 4px 6px rgba(32, 53, 54, 0.381));
+$gradiente: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);;
+$shadow: drop-shadow(4px 4px 4px rgba($bgfooter, .4));
+//0.381
+
+
+
+//MAPAS
+$palette: (
+    "colorheader": $bgcabecera,
+    "colorbody1": $bgbody,
+    "colorbody2": $fondos,
+    "colorfooter": $bgfooter,
+);
+
+$fontsizes:(
+"med1":$fs*1.3,
+"lar1":$fs*2,
+"lar2":$fs*3,
+"xl1":$fs*3,
+);
 
 
 
 
-
-/* mapa para probar cómo funciona */
-$thinkers:(
-'heidegger',
-'sartre',
-'schopenhauer',
-'hegel'
-)
 
 

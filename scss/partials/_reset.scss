@@ -1,5 +1,6 @@
 //RESET Y ESTILOS DE TODO EL SITIO (HEADER + FOOTER)
- /*  @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+ //Cargo la fuente también desde Google porque no me la toma de mis assets
 
 
 /* RESET */
@@ -25,10 +26,10 @@ body{
 .header__paginas{
     position:sticky;
     top: 0;
-    width: 100%;
+    width: $w;
     z-index: 100;
  }
-.nav__paginas{
+.nav__paginas, nav>ul{
     position:fixed;
     z-index: 100;
  }
@@ -47,7 +48,7 @@ body{
  
  footer a, .btn-group a{
     color: $color;
-    font-weight: bolder;
+    font-weight: bold;
  }
  
  /* HEADER */
@@ -55,6 +56,7 @@ body{
     background-color: $bgcabecera;
     width: $w;
     height: 140px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +70,7 @@ body{
 /* FOOTER */ /* VER ETIQUETA MARQUEE */
 
 footer{
-    width: 100%;
+    width: $w;
     background-color: $bgfooter;
     color: $color;
     .footer__titulo{
@@ -84,7 +86,7 @@ footer{
         display: flex;
         justify-content: center;
         gap: 50px;
-        font-size: 1.3rem;
+        font-size: $fs*1.3;
         text-align: center;
         padding-bottom: 30px;
         a:hover{

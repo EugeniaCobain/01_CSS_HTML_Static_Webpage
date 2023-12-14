@@ -5,7 +5,7 @@
 .nav > ul{
    flex-direction: column;
    align-items: start;
-   width: 100%;
+   width: $w;
    position: fixed;
    left: 0;
    top: 200px; 
@@ -47,14 +47,14 @@ footer{
    .footer__redes {
        display: flex;
        justify-content: center;
-       gap: 40px;
-       font-size: 1.2rem;
-       padding: 25px;
+       gap: pxARem(40);
+       font-size: $fs*1.2;
+       padding: pxARem(25);
    } 
    .footer__disclaimer{
        display: flex;
        justify-content: center;
-       padding-bottom: 10px;
+       padding-bottom: pxARem(10);
    }
 }
 
@@ -69,13 +69,11 @@ footer{
          .locations__pais{
             padding-bottom: 0;
              .locations__ciudad {
-               flex-direction: column;
-               justify-content: start;
-               align-items: flex-start;
-               gap: 15px;
+               @include flexBox(column, start, flex-start);
+               gap: pxARem(15);
                padding:0px;
               iframe{
-                 width:200px;
+                 width:pxARem(200);
               }      
             }
          }   
@@ -85,7 +83,7 @@ footer{
 
 /* PÁGINA ERROR */
 .contenedor__error{
-   padding:50px;
+   padding:pxARem(50);
    background-color: $bgfooter;
 }
 }   
@@ -94,23 +92,23 @@ footer{
 
 /* HEADER + LOGO */
 header{
-   height: 110px;
+   height: pxARem(110);
    .container__logo{
       img{
-            width: 350px;
+            width: pxARem(350);
       }
    }
 }
 
 /* MENÚ */
 .container__menu{
-   height: 60px;
+   height: pxARem(60);
 }
 .nav > ul{
-   top:170px;
+   top:pxARem(170);
 }
 .nav ul li {
-   width: 200px;
+   width: pxARem(200);
    margin:0;
    padding:0;
    left:0;  
@@ -121,17 +119,17 @@ header{
 .nav ul li .art{
    margin: 0;
    padding:0;
-   padding-bottom:2px;
+   padding-bottom:pxARem(2);
    display: flex;
 }
 .nav ul li .gra{
    flex-direction: column;
    margin: 0;
    padding:0;
-   top:7px;   
+   top:pxARem(7);   
       a{
          display: flex;
-         padding-left: 5px;
+         padding-left: pxARem(5);
       }
 }
 
@@ -139,21 +137,19 @@ header{
 footer{
    .footer__titulo{
       padding:0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexBox(row, center,center);
        .footer__logo img{
-          width: 350px;
+          width: pxARem(350);
        }
    }
    .footer__redes {
-       gap: 35px;
+       gap: pxARem(35);
    } 
 }
 
 /* INICIO */
 .index__secciones{
-   padding: 30px;
+   padding: $padding*2;
    h3{
       font-size: $fs*2;
       text-align: center;
@@ -164,7 +160,7 @@ footer{
       margin-bottom: pxARem(25);
       padding:pxARem(10);
          .about__imagen{
-            width:350px;
+            width:pxARem(350);
          }
    }
    .seccion__grave{
@@ -187,19 +183,19 @@ footer{
        width: $w*0.9;
        padding:30px 0 30px 0px;
        img{
-           max-width: 100%;
-           min-width: 150px;
+           max-width: $w;
+           min-width: pxARem(150);
            margin:15px 0px;
            padding: 0px;
-         text-align: center;
-           border-radius: 5px;
+           text-align: center;
+           border-radius: pxARem(5);
            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 1));
        }
        .right{
            padding: 0px;
         }
         .png{
-         padding-left: 10px;
+         padding-left: pxARem(15);
         }
        .textbox{
            text-align: center;
@@ -213,8 +209,7 @@ footer{
        padding-top: pxARem(30);
     }
    .btn-group{
-      display: flex;
-      flex-direction: column;
+      @include flexBox(column, center,center);
       padding: pxARem(50);
       gap: pxARem(20);
     }
@@ -223,7 +218,7 @@ footer{
        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
        grid-auto-rows: minmax(400px, auto);
        gap:25px;
-       padding: 50px 15px;    
+       @include pad($lr:15px)   
    }
 }
 
@@ -238,7 +233,7 @@ footer{
       padding:0;
       margin:0;
       .aside{
-         width:100%;
+         width:$w;
          border-right:none;
          padding:0 0px 0 50px;
       }
@@ -248,17 +243,15 @@ footer{
          .locations__pais{
             padding-bottom: 0;
              .locations__ciudad {
-               flex-direction: column;
-               justify-content: start;
-               align-items: flex-start;
-               gap: 15px;
+               @include flexBox(column, start, flex-start);
+               gap: pxARem(15);
                padding:0px;
                .ciudad__titulo{
-                  width: 100%;
+                  width: $w;
               }
               iframe{
-                 width:250px;
-                 height:200px;
+                 width:pxARem(250);
+                 height:pxARem(200);
               }      
             }
          }   
@@ -277,20 +270,19 @@ form{
 /* PÁGINA ERROR */
 .error__header{
    img{
-      width: 350px;
-      padding-top:50px;
+      width: pxARem(150);
+      padding-top:pxARem(50);
 }
 }
 .contenedor__error{
-   padding: 30px;
+   padding: pxARem(30);
    h1{
        font-size: $fs*3;
    }
    h2{
        font-size: $fs*2.5;
-       padding-bottom: 20px;
-   }
-  
+       padding-bottom: 2pxARem(200);
+   } 
 }
 
 }
@@ -299,24 +291,24 @@ form{
 
 /* HEADER + LOGO */
 header{
-   height: 90px;
+   height: pxARem(90);
    .container__logo{
       img{
-            width: 300px;
+            width: pxARem(300);
       }
    }
 }
 
 /* MENÚ */
 .container__menu{
-   height: 50px;
+   height: pxARem(50);
 }
 .nav > ul{
-   top:140px;
+   top:pxARem(140);
 }
 .nav ul li {
    font-size: 1.1rem;
-   width: 150px;
+   width: pxARem(150);
 }
 .nav ul li ul{
    left: pxARem(150);
@@ -324,35 +316,35 @@ header{
 .nav ul li .art{
    padding:0;
    margin:0;
-   padding-bottom:6px;
+   padding-bottom:pxARem(6);
 }
 .nav ul li .gra{ 
    a{
-      padding-left: 10px;
+      padding-left: pxARem(10);
    }
 }
 /* MENÚ HAMBURGUESA */
 .icon__menu{
-   width: 35px;
-   height:35px;
+   width: pxARem(35);
+   height:pxARem(35);
 }
 
 /* FOOTER */
 footer{
    .footer__titulo{
       padding: 0px;
-      height:85px;
+      height:pxARem(85);
        .footer__logo img{
-         padding-top:10px;
+         padding-top:pxARem(10);
          padding-bottom: 0;
-         width:300px;
+         width:pxARem(300);
        }
    }
    .footer__redes {
-       gap: 35px;
+       gap: pxARem(35);
        font-size: 1.1rem;
-       padding: 15px;
-       padding-bottom:20px;
+       padding: pxARem(15);
+       padding-bottom:pxARem(20);
        i{
          display: none;
        }
@@ -364,7 +356,7 @@ footer{
 
 /* INICIO */
 .index__secciones{
-   padding: 15px 5px;
+   @include pad (15px, 5px);
    .seccion__about{
       margin-bottom: pxARem(10);
       padding:pxARem(20);
@@ -385,8 +377,8 @@ footer{
 .article__container{
    .png{
       img{
-         width:30px;
-         margin-left: 5px;
+         width:pxARem(30);
+         margin-left: pxARem(50);
       }
    }
 }
@@ -395,30 +387,26 @@ footer{
 .locations{
    .locations__grid{
       .aside{
-         width:100%;
+         width:$w;
          border-right:none;
          padding:0px  0px 35px 35px;
       }
       .locations__main{
-         margin: 0px 25px ;
-         /* margin:0px 0px 35px 50px; */
+         margin: 0px 25px;
          gap: 0px;
          .locations__pais{
-      /*  padding: 35px; */
-            padding-top: 15px;
+            padding-top: $padding;
             padding-bottom: 0;
              .locations__ciudad {
-               flex-direction: column;
-               justify-content: start;
-               align-items: flex-start;
-               gap: 15px;
+               @include flexBox(column, start, flex-start);
+               gap: $padding;
                padding:0px;
                h4{
-                  padding-bottom:10px;
+                  padding-bottom:pxARem(10);
               }
               iframe{
-                 width:200px;
-                 height:200px;
+                 width:pxARem(200);
+                 height:pxARem(200);
               }      
             }
          }   
@@ -429,24 +417,23 @@ footer{
 /* CONTACTO */
 form{
    input[type="submit"], input[type="text"], input[type="email"]{
-      background-color: aquamarine;
-      width:250px;
+      width:pxARem(250);
    }
    #message{
-      width: 250px;
+      width: pxARem(250);
    }
 }
 
 /* PÁGINA ERROR */
 .error__header{
    img{
-      width: 300px;
+      width: pxARem(300);
 }
 }
 .contenedor__error{
    text-align: center;
-   padding-top: 150px;
-   padding-bottom: 50px;
+   padding-top: pxARem(150);
+   padding-bottom: pxARem(50);
    h1{
        font-size: $fs*3;
    }

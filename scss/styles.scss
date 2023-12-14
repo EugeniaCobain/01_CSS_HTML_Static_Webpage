@@ -6,19 +6,20 @@
 /* PÁGINA INICIO*/
 //Carrousel/Slider con animación CSS
 .slider-frame{
-    width:100%;
+    width:$w;
     height: auto;
     overflow: hidden;
+    filter: drop-shadow(0px 4px 6px rgba($bgfooter, .4));
     ul{
         display: flex;
         padding: 0;
-        width:400%;
+        width:$w*4;
         overflow: hidden;
         animation: slider 12s infinite alternate ease-in;
         li{
-            width: 100%;
+            width: $w;
             img{
-                width: 100%;
+                width: $w;
             }
         }
     }
@@ -37,31 +38,29 @@
     }
 }
 .index__secciones{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 50px 125px;
+    @include flexBox(column, center, center);
+    @include pad;
     h3{
-        font-size: $fs*3;
-        @include usarFlexbox;
+        font-size: map-get($fontsizes, lar2);
+        text-align: center;
         margin-bottom: $padding;
     }
     p{
-        font-size: $fs*1.3;
+        font-size:  map-get($fontsizes, med1);
         text-align: justify;
     }
     .linkUp{
         line-height: $fs*4;
-        @include justifyFlexbox(start);
+        @include flexBox(row, start, center);
     }
 
     /* Sección "About" */
     .seccion__about{
-        @include usarFlexbox;
+        @include flexBox(row, center, center);
+        @include pad(25px, 50px);
         gap:pxARem(40);
         margin-bottom:pxARem(75);
-        padding: 25px 50px;
-         width: $w;
+        width: $w;
             .about__imagen{
                 width: pxARem(500); 
                 filter: $shadow;
@@ -69,15 +68,14 @@
                 z-index: -100;
             }
     }
-
     /* Sección "Graves" */
     .seccion__grave{
         @extend .seccion__about;
         .grave__imagen{
          width: pxARem(400); 
          filter: $shadow;
+         filter: drop-shadow(-4px 4px 6px rgba($bgfooter, .4));
             border-radius: pxARem(10);
-            z-index: -100;
         }
     }   
 }
@@ -88,56 +86,49 @@
     background-position: 70% 98%;
     background-attachment: fixed;
     @include wrapper;   
-    .wrapArticles__imgSobreTexto{
-        @include tituloSeccion;
-     }
 }
 
  .article__container{
-    width: 100%;
-    /* padding: 50px 25px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $fondos;
+    width: $w;
+    @include flexBox(column, center, center);
+    background-color: map-get($palette, colorbody2);
     .article__wrapper{
         margin: 50px auto;
+        @include pad;
         width: $w*0.9;
-        padding: $padding;
-        /* padding:0; */
         img{
             max-width: pxARem(400);
-            min-width: 150px;
+            min-width: pxARem(150);
             margin-right: $padding;
             margin-top: $padding;
             float:left;
-            border-radius: 5px;
-            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 1));
+            border-radius:  pxARem(10);
+            filter: drop-shadow(4px 4px 4px rgba(0,0,0, .7));
         }
         .right{
             float:right;
-            padding-left:15px;
+            padding-left:$padding;
          }
         .textbox{
             text-align: justify;
             h2{
-            font-size: $fs*2;
-            margin-bottom: $padding;
+            font-size: map-get($fontsizes, lar1);
+            margin-bottom: $fs*2;
+            text-align:center;
             color:$color;
             font-weight: 600;
-            text-shadow: 2px 2px 4px #203536;
+            text-shadow: 4px 4px 4px #203536;
            }
            h3{
             font-size: $fs*1.7;
-            padding-top: 25px;
-            padding-bottom:15px;
+            padding-top: pxARem(25);
+            padding-bottom:$padding;
             color:$color;
             font-weight: 600;
             text-shadow: 2px 2px 4px #203536;
            }
            p{
-            font-size: $fs*1.3;
+            font-size: map-get($fontsizes, med1);
             line-height: 1.3;
             color: $color;
            }
@@ -149,8 +140,8 @@
         background-repeat: no-repeat;
         background-position:96% 12%;
         background-attachment: fixed;
-        width:100%;
-        height: 550px;
+        width:$w;
+        height: pxARem(550);
     }
     .article__parallax2{
         background-image: url(../assets/imgs/articles/highgate.jpg);
@@ -158,39 +149,32 @@
         background-repeat: no-repeat;
         background-position:top;
         background-attachment: fixed;
-        width:100%;
-        height: 100vh;
+        width:$w;
+        height: $h;
     }
 }
 
 /* PÁGINA GRAVES */
 .main__graves{
-    background-color: $fondos;
+    background-color: map-get($palette , colorbody2 );
     .wrapGraves{
         background: url(../assets/imgs/graves/Tomba-Ribaudo-staglieno-genova\ -\ copia.jpg);
         background-position: 70% 100%;
         @include wrapper;
-        .wrapGraves__imgSobreTexto{
-            @include tituloSeccion;
-        }
     }
     .btn-group{
-        @include usarFlexbox;
+        @include flexBox(row, center, center);
         padding: pxARem(75);
         gap: pxARem(20);
         .btn-personal{
-            background-color: $bgfooter ;
-            font-family: Oxygen-Regular;
-            color:$color;
-            font-weight: bold;
+            @include button;
             font-size: $fs*2;
             width:  pxARem(300);
-            padding: 8px 16px;
             padding:  pxARem(20);
-            transition: all .3s;
-            border-radius: 10px;
+            border-radius: pxARem(10);
+            transition: all .3s;  
             &:hover{
-                background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
+                background-image: $gradiente;
                 transform: scale(1.01);
                 a{
                     color: $colorhover;
@@ -205,62 +189,58 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         grid-auto-rows: minmax(600px, auto);
-        gap:50px;
-        padding: 50px 100px;
+        gap:pxARem(50);
+        @include pad($lr:100px);
         /* FLIPPING CARDS */
         .card{
-            display:flex;
-            align-items:center;
-            justify-content: center;
+            @include flexBox(row, center, center);
             position: relative;
             object-fit: cover;
             color: $color;
-            border-radius: 4px;
             .face{
                 position:absolute;
-                width:100%;
-                height:100%;
+                width:$w;
+                height:$w;
                 backface-visibility: hidden;
-                border-radius: 10px;
+                border-radius: $padding;
                 overflow: hidden;
-                transition:.5s;
+                transition:.7s;
             }
             .front{
                 transform: perspective(600px) rotateY(0deg);
                 box-shadow: 0 4px 20px rgba(#000, 1);
                 img{
                     position: absolute;
-                    width:100%;
-                    height:100%;
+                    width:$w;
+                    height:$w;
                     object-fit:cover;
                 }
                 h3{
+                    
                     position: absolute;
                     bottom: 0;
-                    width:100%;
-                    height: 45px;
-                    font-size: 1.3rem;
+                    width:$w;
+                    height: pxARem(45);
+                    font-size: $fs*1.3;
                     text-align: center;
                     background-color: $fondos;
-                    padding:5px;
+                    padding:pxARem(5);
                 }
             }
             .back{
                 transform: perspective(600px) rotateY(180deg);
+                @include flexBox(column, center, center);
                 background-color: $bgfooter;
-                padding: 15px;
+                padding: $padding;
                 color: $color;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 text-align: center;
                 box-shadow: 0 4px 20px rgba(#000, 1);
                 h3{
-                    font-size: 1.3rem;
+                    font-size: $fs*1.3;
                 }
                 p{
-                    font-size: 1rem;
-                    padding: 15px;
+                    font-size: $fs;
+                    padding: $padding;
                     text-justify: justify;
                 }
             }
@@ -276,20 +256,14 @@
 
 /* LOCATIONS */
 .locations{
-    background-color: $fondos;
+    background-color: map-get($palette, colorbody2);
     .wrapLocations{
         background: url(../assets/imgs/locations/locations.jpg);
         @include wrapper;
         background-position: 15% 10%;
-        .wrapLocations__imgSobreTexto{
-           @include tituloSeccion;
-         }
     }
-   /*  .locations__grid > *{
-        height:100%;
-    } */
     .locations__grid{
-        width:100%;
+        width:$w;
         display: grid;
         grid-template-columns: 30% 70%;
         grid-template-rows: 1fr;
@@ -347,19 +321,15 @@
             display: flex;
             flex-direction: column;
             gap:0px;
-            /* display: grid;
-            grid-template-columns: 1fr;
-            justify-content: center;
-            padding: 100px 35px; */
             .locations__pais{
                 display:flex;
                 flex-direction: column;
-                padding-top:35px;
+                padding-top:pxARem(35);
                 h2{
                     font-size: $fs*2; 
                     color:$color;
                     font-weight: 600;
-                    text-shadow: 2px 2px 4px #203536;
+                    text-shadow: 4px 4px 4px #203536;; 
                     padding-bottom: pxARem(30);
                    }
                    h3{
@@ -367,7 +337,6 @@
                     color:$color;
                     padding-bottom:15px;
                     font-weight: 600;
-                    text-shadow: 2px 2px 4px #203536;
                     justify-content: start;
                    }
                   h4{
@@ -382,50 +351,46 @@
                     color: $color;
                    }
                 .locations__ciudad {
-                    .ciudad__titulo{
-                        width: 40%;
-                    }
                     display:flex;
                     flex-direction: row;
                     @include locations;
                     padding-bottom: pxARem(50);
+                    .ciudad__titulo{
+                        width: 40%;
+                    }
                     iframe{
-                        width:300px;
-                        height:100px;
+                        width: pxARem(300);
+                        height:pxARem(100);
                     }
                 }
             }   
         }
     } 
     
-    
 }
 
 /* PÁGINA CONTACTO */
 .main__contacto{
-    display: flex;
-    flex-direction: column;
+    @include flexBox(column, center, center);
        .wrapContacto{
            background: url(../assets/imgs/contacto/westminster.jpg);
            @include wrapper;
-           .wrapContacto__imgSobreTexto{
-              @include tituloSeccion;
-            }
        }
        .mail__contacto{ 
            width: $w;
            text-align: center;
            font-size: $fs*1.3;
            padding: pxARem(25);
+           padding-bottom:0;
            &>p{
-               margin-top: pxARem(20);
-               margin-left: pxARem(50);
-               margin-right: pxARem(50);
+            margin-top: pxARem(20);
+            margin-left: pxARem(50);
+            margin-right: pxARem(50);
+
             }
         }
         form{
-            @include usarFlexbox;
-            flex-direction: column;
+            @include flexBox(column, center, center);
             width: $w;
             padding: pxARem(30) 0;
             label{
@@ -434,25 +399,20 @@
                 text-align: justify;
             }
             input[type="submit"]{
-                border: 1px solid black;
-                background-color: $bgfooter;
-                font-family: Oxygen-Regular;
-                color: $bgfooter;
-                font-weight: bolder;
-                font-size: $fs*1.3;
+                @include button;
                 width: pxARem(300);
-                padding: 8px 16px;
-                margin-top: 8px;
-                border-radius: 5px;
-
                 color: $color;
+                font-size: $fs*1.3;
+                margin-top: 10px;
+                filter: drop-shadow(0px 4px 6px rgba($bgfooter, .4));;
+                transition: all .3s;
                 &[type="submit"]:hover {
                     color: $colorhover;
-                    background-image: linear-gradient(to right, #203536, #263c3b, #2c4340, #334b45, #3a524a, #3a524a, #3a524a, #3a524a, #334b45, #2c4340, #263c3b, #203536);
-                    transition: all 0.3s;
+                    background-image: $gradiente;
                 }
             }
             textarea{
+                filter: $shadow;
                 border: 1px solid black;
                 background-color: rgb(255, 255, 255);
                 margin: 8px 0;
@@ -462,7 +422,7 @@
                 height: pxARem(300);
                 padding: pxARem(10);
                 border: 1px solid black;
-                border-radius: 5px;
+                border-radius: 10px;
                 margin: 8px 0;
             }
         }   
@@ -471,9 +431,10 @@
             font-family: Oxygen-Regular;
             font-size: $fs;
             width: pxARem(300);
-            padding: 10px 10px;
-            margin: 8px 0;
-            border-radius: 5px;
+            padding: pxARem(10);
+            margin: 10px 0 20px 0;
+            border-radius: pxARem(10);
+            filter: $shadow;
         }
 }
 
@@ -483,13 +444,10 @@
     padding-top: 30px;
 }
 .contenedor__error{
-    width:100%;
-    height: 100vh;
-    display: flex;
+    width:$w;
+    height: $h;
+    @include flexBox(column, center, center);
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: $bgfooter;
     color: $color;
     h1{
@@ -518,7 +476,6 @@
         }
     }  
 }
-
 .error__footer{
     background-color: $bgfooter;
     height: auto;
@@ -535,34 +492,6 @@
 
 
 
-
- 
-/* En "_variables" hice un mapa para probar cómo funciona con el @EACh. En efecto, en el archivo .CSS se crearon las clases .heideggerimag y demás, pero no las necesito */
-
-@each $thinker in heidegger, sartre, schopenhauer, hegel{
-    .#{$thinker}imag{
-        background-image: url(../assets/imgs/graves/thinkers/#{$thinker});
-    }
-}
-
-@each $thinker in heidegger, sartre, schopenhauer, hegel{
-    .#{$thinker}imag{
-        background-image: url(../assets/imgs/graves/thinkers/#{$thinker});
-        width: pxARem(400);
-    }
-}
-
-@for $i from 1 through 4{
-    .card-#{$i}{
-        background-color: $fondos;
-        box-shadow: 2px 2px 4px rgba(9, 18, 18, 1);
-        border-radius: 10px;
-        margin: pxARem(20);
-        padding-bottom: $padding;
-            }
-    }
-
-/* Funcionó, pero no sé cómo usar esas clases que acabo de crear en mi proyecto. Mi intención era crear de esta manera las cards que faltan sin tener que hacerlas de a 1 */
 
 
 
